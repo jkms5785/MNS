@@ -12,8 +12,9 @@ function Que() {
     viewProject.classList.add("viewProjectHovered");
 
    if(this == work[1]){
+         console.dir(work[1].firstChild);
         work[1].firstChild.children[0].src = "file:///Users/kimmunsu/Desktop/Portfolio_web/Material%20and%20Solution/img/work_latup_m.gif"
-        console.dir(work[1].firstChild);
+      
    }
 
 }
