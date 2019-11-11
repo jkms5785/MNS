@@ -13,7 +13,7 @@ function Que() {
 
    if(this == work[1]){
          console.dir(work[1].firstChild);
-        work[1].firstChild.children[0].src = "file:///Users/kimmunsu/Desktop/Portfolio_web/Material%20and%20Solution/img/work_latup_m.gif"
+        // work[1].firstChild.children[0].src = "file:///Users/kimmunsu/Desktop/Portfolio_web/Material%20and%20Solution/img/work_latup_m.gif"
       
    }
 
@@ -30,7 +30,7 @@ function Stop() {
     viewProject.classList.remove("viewProjectHovered");
 
     if(this == work[1]){
-        work[1].firstChild.children[0].src = "file:///Users/kimmunsu/Desktop/Portfolio_web/Material%20and%20Solution/img/work_latup.png"
+        // work[1].firstChild.children[0].src = "file:///Users/kimmunsu/Desktop/Portfolio_web/Material%20and%20Solution/img/work_latup.png"
    }
 
 }
