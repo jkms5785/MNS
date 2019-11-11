@@ -79,10 +79,4 @@ window.onload = (function () {
     for (var i = 0; i < sc.length; i++) {
         li_click(i);
     }
-    
-      setTimeout(function () {
-         $('.thumbnail').prepend("<img id='latup_main' src= 'img/latup_source/latup_main.png' alt='main'>");
-    }, 300);
-    
-    
 });

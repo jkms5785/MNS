@@ -79,9 +79,4 @@ window.onload = (function () {
     for (var i = 0; i < sc.length; i++) {
         li_click(i);
     }
-
-    setTimeout(function () {
-        $('.thumbnail').prepend("<img id='muto_main' src= 'img/muto_source/muto_main.png' alt='main'>");
-    }, 300);
-
 });

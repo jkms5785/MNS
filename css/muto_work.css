@@ -129,7 +129,7 @@
    }
 
    .info_sub_title {
-       opacity: 0.87;
+       opacity: 0.8;
        font-family: 'Google Sans', sans-serif;
        font-weight: 700;
        font-size: 1.125rem;
@@ -137,7 +137,7 @@
    }
 
    .info_sub_title_kr {
-       opacity: 0.87;
+       opacity: 0.8;
        font-family: 'Noto Sans KR', sans-serif;
        font-size: 1.125rem;
        letter-spacing: -0.24px;
@@ -145,7 +145,7 @@
    }
 
    .info_sub_body {
-       opacity: 0.8;
+       opacity: 0.6;
        font-family: 'Google Sans', sans-serif;
        font-size: 1.125rem;
        line-height: 36px;

@@ -1,7 +1,6 @@
 var didScroll;
 
 var headerLife = document.getElementsByTagName('header');
-console.log(headerLife);
 
 function headerAni() {
     headerLife[0].classList.add('headerUp');
@@ -14,14 +13,10 @@ function headerAniStop() {
 }
 
 window.addEventListener('scroll', () => {
-
     var scrolled = window.scrollY;
-
     didScroll = true;
-
     if (didScroll) {
         headerAni();
-
         setTimeout(function () {
             didScroll = false;
 //            console.log(didScroll);
