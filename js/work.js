@@ -12,7 +12,6 @@ function Que() {
     viewProject.classList.add("viewProjectHovered");
 
    if(this == work[1]){
-         console.dir(work[1].firstChild);
         work[1].firstChild.children[0].src = "fhttps://jkms5785.github.io/MaterialAndSolution/img/work_latup_m.gif"
    }
 
