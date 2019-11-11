@@ -1,4 +1,4 @@
-window.onload = (function () {
+
     var sc = document.getElementsByClassName('bt');
 
     var ov_tg = document.getElementById('ov_tg'),
@@ -50,6 +50,7 @@ window.onload = (function () {
         window.scrollTo(0, fd_tg_Top - 100);
     }
 
+function init(){
     sc[0].addEventListener('click', ov_scroll),
         sc[1].addEventListener('click', rs_scroll),
         sc[2].addEventListener('click', dp_scroll),
@@ -78,4 +79,6 @@ window.onload = (function () {
     for (var i = 0; i < sc.length; i++) {
         li_click(i);
     }
-});
+    }
+
+    init();
