@@ -12,7 +12,7 @@ function Que() {
     viewProject.classList.add("viewProjectHovered");
 
     if (this == work[1]) {
-        work[1].firstChild.children[0].src = "img/work_latup_m.gif";
+        work[1].firstChild.children[0].src = "https://jkms5785.github.io/MaterialAndSolution/img/work_latup_m.gif";
     }
 
 }
