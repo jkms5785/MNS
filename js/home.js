@@ -104,7 +104,6 @@
 
          var titleLoader1 = function () {
              for (m = 0; m < materialAnd; m++) {
-
                  (function (x) {
                      setTimeout(function () {
                          title1.eq(x).removeClass("title_preloader");
