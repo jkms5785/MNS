@@ -12,7 +12,7 @@ function Que() {
     viewProject.classList.add("viewProjectHovered");
 
     if (this == work[1]) {
-        work[1].firstChild.children[0].src = images[1].src;
+        work[1].firstChild.children[0].src = images[0].src;
     }
 
 }
@@ -28,7 +28,7 @@ function Stop() {
     viewProject.classList.remove("viewProjectHovered");
 
     if (this == work[1]) {
-        work[1].firstChild.children[0].src = images[0].src;
+        work[1].firstChild.children[0].src =  "img/work_latup.png"
     }
 
 }
@@ -37,9 +37,7 @@ const images = [];
 
 function imgLoad() {
     images[0] = new Image();
-    images[0].src = "img/work_latup.png";
-    images[1] = new Image();
-    images[1].src = "img/work_latup_m.gif";
+    images[0].src = "img/work_latup_m.gif";
 }
 
 function init() {
@@ -48,7 +46,6 @@ function init() {
         work[i].addEventListener("mouseover", Que);
         work[i].addEventListener("mouseleave", Stop);
     }
-
     imgLoad();
 }
 
