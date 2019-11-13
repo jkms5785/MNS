@@ -269,19 +269,16 @@
        padding-top: 45.3125%;
    }
 
-
    .finding {
        padding-top: 50%;
    }
 
    .concept {
        padding-top: 40.625%;
-
    }
 
    .servStruc {
        padding-top: 37.5%;
-
    }
 
    .process {
@@ -356,9 +353,10 @@
 
    /*  pd prototype      */
 
-.designComp{
-    padding-top: 37.9375%;
-}
+   .designComp {
+       padding-top: 37.9375%;
+   }
+
    /*        panel*/
    .panel_wrap {
        width: 100%;
@@ -409,6 +407,7 @@
    .panel_cont_7 {
        padding-top: 100%;
    }
+
    .panel_cont_6 img {
        width: 100%;
    }
