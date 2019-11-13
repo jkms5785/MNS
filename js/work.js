@@ -12,7 +12,7 @@ function Que() {
     viewProject.classList.add("viewProjectHovered");
 
     if (this == work[1]) {
-        work[1].firstChild.children[0].src = "img/work_latup_m.gif";
+        work[1].firstChild.children[0].src = images[1].src;
     }
 
 }
@@ -28,7 +28,7 @@ function Stop() {
     viewProject.classList.remove("viewProjectHovered");
 
     if (this == work[1]) {
-        work[1].firstChild.children[0].src = "img/work_latup.png";
+        work[1].firstChild.children[0].src = images[0].src;
     }
 
 }
@@ -36,11 +36,10 @@ function Stop() {
 const images = [];
 
 function imgLoad() {
-    images.push("img/work_latup.png");
-    images.push("img/work_latup_m.gif");
-
-    console.log(images);
-    console.log(images[0]);
+    images[0] = new Image();
+    images[0].src = "img/work_latup.png";
+    images[1] = new Image();
+    images[1].src = "img/work_latup_m.gif";
 }
 
 function init() {
