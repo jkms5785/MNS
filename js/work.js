@@ -28,9 +28,19 @@ function Stop() {
     viewProject.classList.remove("viewProjectHovered");
 
     if (this == work[1]) {
-       work[1].firstChild.children[0].src = "img/work_latup.png";
+        work[1].firstChild.children[0].src = "img/work_latup.png";
     }
 
+}
+
+const images = [];
+
+function imgLoad() {
+    images.push("img/work_latup.png");
+    images.push("img/work_latup_m.gif");
+
+    console.log(images);
+    console.log(images[0]);
 }
 
 function init() {
@@ -39,6 +49,8 @@ function init() {
         work[i].addEventListener("mouseover", Que);
         work[i].addEventListener("mouseleave", Stop);
     }
+
+    imgLoad();
 }
 
 init();

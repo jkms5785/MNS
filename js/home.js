@@ -7,8 +7,7 @@
              preloader.animate({
                  top: "200%"
              }, 2500);
-
-
+             
              preloader.animate({
                  top: "400%",
                  height: 0
