@@ -11,17 +11,19 @@ function silder() {
 
 const homeImgArray = [];
 
-function imageLoad() {
+function homePreloader() {
 
     homeImgArray[0] = new Image();
     homeImgArray[0].src = "img/main_logo.gif";
 
     if (homeImgArray[0]) {
-        const homeGif = document.createElement("img");
-        gifCont.appendChild(homeGif);
-        homeGif.src = "img/main_logo.gif";
 
         preloader.style.top = "0";
+        
+        const homeGif = document.createElement("img");
+        gifCont.appendChild(homeGif);
+        homeGif.src = homeImgArray[0].src;
+
         homeImgArray[1] = new Image();
         homeImgArray[1].src = "img/work_latup_m.gif";
         silder();
@@ -29,7 +31,8 @@ function imageLoad() {
 }
 
 function init() {
-    imageLoad();
+    homePreloader();
+    preloader.style.top = "-200%";
 }
 
 init();
