@@ -1,0 +1,8 @@
+.preloader {
+    position: absolute;
+    width: 100%;
+    height: 200%;
+    background-color: #2F75FF;
+    z-index: 9999;
+    top: -200%;
+}
