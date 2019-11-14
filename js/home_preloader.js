@@ -18,8 +18,9 @@ function homePreloader() {
     homeGif.src = "img/main_logo.gif";
     const homeGifDone = document.getElementById("MNS");
 
-    window.onload = function() {
+    homeGifDone.onload = function() {
         silder();
+        console.log("finishi load");
     };
 }
 
