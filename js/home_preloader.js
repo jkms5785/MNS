@@ -1,6 +1,5 @@
 const preloader = document.getElementById("js-preloader");
 const gifCont = document.getElementById("js-gifCont");
-console.log(gifCont);
 
 function silder() {
     setTimeout(function () {
@@ -27,6 +26,7 @@ function homePreloader() {
 function init() {
     homePreloader();
     preloader.style.top = "-200%";
+    console.log(123);
 }
 
 init();
