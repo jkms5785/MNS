@@ -16,7 +16,7 @@
      }
 
 
-     BluePreloader();
+    //  BluePreloader();
      //preloader      
 
      // after preloader //
@@ -136,9 +136,9 @@
      // after preloader //
 
      // home_gif //
-     setTimeout(function () {
-         $('.home_gif_cont').prepend("<img id='home_gif' src= 'img/home_logo.gif'>");
-    }, 2000);
+    //  setTimeout(function () {
+    //      $('.home_gif_cont').prepend("<img id='home_gif' src= 'img/home_logo.gif'>");
+    // }, 2000);
  // home_gif //
 
 
