@@ -3,16 +3,16 @@
      //preloader          
      var BluePreloader = function () {
 
-         setTimeout(function () {
-             preloader.animate({
-                 top: "200%"
-             }, 2500);
+        //  setTimeout(function () {
+        //      preloader.animate({
+        //          top: "200%"
+        //      }, 2500);
              
-             preloader.animate({
-                 top: "400%",
-                 height: 0
-             }, 1500);
-         }, 250);
+        //      preloader.animate({
+        //          top: "400%",
+        //          height: 0
+        //      }, 1500);
+        //  }, 250);
      }
 
 
