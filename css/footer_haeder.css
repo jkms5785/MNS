@@ -1,48 +1,9 @@
 body {
-    margin: 0;
     overflow-x: hidden;
     background-color: #F6F6F6;
 }
 
-p {
-    padding: 0;
-    margin: 0;
-}
-
-ul {
-    margin: 0;
-    padding: 0;
-}
-
-li {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-}
-
 a:visited {
-    text-decoration: none;
-    color: #000000;
-}
-
-a:hover {
-    text-decoration: none;
-    color: #2F75FF;
-}
-
-a:focus {
-    text-decoration: none;
-
-}
-
-a:active {
-    text-decoration: none;
-}
-
-a:link {
-    text-decoration: none;
     color: #000000;
 }
 
@@ -103,15 +64,6 @@ header {
     transform: translateY(0);
 }
 
-.current_page {
-    color: #2F75FF;
-    opacity: 0.87;
-}
-
-.other_page {
-    opacity: 0.6;
-}
-
 .underline {
     background-image: linear-gradient(to right, #2F75FF, #2F75FF);
     background-size: 0 100%;
@@ -141,6 +93,7 @@ footer {
 
 .footer_cont {
     max-width: 1280px;
+    padding: 84px 0;
     margin: 0 auto;
     display: flex;
     justify-content: center;

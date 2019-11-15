@@ -13,7 +13,11 @@ const body = document.querySelector("#js-body");
 
 const header = document.querySelector("header");
 
-const arrow = document.querySelector("#js-arrow");
+const arrow = document.querySelector("#js-arrow"),
+    arrowCont = arrow.children[0],
+    arrowBody = arrow.children[1],
+    arrowLine = arrow.children[0].children[0],
+    arrowHead = arrow.children[0].children[1];
 
 function headerLoader() {
     header.classList.remove("header_preloader");
@@ -78,43 +82,29 @@ function preloaderIn() {
 }
 
 function arrowHovered() {
-    console.log("Hovered");
-    arrow.children[0].children[0].style.animationPlayState = "paused";
-    arrow.children[0].children[1].style.animationPlayState = "paused";
-
-    arrow.children[0].children[0].style.fill = "#2F75FF";
-    arrow.children[0].children[1].style.fill = "#2F75FF";
-
-    arrow.children[1].style.color = "#2F75FF";
-
-    arrow.children[0].classList.add("arrowRotate_home");
-
-    arrow.children[0].classList.remove("arrowRotateOrigin_home");
-
+    arrowLine.style.animationPlayState = "paused";
+    arrowHead.style.animationPlayState = "paused";
+    arrowLine.style.fill = "#2F75FF";
+    arrowHead.style.fill = "#2F75FF";
+    arrowBody.style.color = "#2F75FF";
+    arrowCont.classList.add("arrowRotate_home");
+    arrowCont.classList.remove("arrowRotateOrigin_home");
 }
 
 function arrowUnHovered() {
-    console.log("UnHovered");
-
-    arrow.children[0].children[0].style.animationPlayState = "";
-    arrow.children[0].children[1].style.animationPlayState = "";
-
-    arrow.children[0].children[0].style.fill = "#393939";
-    arrow.children[0].children[1].style.fill = "#393939";
-
-    arrow.children[1].style.color = "#393939";
-    arrow.children[0].classList.remove("arrowRotate_home");
-    arrow.children[0].classList.add("arrowRotateOrigin_home");
-
-
+    arrowLine.style.animationPlayState = "";
+    arrowHead.style.animationPlayState = "";
+    arrowLine.style.fill = "#393939";
+    arrowHead.style.fill = "#393939";
+    arrowBody.style.color = "#393939";
+    arrowCont.classList.remove("arrowRotate_home");
+    arrowCont.classList.add("arrowRotateOrigin_home");
 }
 
 function init() {
     preloaderIn();
     arrow.addEventListener("mouseover", arrowHovered);
     arrow.addEventListener("mouseleave", arrowUnHovered);
-
-    console.dir(arrow);
 }
 
 init();

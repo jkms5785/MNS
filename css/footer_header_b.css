@@ -1,48 +1,9 @@
 body {
-    margin: 0;
     overflow-x: hidden;
     background-color: #F6F6F6;
 }
 
-p {
-    padding: 0;
-    margin: 0;
-}
-
-ul {
-    margin: 0;
-    padding: 0;
-}
-
-li {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-}
-
 a:visited {
-    text-decoration: none;
-    color: white;
-}
-
-a:hover {
-    text-decoration: none;
-    color: #2F75FF;
-}
-
-a:focus {
-    text-decoration: none;
-
-}
-
-a:active {
-    text-decoration: none;
-}
-
-a:link {
-    text-decoration: none;
     color: white;
 }
 
@@ -91,15 +52,6 @@ header {
     transform: translateY(0);
 }
 
-.current_page {
-    color: #2F75FF;
-    opacity: 0.87;
-}
-
-.other_page {
-    opacity: 0.6;
-}
-
 .underline {
     background-image: linear-gradient(to right, #2F75FF, #2F75FF);
     background-size: 0 100%;
@@ -130,7 +82,7 @@ footer {
 .footer_cont {
     max-width: 1280px;
     margin: 0 auto;
-
+    padding: 84px 0;
     display: flex;
     justify-content: center;
 }
@@ -154,9 +106,7 @@ footer {
     opacity: 0.6;
     font-family: 'Google Sans', sans-serif;
     font-size: 1rem;
-
     color: white;
-
     display: flex;
     align-items: center;
 }
@@ -187,7 +137,6 @@ footer {
 .footer_right ul li:first-child {
     font-weight: 700;
 }
-
 
 .footer_right ul li:not(:first-child) {
     padding-top: 16px;
