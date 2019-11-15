@@ -120,7 +120,7 @@ body::-webkit-scrollbar {
 }
 
 .title_preloader {
-    transform: translateY(150px) rotateX(90deg);
+    transform: translateY(96px) rotateX(90deg);
     opacity: 1.0;
 }
 

@@ -102,7 +102,9 @@ function arrowUnHovered() {
 }
 
 function init() {
-    preloaderIn();
+    setTimeout(function(){
+         preloaderIn();
+    },1000);
     arrow.addEventListener("mouseover", arrowHovered);
     arrow.addEventListener("mouseleave", arrowUnHovered);
 }
