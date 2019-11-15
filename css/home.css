@@ -106,38 +106,36 @@ body::-webkit-scrollbar {
     z-index: 9999;
     opacity: 0.9;
     top: -200%;
-    -webkit-transition: all 1000ms cubic-bezier(0.000, 0.000, 0.390, 1.000);
-    -moz-transition: all 1000ms cubic-bezier(0.000, 0.000, 0.390, 1.000);
-    -o-transition: all 1000ms cubic-bezier(0.000, 0.000, 0.390, 1.000);
-    transition: all 1000ms cubic-bezier(0.000, 0.000, 0.390, 1.000);
-    /* custom */
+ -webkit-transition: all 1700ms cubic-bezier(0.000, 0.000, 0.165, 1); /* older webkit */
+-webkit-transition: all 1700ms cubic-bezier(0.000, 0.000, 0.165, 1.005);
+   -moz-transition: all 1700ms cubic-bezier(0.000, 0.000, 0.165, 1.005);
+     -o-transition: all 1700ms cubic-bezier(0.000, 0.000, 0.165, 1.005);
+        transition: all 1700ms cubic-bezier(0.000, 0.000, 0.165, 1.005); /* custom */
 
-    -webkit-transition-timing-function: cubic-bezier(0.000, 0.000, 0.390, 1.000);
-    -moz-transition-timing-function: cubic-bezier(0.000, 0.000, 0.390, 1.000);
-    -o-transition-timing-function: cubic-bezier(0.000, 0.000, 0.390, 1.000);
-    transition-timing-function: cubic-bezier(0.000, 0.000, 0.390, 1.000);
-    /* custom */
+-webkit-transition-timing-function: cubic-bezier(0.000, 0.000, 0.165, 1); /* older webkit */
+-webkit-transition-timing-function: cubic-bezier(0.000, 0.000, 0.165, 1.005);
+   -moz-transition-timing-function: cubic-bezier(0.000, 0.000, 0.165, 1.005);
+     -o-transition-timing-function: cubic-bezier(0.000, 0.000, 0.165, 1.005);
+        transition-timing-function: cubic-bezier(0.000, 0.000, 0.165, 1.005); /* custom */
 }
 
 .title_preloader {
-    transform: translateY(120px) rotateX(90deg);
-    opacity: 1.0;
+    transform: translateY(180px) rotateX(90deg);
+    opacity: 0;
 }
 
 .title_loader {
     transform: translateY(0px) rotateX(0deg);
-    opacity: 0.9;
-    -webkit-transition: all 500ms cubic-bezier(0.000, 0.000, 0.390, 1.000);
-    -moz-transition: all 500ms cubic-bezier(0.000, 0.000, 0.390, 1.000);
-    -o-transition: all 500ms cubic-bezier(0.000, 0.000, 0.390, 1.000);
-    transition: all 500ms cubic-bezier(0.000, 0.000, 0.390, 1.000);
-    /* custom */
+    opacity: 1.0;
+ -webkit-transition: all 700ms cubic-bezier(0.000, 0.000, 0.015, 0.995);
+   -moz-transition: all 700ms cubic-bezier(0.000, 0.000, 0.015, 0.995);
+     -o-transition: all 700ms cubic-bezier(0.000, 0.000, 0.015, 0.995);
+        transition: all 700ms cubic-bezier(0.000, 0.000, 0.015, 0.995); /* custom */
 
-    -webkit-transition-timing-function: cubic-bezier(0.000, 0.000, 0.390, 1.000);
-    -moz-transition-timing-function: cubic-bezier(0.000, 0.000, 0.390, 1.000);
-    -o-transition-timing-function: cubic-bezier(0.000, 0.000, 0.390, 1.000);
-    transition-timing-function: cubic-bezier(0.000, 0.000, 0.390, 1.000);
-    /* custom */
+-webkit-transition-timing-function: cubic-bezier(0.000, 0.000, 0.015, 0.995);
+   -moz-transition-timing-function: cubic-bezier(0.000, 0.000, 0.015, 0.995);
+     -o-transition-timing-function: cubic-bezier(0.000, 0.000, 0.015, 0.995);
+        transition-timing-function: cubic-bezier(0.000, 0.000, 0.015, 0.995); /* custom */
 }
 
 .body_preloader {
@@ -148,17 +146,15 @@ body::-webkit-scrollbar {
 .body_loader {
     transform: translateY(0px);
     opacity: 0.8;
-    -webkit-transition: all 500ms cubic-bezier(0.000, 0.000, 0.390, 1.000);
-    -moz-transition: all 500ms cubic-bezier(0.000, 0.000, 0.390, 1.000);
-    -o-transition: all 500ms cubic-bezier(0.000, 0.000, 0.390, 1.000);
-    transition: all 500ms cubic-bezier(0.000, 0.000, 0.390, 1.000);
-    /* custom */
+   -webkit-transition: all 700ms cubic-bezier(0.000, 0.000, 0.015, 0.995);
+   -moz-transition: all 700ms cubic-bezier(0.000, 0.000, 0.015, 0.995);
+     -o-transition: all 700ms cubic-bezier(0.000, 0.000, 0.015, 0.995);
+        transition: all 700ms cubic-bezier(0.000, 0.000, 0.015, 0.995); /* custom */
 
-    -webkit-transition-timing-function: cubic-bezier(0.000, 0.000, 0.390, 1.000);
-    -moz-transition-timing-function: cubic-bezier(0.000, 0.000, 0.390, 1.000);
-    -o-transition-timing-function: cubic-bezier(0.000, 0.000, 0.390, 1.000);
-    transition-timing-function: cubic-bezier(0.000, 0.000, 0.390, 1.000);
-    /* custom */
+-webkit-transition-timing-function: cubic-bezier(0.000, 0.000, 0.015, 0.995);
+   -moz-transition-timing-function: cubic-bezier(0.000, 0.000, 0.015, 0.995);
+     -o-transition-timing-function: cubic-bezier(0.000, 0.000, 0.015, 0.995);
+        transition-timing-function: cubic-bezier(0.000, 0.000, 0.015, 0.995); /* custom */
 }
 
 .arrow_preloader {
@@ -169,17 +165,15 @@ body::-webkit-scrollbar {
 .arrow_loader {
     transform: translateY(0px);
     opacity: 0.87;
-    -webkit-transition: all 500ms cubic-bezier(0.000, 0.000, 0.390, 1.000);
-    -moz-transition: all 500ms cubic-bezier(0.000, 0.000, 0.390, 1.000);
-    -o-transition: all 500ms cubic-bezier(0.000, 0.000, 0.390, 1.000);
-    transition: all 500ms cubic-bezier(0.000, 0.000, 0.390, 1.000);
-    /* custom */
+    -webkit-transition: all 700ms cubic-bezier(0.000, 0.000, 0.015, 0.995);
+   -moz-transition: all 700ms cubic-bezier(0.000, 0.000, 0.015, 0.995);
+     -o-transition: all 700ms cubic-bezier(0.000, 0.000, 0.015, 0.995);
+        transition: all 700ms cubic-bezier(0.000, 0.000, 0.015, 0.995); /* custom */
 
-    -webkit-transition-timing-function: cubic-bezier(0.000, 0.000, 0.390, 1.000);
-    -moz-transition-timing-function: cubic-bezier(0.000, 0.000, 0.390, 1.000);
-    -o-transition-timing-function: cubic-bezier(0.000, 0.000, 0.390, 1.000);
-    transition-timing-function: cubic-bezier(0.000, 0.000, 0.390, 1.000);
-    /* custom */
+-webkit-transition-timing-function: cubic-bezier(0.000, 0.000, 0.015, 0.995);
+   -moz-transition-timing-function: cubic-bezier(0.000, 0.000, 0.015, 0.995);
+     -o-transition-timing-function: cubic-bezier(0.000, 0.000, 0.015, 0.995);
+        transition-timing-function: cubic-bezier(0.000, 0.000, 0.015, 0.995); /* custom */
 }
 
 .header_preloader {
@@ -200,6 +194,7 @@ body::-webkit-scrollbar {
 .icon_arrow {
     display: flex;
     margin-right: 8px;
+    opacity: 0.87;
 }
 
 @keyframes bounce {
@@ -256,6 +251,7 @@ body::-webkit-scrollbar {
 .arrow_body {
     font-family: 'Google Sans', sans-serif;
     font-size: 1.333rem;
+    margin-top: 6px;
 
     display: flex;
     color: #393939;
