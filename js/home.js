@@ -53,23 +53,15 @@
      }, 1800);
 
  /* Arrow animation */
- $('.home_arrow').hover(function () {
-     $(this).find('.icon_arrow *').css('animation-play-state', 'paused'),
-         $(this).find('.icon_arrow *').css('fill', '#2F75FF'), $(this).find('.icon_arrow').addClass("arrowRotate_home"),
-         $(this).find('.arrow_body').css('color', '#2F75FF'),
-         $(this).find('.arrow_body').css('opacity', 1.0);
- },
- function () {
-     $(this).find('.icon_arrow *').css('animation-play-state', ''),
-         $(this).find('.icon_arrow *').css('fill', '#585858'),
-         $(this).find('.icon_arrow').removeClass("arrowRotate_home"),
-         $(this).find('.arrow_body').css('color', '#393939'),
-         $(this).find('.arrow_body').css('opacity', 1.0);
- }).click(function () {
- //        console.log('10');
- $('html, body').animate({
-     scrollTop: $("#arrowScrollTo").offset().top
- }, 700);
- })
+//  $('.home_arrow').hover(function () {
+//      $(this).find('.icon_arrow *').css('animation-play-state', 'paused'),
+//  },
+//  function () {
+//      $(this).find('.icon_arrow *').css('animation-play-state', ''),
+//  }).click(function () {
+//  $('html, body').animate({
+//      scrollTop: $("#arrowScrollTo").offset().top
+//  }, 700);
+//  })
  /* Arrow animation */
  });

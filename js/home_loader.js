@@ -79,10 +79,34 @@ function preloaderIn() {
 
 function arrowHovered() {
     console.log("Hovered");
+    arrow.children[0].children[0].style.animationPlayState = "paused";
+    arrow.children[0].children[1].style.animationPlayState = "paused";
+
+    arrow.children[0].children[0].style.fill = "#2F75FF";
+    arrow.children[0].children[1].style.fill = "#2F75FF";
+
+    arrow.children[1].style.color = "#2F75FF";
+
+    arrow.children[0].classList.add("arrowRotate_home");
+
+    arrow.children[0].classList.remove("arrowRotateOrigin_home");
+
 }
 
 function arrowUnHovered() {
     console.log("UnHovered");
+
+    arrow.children[0].children[0].style.animationPlayState = "";
+    arrow.children[0].children[1].style.animationPlayState = "";
+
+    arrow.children[0].children[0].style.fill = "#393939";
+    arrow.children[0].children[1].style.fill = "#393939";
+
+    arrow.children[1].style.color = "#393939";
+    arrow.children[0].classList.remove("arrowRotate_home");
+    arrow.children[0].classList.add("arrowRotateOrigin_home");
+
+
 }
 
 function init() {
