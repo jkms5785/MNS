@@ -1,10 +1,9 @@
 const preloader = document.getElementById("js-preloader"),
     gifCont = document.getElementById("js-gifCont"),
-    homeGif = document.getElementById("js_homeGif"),
-    MNS = new Image();
+    homeGif = document.getElementById("js_homeGif");
 
-const materialAnd = document.querySelector("#js-material"),
-    titleFirst = document.querySelectorAll("#js-material span");
+    const materialAnd = document.querySelector("#js-material"),
+        titleFirst = document.querySelectorAll("#js-material span");
 
 const Solution = document.querySelector("#js-solution"),
     titleSecond = document.querySelectorAll("#js-solution span");
@@ -32,7 +31,9 @@ function arrowLoader() {
 function bodyLoader() {
     body.classList.remove("body_preloader");
     body.classList.add("body_loader");
-    arrowLoader();
+    setTimeout(function () {
+        arrowLoader();
+    }, 300);
 }
 
 function titleLoader_2(c) {
@@ -63,8 +64,8 @@ function titleLoader_1(c) {
 
 function preloaderOut() {
     setTimeout(function () {
-        homeGif.src = MNS.src;
         preloader.style.height = "0";
+        homeGif.style.opacity = "1.0";
         titleLoader_1(0);
         headerLoader();
     }, 1000);
@@ -72,8 +73,9 @@ function preloaderOut() {
 
 function preloaderIn() {
     preloader.style.top = "0";
-    MNS.src = "https://jkms5785.github.io/MaterialAndSolution/img/home_logo.gif";
-    MNS.onload = function () {
+    homeGif.src = "https://jkms5785.github.io/MaterialAndSolution/img/home_logo.gif";
+    homeGif.style.opacity = "0";
+    homeGif.onload = function () {
         setTimeout(function () {
             preloader.style.top = "200%";
             preloaderOut();
@@ -102,11 +104,14 @@ function arrowUnHovered() {
 }
 
 function init() {
-    setTimeout(function(){
-         preloaderIn();
-    },1000);
+    setTimeout(function () {
+        preloaderIn();
+    }, 1000);
+
     arrow.addEventListener("mouseover", arrowHovered);
     arrow.addEventListener("mouseleave", arrowUnHovered);
+    arrowLine.style.fill = "#393939";
+    arrowHead.style.fill = "#393939";
 }
 
 init();
