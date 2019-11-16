@@ -97,12 +97,14 @@ function preloaderIn() {
     preloader.style.top = "0";
 
     const gifDown = document.querySelector("#js-gifdown");
-    gifDown.src = "https://jkms5785.github.io/MaterialAndSolution/img/work_latup_m.gif";
-    gifDown.width = "0";
-    gifDown.height = "0";
-    gifDown.style.opacity = "0";
+    let testImg = new Image();
+    testImg.src = "https://jkms5785.github.io/MaterialAndSolution/img/work_latup_m.gif";
+    // gifDown.src = "https://jkms5785.github.io/MaterialAndSolution/img/work_latup_m.gif";
+    // gifDown.width = "0";
+    // gifDown.height = "0";
+    // gifDown.style.opacity = "0";
 
-    gifDown.onload = function () {
+    testImg.onload = function () {
         setTimeout(function () {
             preloader.style.top = "200%";
             preloaderOut();
