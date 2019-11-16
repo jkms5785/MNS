@@ -1,5 +1,4 @@
 var canvas = document.getElementById('canvas');
-// console.log(canvas);
 canvas.width = window.innerWidth;
 canvas.height = 790;
 
@@ -77,9 +76,7 @@ class Ball {
             this._radius = this._radius
 
         }
-
         if (this._x + this._radius > canvas.width || this._x - this._radius < 0) this._dx = -this._dx
-
         if (this._dy < 0.5 && this._dy > -5.5)
             this._dy = 0;
         if (Math.abs(this._dx) < 2.1)
@@ -88,15 +85,14 @@ class Ball {
         this._y += this._dy
         this._x += this._dx
         this.draw()
-    
     }
 }
 
 function PopupBall2() {
-    var blueQue = document.getElementsByClassName('wrap_blue');
+    var blueQue = document.querySelector('#js-message');
     var scrollanchor = window.scrollY,
-        QueHeight = blueQue[0].offsetHeight,
-        blueQueTop = blueQue[0].offsetTop;
+        QueHeight = blueQue.offsetHeight,
+        blueQueTop = blueQue.offsetTop;
 
     if (scrollanchor >= blueQueTop - window.innerHeight + 600) {
         init2();
@@ -104,15 +100,8 @@ function PopupBall2() {
     }
 }
 
-// function BallPop() {
-//         var radius =
-//             (Math.floor(Math.random() * 10) + 7) * 8,
-//             x, y,
-//             dx = (Math.random() - 0.5) * 50,
-//             dy = -22,
-//             color = 'rgba(47,117,255,' + generateRandom(3, 8) / 10 + ')'
+function init() {
+    window.addEventListener('scroll', PopupBall2);
+}
 
-//         ballsArr.push(new Ball(x, y, dx, dy, radius, color))
-// }
-
-window.addEventListener('scroll', PopupBall2);
+init();

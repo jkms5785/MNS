@@ -1,5 +1,5 @@
 const work = document.getElementsByClassName("js-thumbnail"),
-    workLength = work.length;
+     workLength = work.length;
 
 function Que() {
     let img = this.children[0].children[0],
@@ -12,9 +12,8 @@ function Que() {
     viewProject.classList.add("viewProjectHovered");
 
     if (this == work[1]) {
-        work[1].firstChild.children[0].src = images[0].src;
+        img.src = "https://jkms5785.github.io/MaterialAndSolution/img/work_latup_m.gif";
     }
-
 }
 
 function Stop() {
@@ -28,25 +27,30 @@ function Stop() {
     viewProject.classList.remove("viewProjectHovered");
 
     if (this == work[1]) {
-        work[1].firstChild.children[0].src =  "img/work_latup.png"
+        img.src = "https://jkms5785.github.io/MaterialAndSolution/img/work_latup.png";
     }
-
 }
 
-const images = [];
+function workLoader() {
+    let scrolled = window.scrollY;
+    const scrollobject = document.getElementsByClassName('js-workUp'),
+        workLength = scrollobject.length;
 
-function imgLoad() {
-    images[0] = new Image();
-    images[0].src = "img/work_latup_m.gif";
+    for (k = 0; k < workLength; k++) {
+        let scrollQue = scrollobject[k].offsetTop - window.innerHeight;
+        if ((Math.ceil(scrolled) - 1024) + 600 >= (scrollobject[k].offsetTop + 120)) {
+            scrollobject[k].classList.remove('slideOrigin');
+            scrollobject[k].classList.add('slideUp');
+        }
+    }
 }
 
 function init() {
-    var i = 0;
     for (i = 0; i < workLength; i++) {
         work[i].addEventListener("mouseover", Que);
         work[i].addEventListener("mouseleave", Stop);
     }
-    imgLoad();
+    window.addEventListener('scroll', workLoader);
 }
 
 init();

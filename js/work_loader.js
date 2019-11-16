@@ -14,15 +14,15 @@ const body1 = document.querySelector("#js-body1"),
 
 const header = document.querySelector("header");
 
-const workAni = document.querySelector("#js-workAni");
-
-const clickGuide = document.querySelector("#js-clickGuide");
-
 const arrow = document.querySelector("#js-arrow"),
     arrowCont = arrow.children[0],
     arrowBody = arrow.children[1],
     arrowLine = arrow.children[0].children[0],
     arrowHead = arrow.children[0].children[1];
+
+const workAni = document.querySelector("#js-workAni");
+
+const clickGuide = document.querySelector("#js-clickGuide");
 
 function headerLoader() {
     header.classList.remove("header_preloader");
@@ -95,13 +95,19 @@ function preloaderOut() {
 
 function preloaderIn() {
     preloader.style.top = "0";
-    // MNS.src = "https://jkms5785.github.io/MaterialAndSolution/img/home_logo.gif";
-    // MNS.onload = function () {
-    setTimeout(function () {
-        preloader.style.top = "200%";
-        preloaderOut();
-    }, 1000);
-    // }
+
+    const gifDown = document.querySelector("#js-gifdown");
+    gifDown.src = "https://jkms5785.github.io/MaterialAndSolution/img/work_latup_m.gif";
+    gifDown.width = "0";
+    gifDown.height = "0";
+    gifDown.style.opacity = "0";
+
+    gifDown.onload = function () {
+        setTimeout(function () {
+            preloader.style.top = "200%";
+            preloaderOut();
+        }, 1000);
+    }
 }
 
 function arrowHovered() {
@@ -122,8 +128,14 @@ function arrowUnHovered() {
     arrowCont.classList.remove("arrowRotate");
 }
 
-function scrollTo(){
-    console.log(1);
+function scrollTo() {
+    const scrollTarget = document.querySelector("#js-scrollTo");
+    const scrollY = scrollTarget.offsetTop;
+
+    window.scroll({
+        top: scrollY - 60,
+        behavior: "smooth"
+    })
 }
 
 function init() {
@@ -132,7 +144,7 @@ function init() {
     }, 1000);
     arrow.addEventListener("mouseover", arrowHovered);
     arrow.addEventListener("mouseleave", arrowUnHovered);
-    arrow.addEventListener("click" ,scrollTo );
+    arrow.addEventListener("click", scrollTo);
     arrowLine.style.fill = "#393939";
     arrowHead.style.fill = "#393939";
 }
