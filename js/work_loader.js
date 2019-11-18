@@ -1,7 +1,6 @@
 const preloader = document.getElementById("js-preloader"),
     gifCont = document.getElementById("js-gifCont"),
-    homeGif = document.getElementById("js_homeGif"),
-    MNS = new Image();
+    homeGif = document.getElementById("js_homeGif");
 
 const materialAnd = document.querySelector("#js-material"),
     titleFirst = document.querySelectorAll("#js-material span");
@@ -23,6 +22,8 @@ const arrow = document.querySelector("#js-arrow"),
 const workAni = document.querySelector("#js-workAni");
 
 const clickGuide = document.querySelector("#js-clickGuide");
+
+const workImage = document.querySelectorAll(".js-workImage");
 
 function headerLoader() {
     header.classList.remove("header_preloader");
@@ -86,28 +87,28 @@ function titleLoader_1(c) {
 
 function preloaderOut() {
     setTimeout(function () {
-        // homeGif.src = MNS.src;
         preloader.style.height = "0";
         titleLoader_1(0);
         headerLoader();
     }, 1000);
 }
 
+function workImageLoader() {
+    workImage[0].src = "https://jkms5785.github.io/MaterialAndSolution/img/work_muto.png";
+    workImage[1].src = "https://jkms5785.github.io/MaterialAndSolution/img/work_latup.png";
+    workImage[2].src = "https://jkms5785.github.io/MaterialAndSolution/img/work_grayblock.png";
+}
+
 function preloaderIn() {
     preloader.style.top = "0";
+    let GifImg = new Image();
+    GifImg.src = "https://jkms5785.github.io/MaterialAndSolution/img/work_latup_m.gif";
 
-    const gifDown = document.querySelector("#js-gifdown");
-    let testImg = new Image();
-    testImg.src = "https://jkms5785.github.io/MaterialAndSolution/img/work_latup_m.gif";
-    // gifDown.src = "https://jkms5785.github.io/MaterialAndSolution/img/work_latup_m.gif";
-    // gifDown.width = "0";
-    // gifDown.height = "0";
-    // gifDown.style.opacity = "0";
-
-    testImg.onload = function () {
+    GifImg.onload = function () {
         setTimeout(function () {
             preloader.style.top = "200%";
             preloaderOut();
+            workImageLoader();
         }, 1000);
     }
 }
