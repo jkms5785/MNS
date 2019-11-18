@@ -1,6 +1,8 @@
 const preloader = document.getElementById("js-preloader");
 const header = document.querySelector("header");
 
+const thumnbnail = document.querySelector("#js-thumbnail");
+
 function headerLoader() {
     header.classList.remove("header_preloader");
     header.classList.add("header_loader");
@@ -20,19 +22,21 @@ function profileLoader() {
 
 function preloaderIn() {
     preloader.style.top = "0";
-    // const insertImg = document.createElement("img");
-    // profileCont.appendChild(insertImg);
-    // insertImg.src = "https://jkms5785.github.io/MaterialAndSolution/img/profile.png";
-    // insertImg.alt = "MOONSOO-profile";
+    const img = document.createElement("img");
+    thumnbnail.appendChild(img);
+    console.dir(thumnbnail);
+    thumnbnail.children[0].src = "https://jkms5785.github.io/MaterialAndSolution/img/muto_source/muto_thumbnail.png";
+    // img.src = "https://jkms5785.github.io/MaterialAndSolution/img/muto_source/muto_thumbnail.png";
+    // img.alt = "muto-thumbanil";
     // insertImg.id = "profileLoaded";
     // const profileImg = document.querySelector("#profileLoaded");
 
-    // profileImg.onload = function () {
+    thumnbnail.children[0].onload = function () {
         setTimeout(function () {
             preloader.style.top = "200%";
             preloaderOut();
         }, 1000);
-    // }
+    }
 }
 
 function init() {

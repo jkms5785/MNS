@@ -2,6 +2,16 @@ body {
     background-color: #F8F8F8;
 }
 
+.header_preloader {
+    opacity: 0.2;
+    top: -80px;
+}
+
+.header_loader {
+    opacity: 1;
+    top: 0;
+}
+
 .preloader {
     position: absolute;
     width: 100%;
@@ -213,9 +223,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 1.5rem;
-    padding-bottom: 32px;
 }
-
 
 .overview_title_2 {
     width: 100%;
@@ -224,7 +232,6 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 1.5rem;
-    padding-bottom: 32px;
 }
 
 .body_kr {
@@ -455,4 +462,35 @@ iframe {
     margin-bottom: 12%;
 }
 
-/*        exhibition*/
+.mg_cont {
+    width: 100%;
+}
+
+.mg_width {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.mg_24 {
+    padding-top: 1.875%;
+}
+
+.mg_48 {
+    padding-top: 3.75%;
+}
+
+.mg_64 {
+    padding-top: 5%;
+}
+
+.mg_40 {
+    padding-top: 3.125%;
+}
+
+.mg_80 {
+    padding-top: 6.25%;
+}
+
+.mg_120 {
+    padding-top: 9.375%;
+}
