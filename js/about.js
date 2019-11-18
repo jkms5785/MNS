@@ -1,66 +1,113 @@
-//  window.onload = function () {
+const about = document.querySelectorAll(".js-info"),
+    num = document.querySelectorAll(".js-num"),
+    body = document.querySelectorAll(".js-resuemeQue"),
+    line = document.querySelectorAll(".js-line");
 
-    //  var ResumeTitle = $('.resume_title'),
-    //      ResumeBody = $('.resume_body'),
-    //      ResumeLine = $('.resume_Line'),
-    //      ResumeNum = $('.resume_num');
+function ResumeBodyDown(i) {
+    line[i].classList.remove("lineTo");
+    num[i].classList.add('resume_num');
+    num[i].classList.remove('resume_numUp');
 
-    //  var hoverCounter = 0;
+    let length = body[i].children.length;
 
-    //  function ResumeHover() {
-    //      if (hoverCounter == 0) {
-    //          hoverCounter = 3;
+    function skillDown() {
+        if (i < 3) {
+            for (l = 0; l < length; l++) {
+                body[i].children[l].classList.add("ResumeSlideDown");
+            }
+        } else {
+            let length2 = body[i + 1].children.length,
+                length3 = body[i + 2].children.length;
+            for (l = 0; l < length; l++) {
+                body[i].children[l].classList.add("ResumeSlideDown");
+            }
+            for (l = 0; l < length2; l++) {
+                body[i + 1].children[l].classList.add("ResumeSlideDown");
+            }
+            for (l = 0; l < length3; l++) {
+                body[i + 2].children[l].classList.add("ResumeSlideDown");
+            }
+        }
+    }
 
-    //          var o = ResumeTitle.index(this),
-    //              ResumeBodyChild = ResumeBody.eq(o),
-    //              childLength = ResumeBodyChild.find('.ResumeQue').length;
+    skillDown(i);
+}
 
-    //          var t = 0;
-    //          for (t = 0; t < childLength; t++) {
-    //              (function (x) {
-    //                  setTimeout(function () {
-    //                      ResumeBodyChild.find('.ResumeQue ').eq(x).addClass('ResumeSlideUp');
-    //                      ResumeBodyChild.find('.ResumeQue ').eq(x).removeClass('ResumeSlideDown');
-    //                  }, 20 * x, 'easeInOutQuad');
-    //              })(t);
-    //          }
-    //          ResumeLine.eq(o).stop().animate({
-    //              width: "100%"
-    //          }, 850, "easeOutQuad");
+function ResumeBodyUp(i) {
+    num[i].classList.remove('resume_num');
+    num[i].classList.add('resume_numUp');
+    line[i].classList.add("lineTo");
+    let length = body[i].children.length;
 
-    //          ResumeNum.eq(o).removeClass('resume_num');
-    //          ResumeNum.eq(o).addClass('resume_numUp');
+    let c = 0;
 
-    //          setTimeout(function () {
-    //              hoverCounter = 1;
-    //          }, 500)
-    //      }
-    //  }
+    if (i + 1 < about.length) {
+        function bodyUp(e) {
+            if (c < e) {
+                setTimeout(function () {
+                    body[i].children[c].classList.remove("ResumeSlideDown");
+                    c++;
+                    bodyUp(e);
+                }, 20);
+            }
+        }
+        bodyUp(length);
+    } else if (i + 1 == about.length) {
+        let length2 = body[i + 1].children.length,
+            length3 = body[i + 2].children.length;
 
-    //  function ResumeHoverOut() {
+        function SkillUp1(e) {
+            if (c < e) {
+                setTimeout(function () {
+                    body[i].children[c].classList.remove("ResumeSlideDown");
+                    c++;
+                    SkillUp1(e);
+                }, 20);
+            } else {
+                c = 0;
+                SkillUp2(length2);
+            }
+        }
 
-    //      if (hoverCounter == 1) {
+        function SkillUp2(b) {
+            if (c < b) {
+                setTimeout(function () {
+                    body[i + 1].children[c].classList.remove("ResumeSlideDown");
+                    c++;
+                    SkillUp2(b);
+                }, 20);
+            } else {
+                c = 0;
+                SkillUp3(length3);
+            }
+        }
 
-            //  var o = $('.resume_title').index(this);
-            //  var ResumeBodyChild = ResumeBody.eq(o);
+        function SkillUp3(t) {
+            if (c < t) {
+                setTimeout(function () {
+                    body[i + 2].children[c].classList.remove("ResumeSlideDown");
+                    c++;
+                    SkillUp3(t);
+                }, 35);
+            }
+        }
+        SkillUp1(length);
+    }
+}
 
-            //  ResumeLine.eq(o).stop().animate({
-            //      width: "0%"
-            //  }, 850, "easeOutQuad");
+function init() {
+    for (i = 0; i < about.length; i++) {
+        about[i].index = i;
+        about[i].addEventListener("mouseover", function (e) {
+            let indexValue = e.target.index;
+            ResumeBodyUp(indexValue);
+        }, false);
 
-            //  $('.ResumeQue').removeClass('ResumeSlideUp');
-            //  $('.ResumeQue').addClass('ResumeSlideDown');
+        about[i].addEventListener("mouseleave", function (e) {
+            let indexValue = e.target.index;
+            ResumeBodyDown(indexValue);
+        }, false);
+    }
+}
 
-            //  ResumeNum.eq(o).addClass('resume_num');
-            //  ResumeNum.eq(o).removeClass('resume_numUp');
-
-//              setTimeout(function () {
-//                  hoverCounter = 0;
-//              }, 500)
-//          }
-
-//      }
-
-//      ResumeTitle.hover(ResumeHover, ResumeHoverOut);
-
-//  }
+init();

@@ -49,9 +49,7 @@ function fd_scroll() {
     window.scrollTo(0, fd_tg_Top - 100);
 }
 
-
 var si = document.getElementsByClassName('sc_des');
-
 
 function init() {
         sc[0].addEventListener('click', ov_scroll),

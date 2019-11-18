@@ -12,16 +12,32 @@ const body1 = document.querySelector("#js-body1"),
 
 const header = document.querySelector("header");
 
-const profile = document.querySelector("#js-profile");
+const profileCont = document.querySelector("#js-profile");
 
 function headerLoader() {
     header.classList.remove("header_preloader");
     header.classList.add("header_loader");
 }
 
-function bodyLoader() {
+function bodyLoader3() {
+    body3.classList.remove("body_preloader");
+    body3.classList.add("body_loader");
+}
+
+function bodyLoader2() {
+    body2.classList.remove("body_preloader");
+    body2.classList.add("body_loader");
+     setTimeout(function () {
+         bodyLoader3();
+    }, 300);
+}
+
+function bodyLoader1() {
     body1.classList.remove("body_preloader");
     body1.classList.add("body_loader");
+     setTimeout(function () {
+         bodyLoader2();
+    }, 300);
 }
 
 function titleLoader_2(c) {
@@ -33,7 +49,7 @@ function titleLoader_2(c) {
             titleLoader_2(c);
         }, 8);
     } else if (c === Solution.childElementCount) {
-        bodyLoader();
+        bodyLoader1();
     }
 }
 
@@ -53,18 +69,27 @@ function titleLoader_1(c) {
 function preloaderOut() {
     setTimeout(function () {
         preloader.style.height = "0";
-        // homeGif.style.opacity = "1.0";
         titleLoader_1(0);
         headerLoader();
+        profileLoader();
     }, 1000);
+}
+
+function profileLoader() {
+    profileCont.classList.remove("photo_preloader");
+    profileCont.classList.add("photo_loader");
 }
 
 function preloaderIn() {
     preloader.style.top = "0";
-    // homeGif.style.opacity = "0";
-    profile.src = "https://jkms5785.github.io/MaterialAndSolution/img/profile.png"
-    console.dir(profile);
-    profile.onload = function () {
+    const insertImg = document.createElement("img");
+    profileCont.appendChild(insertImg);
+    insertImg.src = "https://jkms5785.github.io/MaterialAndSolution/img/profile.png";
+    insertImg.alt = "MOONSOO-profile";
+    insertImg.id = "profileLoaded";
+    const profileImg = document.querySelector("#profileLoaded");
+
+    profileImg.onload = function () {
         setTimeout(function () {
             preloader.style.top = "200%";
             preloaderOut();
