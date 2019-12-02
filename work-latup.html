@@ -8,10 +8,9 @@
     <link rel="icon" type="image/png" sizes="32x32" href="MNS-fabi.ico">
 
     <link rel="stylesheet" href="css/footer_header_b.css">
-    <link rel="stylesheet" href="css/work.css">
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/latup_work.css">
-    <link rel="stylesheet" href="css/side_bar_2.css">
+    <link rel="stylesheet" href="css/latup/latup_work.css">
+    <link rel="stylesheet" href="css/latup/latup_side_bar.css">
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
@@ -53,11 +52,7 @@
         </div>
     </header>
 
-    <!--  헤더-->
-
-    <div class="preloader"></div>
-
-    <!--  preloader  -->
+    <div id="js-preloader" class="preloader"></div>
 
     <div class="side_bt">
         <ul>
@@ -86,12 +81,24 @@
     <!--    side bt-->
 
     <div class="thumbnail">
-       <img src="img/latup_source/latup_main.png" alt="">
+       <img id="js-img-thumbnail" src="" alt="thumbnail">
     </div>
 
-    <div class="detail_wrap intro_margin">
-        <div class="detail_margin">
-            <div class="detail_cont">
+     <div class="mg_cont">
+        <div class="mg_width">
+            <div class="mg_120"></div>
+        </div>
+    </div>
+
+    <div class="mg_cont">
+        <div class="mg_width">
+            <div class="mg_80"></div>
+        </div>
+    </div>
+
+    <div class="wrap">
+        <div class="margin">
+            <div class="cont">
                 <div class="overview_cont">
                     <div class="intro_cont">
                         <div class="intro_title">
@@ -162,23 +169,20 @@
         </div>
     </div>
 
-    <div class="detail_wrap" id="ov_tg">
-        <div class="detail_margin overview_img_margin">
-            <div class="detail_cont">
-                <div class="research_cont background_img">
+    <div class="wrap" id="ov_tg">
+        <div class="margin">
+            <div class="cont">
+                <div class="img_cont background_img">
                     <img src="img/latup_source/overview.png" alt="">
                 </div>
             </div>
         </div>
     </div>
 
-
-    <div class="hr_b"></div>
-
-    <div class="detail_wrap">
-        <div class="detail_margin">
-            <div class="detail_cont">
-                <div class="overview_title">
+    <div class="wrap">
+        <div class="margin">
+            <div class="cont">
+                <div class="title">
                     <p>
                         overview</p>
                 </div>
@@ -186,11 +190,11 @@
         </div>
     </div>
 
-    <div class="detail_wrap">
-        <div class="detail_margin">
-            <div class="detail_cont">
-                <div class="overview_text_cont">
-                    <div class="overview_body">
+    <div class="wrap">
+        <div class="margin">
+            <div class="cont">
+                <div class="text_cont">
+                    <div class="body">
                         <div class="body_kr">
                             <p>
                                 어깨 깡패라는 말이 있듯이 넓은 어깨와 등은 우리 사회에서 많은 이들이 선호하는 체형이 되었습니다. 특히나 많은 남성이 넓은 어깨와 등을 가지기 위해 턱걸이 운동을 하고 있습니다. 하지만 다른 운동처럼 턱걸이 또한 지루하고, 때로는 정확한 자세가 필요하기에, 많은 이들이 턱걸이 운동기구를 사용하지 않고, 옷걸이로 사용하고만 있습니다.
@@ -214,22 +218,20 @@
         </div>
     </div>
 
-    <div class="panel_wrap scene_margin">
-        <div class="detail_margin">
-            <div class="detail_cont_s">
-                <div class="panel_cont overview_img">
+    <div class="wrap">
+        <div class="margin">
+            <div class="cont_s">
+                <div class="img_cont overview">
                     <img src="img/latup_source/teaser.png" alt="">
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="hr_down"></div>
-
-    <div class="detail_wrap gray" id="rs_tg">
-        <div class="detail_margin">
-            <div class="detail_cont">
-                <div class="overview_title">
+    <div class="wrap gray" id="rs_tg">
+        <div class="margin">
+            <div class="cont">
+                <div class="title">
                     <p>
                         User Research</p>
                 </div>
@@ -237,21 +239,21 @@
         </div>
     </div>
 
-    <div class="detail_wrap gray">
-        <div class="detail_margin">
-            <div class="detail_cont">
-                <div class="research_cont finding">
+    <div class="wrap gray">
+        <div class="margin">
+            <div class="cont">
+                <div class="img_cont finding">
                     <img src="img/latup_source/research.png" alt="">
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="detail_wrap body_margin gray">
-        <div class="detail_margin">
-            <div class="detail_cont">
-                <div class="overview_text_cont">
-                    <div class="overview_body">
+    <div class="wrap gray">
+        <div class="margin">
+            <div class="cont">
+                <div class="text_cont">
+                    <div class="body">
                         <div class="body_kr">
                             <p>
                                 풀업 운동 기구를 소유하고, 운동하는 학생들을 인터뷰하여, 현재 운동 경험에 대해서 질문하였습니다. 많은 이들이 운동의 지루함에 대해 말하였고, 자신의 자세가 정확한지 알 수 없다고 말하였습니다. 또한, 그들이 풀업의 다양한 그립 방법이 있음에도 활용하지 못함을 알 수 있었습니다.
@@ -276,12 +278,10 @@
         </div>
     </div>
 
-    <div class="hr_up"></div>
-
-    <div class="detail_wrap">
-        <div class="detail_margin">
-            <div class="detail_cont">
-                <div class="overview_title">
+    <div class="wrap">
+        <div class="margin">
+            <div class="cont">
+                <div class="title">
                     <p>
                         Service Structure</p>
                 </div>
@@ -289,22 +289,20 @@
         </div>
     </div>
 
-    <div class="detail_wrap">
-        <div class="detail_margin">
-            <div class="detail_cont">
-                <div class="research_cont servStruc">
+    <div class="wrap">
+        <div class="margin">
+            <div class="cont">
+                <div class="img_cont servStruc">
                     <img src="img/latup_source/servComp.png" alt="">
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="hr_down"></div>
-
-    <div class="detail_wrap gray" id="dp_tg">
-        <div class="detail_margin">
-            <div class="detail_cont">
-                <div class="overview_title">
+    <div class="wrap gray" id="dp_tg">
+        <div class="margin">
+            <div class="cont">
+                <div class="title">
                     <p>
                         Design Process</p>
                 </div>
@@ -312,38 +310,31 @@
         </div>
     </div>
 
-
-    <div class="detail_wrap gray">
-        <div class="detail_margin">
-            <div class="detail_cont">
-                <div class="research_cont process">
+    <div class="wrap gray">
+        <div class="margin">
+            <div class="cont">
+                <div class="img_cont process">
                     <img src="img/latup_source/process.png" alt="">
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="detail_wrap body_margin gray">
-        <div class="detail_margin">
-            <div class="detail_cont">
-                <div class="overview_text_cont">
-                    <div class="overview_body">
+    <div class="wrap gray">
+        <div class="margin">
+            <div class="cont">
+                <div class="text_cont">
+                    <div class="body">
                         <div class="body_kr">
                             <p>
                                 디자인을 전개하면서 모바일 디바이스와 제품의 자연스러운 결합과 제품의 구조에 대해 많은 고민이 있었습니다. 이를 해결하기 위해 수많은 실물 모형 제작과 UI 스케치를 진행하였습니다.
                                 뿐만 아니라, 디자인 과정에 사용자 테스트 과정을 거쳐 UI와 인터랙션을 개선 시키고, 디자인 방향을 수정하였습니다.
-                                <br><br>
-                                이어서 몇가지 주요 프로세스를 설명하겠습니다.
                             </p>
-
                         </div>
 
                         <div class="body_en">
                             <p>
                                 As we developed the design, we had a lot of concerns about the natural combination of mobile devices and products and the structure of the product. To solve this problem, we've done a lot of mock-ups and UI sketches. In addition, we improved UI and interaction and modified design direction through user testing in the design process.
-
-                                <br><br>
-                                The following is a description of some of the key processes.
                             </p>
                         </div>
                     </div>
@@ -352,12 +343,10 @@
         </div>
     </div>
 
-    <div class="hr_up"></div>
-
-    <div class="detail_wrap ut_margin" id="ut_tg">
-        <div class="detail_margin">
-            <div class="detail_cont">
-                <div class="overview_title">
+    <div class="wrap" id="ut_tg">
+        <div class="margin">
+            <div class="img_cont">
+                <div class="title">
                     <p>
                         User Test</p>
                 </div>
@@ -365,21 +354,21 @@
         </div>
     </div>
 
-    <div class="detail_wrap">
-        <div class="detail_margin">
-            <div class="detail_cont">
-                <div class="research_cont ut">
+    <div class="wrap">
+        <div class="margin">
+            <div class="cont">
+                <div class="img_cont ut">
                     <img src="img/latup_source/useTest.png" alt="">
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="detail_wrap body_margin_2">
-        <div class="detail_margin">
-            <div class="detail_cont">
-                <div class="overview_text_cont">
-                    <div class="overview_body">
+    <div class="wrap">
+        <div class="margin">
+            <div class="cont">
+                <div class="text_cont">
+                    <div class="body">
                         <div class="body_kr">
                             <p>
                                 제품의 사용성과 사용자 경험을 개선하기 위해 2명의 참여자를 대상으로 러프한 인터랙션 UI 테스트를 진행하였습니다. 테스트 과정을 통해 더 정교한 제품의 구조, UI 플로우에 대해 알수 있었습니다. 테스트 과정을 통해 제품의 구조를 발전시킬 수 있었고, UI를 명확하게 디자인할 수 있었습니다.
@@ -399,38 +388,35 @@
         </div>
     </div>
 
-    <div class="hr_down"></div>
-
-    <div class="detail_wrap gray" id="di_tg">
-        <div class="detail_margin">
-            <div class="detail_cont">
-                <div class="overview_title">
+    <div class="wrap gray" id="di_tg">
+        <div class="margin">
+            <div class="cont">
+                <div class="title">
                     <p>
                         Design Iterations</p>
                 </div>
             </div>
         </div>
     </div>
-    <div class="panel_wrap gray">
-        <div class="detail_margin">
-            <div class="detail_cont">
-                <div class="research_cont iterations_cont_01">
+    <div class="wrap gray">
+        <div class="margin">
+            <div class="cont">
+                <div class="img_cont iterations_01">
                     <img src="img/latup_source/iteration_1.png" alt="">
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="detail_wrap body_margin_2 gray">
-        <div class="detail_margin">
-            <div class="detail_cont">
-                <div class="overview_text_cont">
-                    <div class="overview_body">
+    <div class="wrap gray">
+        <div class="margin">
+            <div class="cont">
+                <div class="text_cont">
+                    <div class="body">
                         <div class="body_kr">
                             <p>
                                 테스트 과정에서 사용자의 시선에서 UI가 가려짐을 알 수 있었습니다. 이를 해결하기 위해 제품과 모바일 디바이스의 결합부를 15도가량 전면으로 기울여 스크린의 명시성과 제품과 모바일 디바이스의 자연스러운 결합을 유도 하였습니다.
                             </p>
-
                         </div>
 
                         <div class="body_en">
@@ -445,29 +431,25 @@
         </div>
     </div>
 
-    <div class="hr_g"></div>
-
-    <div class="panel_wrap di_margin gray">
-        <div class="detail_margin">
-            <div class="detail_cont">
-                <div class="research_cont iterations_cont_02">
+    <div class="wrap gray">
+        <div class="margin">
+            <div class="cont">
+                <div class="img_cont iterations_02">
                     <img src="img/latup_source/iteration_2.png" alt="">
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="detail_wrap body_margin_2 gray">
-        <div class="detail_margin">
-            <div class="detail_cont">
-                <div class="overview_text_cont">
-                    <div class="overview_body">
+    <div class="wrap gray">
+        <div class="margin">
+            <div class="cont">
+                <div class="text_cont">
+                    <div class="body">
                         <div class="body_kr">
                             <p>
-                                또한, 기존의 가로형 UI에서의 운동 수행 화면이 가시성이 떨어지고 구조적인 문제 또한 발생하였기에 이를 세로형으로 수정하여 운동 수행 중 명확한 피드백을 사용자에게 전달할 수 있었습니다.
-
+                                기존의 가로형 UI에서의 운동 수행 화면이 가시성이 떨어지고 구조적인 문제 또한 발생하였기에 이를 세로형으로 수정하여 운동 수행 중 명확한 피드백을 사용자에게 전달할 수 있었습니다.
                             </p>
-
                         </div>
 
                         <div class="body_en">
@@ -481,12 +463,10 @@
         </div>
     </div>
 
-    <div class="hr_up"></div>
-
-    <div class="detail_wrap" id="pd_tg">
-        <div class="detail_margin">
-            <div class="detail_cont">
-                <div class="overview_title">
+    <div class="wrap" id="pd_tg">
+        <div class="margin">
+            <div class="cont">
+                <div class="title">
                     <p>
                         Product Interaction prototype</p>
                 </div>
@@ -494,33 +474,29 @@
         </div>
     </div>
 
-    <div class="panel_wrap pd_prototype_margin">
-        <div class="detail_margin">
-            <div class="detail_cont">
-                <div class="research_cont pd_prototype">
+    <div class="wrap">
+        <div class="margin">
+            <div class="cont">
+                <div class="img_cont pd_prototype">
                     <img src="img/latup_source/IxPrototype.png" alt="">
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="hr_b"></div>
-
-    <div class="detail_wrap body_margin">
-        <div class="detail_margin">
-            <div class="detail_cont">
-                <div class="overview_text_cont">
-                    <div class="overview_body">
+    <div class="wrap">
+        <div class="margin">
+            <div class="cont">
+                <div class="text_cont">
+                    <div class="body">
                         <div class="body_kr">
                             <p>
                                 제품의 인터랙션을 아두이노를 이용해 프로토타입으로 제작하였습니다. 마그네틱 센서를 이용해 그립너비 조정과, 제품의 가운데에 위치한 적외선센서와 사용자와의 거리를 측정해 풀업 횟수를 카운팅하도록 설계 하였습니다.
                             </p>
-
                         </div>
 
                         <div class="body_en">
                             <p>
-
                                 We used Aduino to create an interaction prototype. It is designed to adjust grip width using magnetic sensor and count the number of pull-ups by measuring thedistance between the infrared sensor located in the center of the product and the user.
                             </p>
                         </div>
@@ -530,12 +506,10 @@
         </div>
     </div>
 
-    <div class="hr_down"></div>
-
-    <div class="detail_wrap gray" id="pd_tg">
-        <div class="detail_margin">
-            <div class="detail_cont">
-                <div class="overview_title">
+    <div class="wrap gray" id="pd_tg">
+        <div class="margin">
+            <div class="cont">
+                <div class="title">
                     <p>
                         Design</p>
                 </div>
@@ -543,24 +517,22 @@
         </div>
     </div>
 
-    <div class="panel_wrap gray">
-        <div class="detail_margin">
-            <div class="detail_cont">
-                <div class="research_cont designEle">
+    <div class="wrap gray">
+        <div class="margin">
+            <div class="cont">
+                <div class="img_cont elements">
                     <img src="img/latup_source/designEle.png" alt="">
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="hr_up"></div>
-
     <!--app/product panel-->
 
-    <div class="detail_wrap" id="fd_tg">
-        <div class="detail_margin">
-            <div class="detail_cont">
-                <div class="overview_title">
+    <div class="_wrap" id="fd_tg">
+        <div class="margin">
+            <div class="cont">
+                <div class="title">
                     <p>
                         Solution</p>
                 </div>
@@ -568,118 +540,96 @@
         </div>
     </div>
 
-    <div class="panel_wrap">
-        <div class="detail_margin">
-            <div class="detail_cont">
-                <div class="panel_cont panel_cont_1">
+    <div class="wrap">
+        <div class="margin">
+            <div class="cont">
+                <div class="img_cont panel_cont_1">
                     <img src="img/latup_source/selectWorkout.gif" alt="">
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="hr_b"></div>
-
-    <div class="panel_wrap">
-        <div class="detail_margin">
-            <div class="detail_cont">
-                <div class="panel_cont panel_cont_2">
+    <div class="wrap">
+        <div class="margin">
+            <div class="cont">
+                <div class="img_cont panel_cont_2">
                     <img src="img/latup_source/docking.png" alt="">
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="hr_b"></div>
-
-    <div class="panel_wrap">
-        <div class="detail_margin">
-            <div class="detail_cont">
-                <div class="panel_cont panel_cont_3">
+    <div class="wrap">
+        <div class="margin">
+            <div class="cont">
+                <div class="img_cont panel_cont_3">
                     <iframe src="https://player.vimeo.com/video/364471804?autoplay=1&loop=1&autopause=0&quality=2K&muted=1" width="100%" height="820" allow="autoplay; fullscreen" frameborder="0" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="hr_b"></div>
-
-
-    <div class="panel_wrap">
-        <div class="detail_margin">
-            <div class="detail_cont">
-                <div class="panel_cont panel_cont_4">
+    <div class="wrap">
+        <div class="margin">
+            <div class="cont">
+                <div class="img_cont panel_cont_4">
                     <iframe src="https://player.vimeo.com/video/364004115?autoplay=1&loop=1&autopause=0&quality=2K&muted=1" width="100%" height="880" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="hr_b"></div>
-
-
-    <div class="panel_wrap">
-        <div class="detail_margin">
-            <div class="detail_cont">
-                <div class="panel_cont panel_cont_5">
+    <div class="wrap">
+        <div class="margin">
+            <div class="cont">
+                <div class="img_cont panel_cont_5">
                     <iframe src="https://player.vimeo.com/video/364283538?autoplay=1&loop=1&autopause=0&quality=2K&muted=1" width="100%" height="880" allow="autoplay; fullscreen" frameborder="0" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="hr_b"></div>
-
-    <div class="panel_wrap">
-        <div class="detail_margin">
-            <div class="detail_cont">
-                <div class="panel_cont panel_cont_6">
+    <div class="wrap">
+        <div class="margin">
+            <div class="cont">
+                <div class="img_cont panel_cont_6">
                     <iframe src="https://player.vimeo.com/video/364474701?autoplay=1&loop=1&autopause=0&quality=2K&muted=1" width="100%" height="920" allow="autoplay; fullscreen" frameborder="0" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="panel_wrap">
-        <div class="detail_margin">
-            <div class="detail_cont">
-                <div class="panel_cont panel_cont_7">
+    <div class="wrap">
+        <div class="margin">
+            <div class="cont">
+                <div class="img_cont panel_cont_7">
                     <img src="img/latup_source/workoutFeedback.gif" alt="">
                 </div>
             </div>
         </div>
     </div>
 
-
-    <div class="hr_b"></div>
-    <div class="hr_b"></div>
-
-    <div class="detail_wrap ex_margin">
-        <div class="detail_margin">
-            <div class="detail_cont">
-                <div class="overview_title_2">
+    <div class="wrap">
+        <div class="margin">
+            <div class="cont">
+                <div class="title">
                     <p>
                         Exhibition</p>
-                    <p>
                 </div>
             </div>
         </div>
     </div>
 
-
-    <div class="panel_wrap end">
-        <div class="detail_margin">
-            <div class="detail_cont">
-                <div class="research_cont exhibition">
+    <div class="wrap end">
+        <div class="margin">
+            <div class="cont">
+                <div class="img_cont exhibition">
                     <img src="img/latup_source/exhibition.png" alt="">
                 </div>
             </div>
         </div>
     </div>
-
-
-
-    <!--app/product panel-->
 
     <footer>
         <div class="footer_cont">
@@ -699,7 +649,8 @@
     </footer>
 
     <script src="js/headerAni.js" type="text/javascript"></script>
-    <script src="js/latup.js" type="text/javascript"></script>
+    <script src="js/latup/latup.js" type="text/javascript"></script>
+      <script src="js/latup/latup_loader.js" type="text/javascript"></script>
 </body>
 
 </html>
