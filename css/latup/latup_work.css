@@ -47,7 +47,7 @@ body {
     padding-top: 62.5%;
     position: relative;
     z-index: 1000;
-    background-color: white;
+    background-color: black;
 }
 
 .thumbnail img {
@@ -214,7 +214,7 @@ iframe {
 }
 
 .overview {
-    padding-top: 65.641025%;
+    padding-top: 65.647482014%;
 }
 
 .interview {
@@ -222,67 +222,67 @@ iframe {
 }
 
 .finding {
-    padding-top: 62.5%;
-}
-
-.process {
-    padding-top: 48.828125%;
+    padding-top: 56.25%;
 }
 
 .servStruc {
-    padding-top: 34.375%;
+    padding-top: 29.6875%;
+}
+
+.process {
+    padding-top: 48.75%;
 }
 
 .ut {
-    padding-top: 64.0625%;
+    padding-top: 57.8125%;
 }
 
 .iterations_01 {
-    padding-top: 31.25%;
+    padding-top: 25%;
 }
 
 .iterations_02 {
-    padding-top: 43.125%;
+    padding-top: 38.28125%;
 }
 
 .pd_prototype {
-    padding-top: 34.375%;
+    padding-top: 37.5%;
 }
 
 .elements {
-    padding-top: 60.9375%;
+    padding-top: 46.875%;
 }
 
-.panel_cont_1 {
+.selectWokrout {
     padding-top: 53.125%;
 }
 
-.panel_cont_2 {
-    padding-top: 77.948717948%;
+.docking {
+    padding-top: 67.1875%;
 }
 
-.panel_cont_3 {
+.gripAdjust {
     padding-top: 64.0625%;
 }
 
-.panel_cont_4 {
+.workout {
     padding-top: 68.75%;
 }
 
-.panel_cont_5 {
+.drop {
     padding-top: 68.75%;
 }
 
-.panel_cont_6 {
+.finish {
     padding-top: 71.875%;
 }
 
-.panel_cont_7 {
+.feedback {
     padding-top: 60.9375%;
 }
 
 .exhibition {
-    padding-top: 62.5%;
+    padding-top: 56.25%;
 }
 
 /*  margin */

@@ -280,31 +280,27 @@ iframe {
     padding-top: 50%;
 }
 
+/* video */
 
-.panel_cont_0 {
-    padding-top: 76.5625%;
-}
-
-.panel_cont_1 {
+.selectPhoto {
     padding-top: 55.625%;
 }
 
-.panel_cont_2 {
+.putMusic {
     padding-top: 67.1875%;
 }
 
-.panel_cont_3 {
+.present {
     padding-top: 72.734375%;
 }
 
-.panel_cont_4 {
+.listen {
     padding-top: 61.875%;
 }
 
-.panel_cont_5 {
+.print {
     padding-top: 55.3125%;
 }
-
 
 /*  margin */
 .mg_cont {

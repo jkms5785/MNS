@@ -27,15 +27,32 @@ const product_02 = document.querySelector("#js-img-product_02"),
     taps = document.querySelector("#js-img-taps"),
     exhibition = document.querySelector("#js-img-exhibition");
 
+const selectPhoto = document.querySelector("#js-video-selectPhoto"),
+    putMusic = document.querySelector("#js-video-putMusic"),
+    present = document.querySelector("#js-video-present"),
+    listen = document.querySelector("#js-video-listen"),
+    print = document.querySelector("#js-video-print");
+
 function headerLoader() {
     header.classList.remove("header_preloader");
     header.classList.add("header_loader");
 }
 
+function videoLoader() {
+    selectPhoto.src = "https://player.vimeo.com/video/363292104?autoplay=1&loop=1&autopause=0&quality=720p&muted=1";
+    putMusic.src = "https://player.vimeo.com/video/363292164?autoplay=1&loop=1&autopause=0&quality=720p&muted=1";
+
+    selectPhoto, putMusic.onload = function () {
+        present.src = "https://player.vimeo.com/video/363295092?autoplay=1&loop=1&autopause=0&quality=720p&muted=1";
+        listen.src = "https://player.vimeo.com/video/363292261?autoplay=1&loop=1&autopause=0&quality=720p&muted=1";
+        print.src = "https://player.vimeo.com/video/363294872?autoplay=1&loop=1&autopause=0&quality=720p&muted=1";
+    }
+}
+
 const Lazy_imgArry = [];
 const imgArry = [];
 
-function imgLoader_6(){
+function imgLoader_6() {
     imgArry[15] = new Image();
     imgArry[15].src = "img/muto_source/img/16_product.png";
 
@@ -49,12 +66,12 @@ function imgLoader_6(){
         product_02.src = imgArry[15].src;
         taps.src = imgArry[16].src;
         exhibition.src = imgArry[17].src;
-       console.log("img are all loaded");
+         videoLoader();
     }
 }
 
 
-function imgLoader_5(){
+function imgLoader_5() {
     imgArry[12] = new Image();
     imgArry[12].src = "img/muto_source/img/13_prototype.png";
 
@@ -73,7 +90,7 @@ function imgLoader_5(){
 }
 
 
-function imgLoader_4(){
+function imgLoader_4() {
     imgArry[9] = new Image();
     imgArry[9].src = "img/muto_source/img/10_iterations.png";
 
@@ -91,7 +108,7 @@ function imgLoader_4(){
     }
 }
 
-function imgLoader_3(){
+function imgLoader_3() {
     imgArry[6] = new Image();
     imgArry[6].src = "img/muto_source/img/07_structure.png";
 
@@ -110,7 +127,7 @@ function imgLoader_3(){
 }
 
 
-function imgLoader_2(){
+function imgLoader_2() {
     imgArry[3] = new Image();
     imgArry[3].src = "img/muto_source/img/04_interview.png";
 
@@ -128,7 +145,7 @@ function imgLoader_2(){
     }
 }
 
-function imgLoader_1(){
+function imgLoader_1() {
     imgArry[0] = new Image();
     imgArry[0].src = "img/muto_source/img/01_background.png";
 
@@ -160,8 +177,6 @@ function Lazy_imgLoader_6() {
         product_02.src = Lazy_imgArry[15].src;
         taps.src = Lazy_imgArry[16].src;
         exhibition.src = Lazy_imgArry[17].src;
-        console.log("imgs are loaded");
-
         imgLoader_1();
     }
 }
