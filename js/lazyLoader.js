@@ -13,51 +13,38 @@ function headerLoader() {
     header.classList.add("header_loader");
 }
 
-function imageQue3(){
-    overview2.src = "img/muto_source/app_teaser.png";
-    overview2.alt = "overview_product";
+const Lazy_imgCont = [];
+
+function imageLoader_2(){
+    setTimeout(() => {
+        console.log("imgloader2");
+    }, 1000);
 }
 
-function imageQue2(){
-    overview1.src = "img/muto_source/product_teaser.png";
-    overview1.alt = "overview_product";
-}
+function imageLoader_1(){
+    Lazy_imgCont[0] = new Image();
+    Lazy_imgCont[0].src = "img/muto_source/lazyLoader/lazy_product_teaser.png";
 
-function imageQue1(){
-    background.src = "img/muto_source/muto_background.png";
-    background.alt = "background";
-}
+    Lazy_imgCont[1] = new Image();
+    Lazy_imgCont[1].src = "img/muto_source/lazyLoader/lazy_app_teaser.png";
 
-function imageLoader(){
-    background.src ="img/muto_source/muto_background.png"
-    overview1.src = "img/muto_source/lazyLoader/lazy_product_teaser.png";
-    overview2.src = "img/muto_source/lazyLoader/lazy_app_teaser.png";
-    interview.src = "img/muto_source/lazyLoader/lazy_interview.png";
-    finding.src = "img/muto_source/lazyLoader/lazy_finding.png";
-    setTimeout(function(){
-        imageLoader2();
-    },1000);
-}
+    Lazy_imgCont[2] = new Image();
+    Lazy_imgCont[2].src = "img/muto_source/lazyLoader/lazy_interview.png";
 
-function ScrollValue(){
-    let currentScroll = Math.floor(window.pageYOffset);
-    if(currentScroll - 600 < background.parentElement.offsetTop){
-        // imageQue1();
-    }else if (currentScroll - 600 < overview1.parentElement.offsetTop){
-        imageQue2();
-    }else if (currentScroll - 600 < overview2.parentElement.offsetTop){
-        imageQue3();
+    Lazy_imgCont[3] = new Image();
+    Lazy_imgCont[3].src = "img/muto_source/lazyLoader/lazy_finding.png";
+    
+    Lazy_imgCont[0, 1, 2, 3].onload = function(){
+        console.log("finish uploading");
+        console.dir(Lazy_imgCont);
+        imageLoader_2()
     }
-
-    //else if 스크롤이 끝에 닿으면 이벤트리스너 지우기.
 }
 
 function preloaderOut() {
     setTimeout(function () {
         preloader.style.height = "0";
-        thumbnail.style.opacity = "1.0";
         headerLoader();
-        imageLoader();
     }, 1000);
 }
 
@@ -65,12 +52,11 @@ function preloaderIn() {
     preloader.style.top = "0";
     thumbnail.src = "img/muto_source/muto_thumbnail.png";
     thumbnail.alt = "thumbnail";
-    thumbnail.style.opacity = "0";
-
     thumbnail.onload = function () {
         setTimeout(function () {
             preloader.style.top = "200%";
             preloaderOut();
+            imageLoader_1();
         }, 1000);
     }
 }
@@ -79,8 +65,6 @@ function init() {
     setTimeout(function () {
         preloaderIn();
     }, 1000);
-
-    window.addEventListener("scroll", ScrollValue);
 }
 
 init();
