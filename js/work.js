@@ -12,7 +12,7 @@ function Que() {
     viewProject.classList.add("viewProjectHovered");
 
     if (this == work[1]) {
-        img.src = "https://jkms5785.github.io/MaterialAndSolution/img/work_latup_m.gif";
+        img.src = "img/work_latup_m.gif";
     }
 }
 
@@ -27,7 +27,7 @@ function Stop() {
     viewProject.classList.remove("viewProjectHovered");
 
     if (this == work[1]) {
-        img.src = "https://jkms5785.github.io/MaterialAndSolution/img/work_latup.png";
+        img.src = "img/work_latup.png";
     }
 }
 
