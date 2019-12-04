@@ -73,7 +73,7 @@ function preloaderOut() {
 
 function preloaderIn() {
     preloader.style.top = "0";
-    homeGif.src = "img/home_logo-min.gif";
+    homeGif.src = "img/main_logo-min.gif";
     homeGif.style.opacity = "0";
     homeGif.onload = function () {
         setTimeout(function () {
