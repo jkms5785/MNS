@@ -94,15 +94,15 @@ function preloaderOut() {
 }
 
 function workImageLoader() {
-    workImage[0].src = "https://jkms5785.github.io/MaterialAndSolution/img/work_muto.png";
-    workImage[1].src = "https://jkms5785.github.io/MaterialAndSolution/img/work_latup.png";
-    workImage[2].src = "https://jkms5785.github.io/MaterialAndSolution/img/work_grayblock.png";
+    workImage[0].src = "img/work_muto.png";
+    workImage[1].src = "img/work_latup.png";
+    workImage[2].src = "img/work_grayblock.png";
 }
 
 function preloaderIn() {
     preloader.style.top = "0";
     let GifImg = new Image();
-    GifImg.src = "https://jkms5785.github.io/MaterialAndSolution/img/work_latup_m.gif";
+    GifImg.src = "img/work_latup_m.gif";
 
     GifImg.onload = function () {
         setTimeout(function () {

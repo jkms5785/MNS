@@ -69,6 +69,7 @@ function lazyLoader(i) {
     } else {
         i = 0;
         imgLoader(i);
+        videoLoader();
     }
 }
 
