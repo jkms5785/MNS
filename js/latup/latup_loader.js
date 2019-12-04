@@ -3,30 +3,24 @@ const header = document.querySelector("header");
 
 const thumbnail = document.querySelector("#js-img-thumbnail");
 
-const background = document.querySelector("#js-img-background"),
-    overview = document.querySelector("#js-img-overview"),
-    interview = document.querySelector("#js-img-interview");
+const Lazy_imgArry = [];
+const imgArry = [];
 
-const finding = document.querySelector("#js-img-finding"),
-    structure = document.querySelector("#js-img-structure"),
-    process = document.querySelector("#js-img-process");
-
-const usertest = document.querySelector("#js-img-usertest"),
-    iterations_01 = document.querySelector("#js-img-iterations_01"),
-    iterations_02 = document.querySelector("#js-img-iterations_02");
-
-const prototype = document.querySelector("#js-img-prototype"),
-    elements = document.querySelector("#js-img-elements"),
-    docking = document.querySelector("#js-img-docking"),
-    exhibition = document.querySelector("#js-img-exhibition");
-
-const selectWorkout = document.querySelector("#js-img-selectWorkout"),
-    feedback = document.querySelector("#js-img-workoutFeedback");
+const selectWorkout = document.querySelector("#js-gif-selectWorkout"),
+    feedback = document.querySelector("#js-gif-workoutFeedback");
 
 const gripAdjst = document.querySelector("#js-video-gripAdjust"),
     workout = document.querySelector("#js-video-workout"),
     drop = document.querySelector("#js-video-drop"),
     finish = document.querySelector("#js-video-finish");
+
+let i = 0,
+    a = 1;
+let imgNum = 13;
+
+for (a = 1; a < imgNum + 1; a++) {
+    eval(`var img_${a} = document.querySelector("#js-img-${a < 10 ? `0${a}` : a}");`);
+}
 
 function headerLoader() {
     header.classList.remove("header_preloader");
@@ -42,168 +36,39 @@ function videoLoader() {
     }
 }
 
-const Lazy_imgArry = [];
-const imgArry = [];
-
-function imgLoader_4() {
-    imgArry[9] = new Image();
-    imgArry[9].src = "img/latup_source/img/10_prototype.png";
-
-    imgArry[10] = new Image();
-    imgArry[10].src = "img/latup_source/img/11_elements.png";
-
-    imgArry[11] = new Image();
-    imgArry[11].src = "img/latup_source/img/12_docking.png";
-
-    imgArry[12] = new Image();
-    imgArry[12].src = "img/latup_source/img/13_exhibition.png";
-
-    imgArry[9, 10, 11, 12].onload = function () {
-        prototype.src = imgArry[9].src;
-        elements.src = imgArry[10].src;
-        docking.src = imgArry[11].src;
-        exhibition.src = imgArry[12].src;
-        videoLoader();
-    }
-}
-
-function imgLoader_3() {
-    imgArry[6] = new Image();
-    imgArry[6].src = "img/latup_source/img/07_usertest.png";
-
-    imgArry[7] = new Image();
-    imgArry[7].src = "img/latup_source/img/08_iteration.png";
-
-    imgArry[8] = new Image();
-    imgArry[8].src = "img/latup_source/img/09_iteration.png";
-
-    imgArry[6, 7, 8].onload = function () {
-        usertest.src = imgArry[6].src;
-        iterations_01.src = imgArry[7].src;
-        iterations_02.src = imgArry[8].src;
-        imgLoader_4();
-    }
-}
-
-function imgLoader_2() {
-    imgArry[3] = new Image();
-    imgArry[3].src = "img/latup_source/img/04_finding.png";
-
-    imgArry[4] = new Image();
-    imgArry[4].src = "img/latup_source/img/05_structure.png";
-
-    imgArry[5] = new Image();
-    imgArry[5].src = "img/latup_source/img/06_process.png";
-
-    imgArry[3, 4, 5].onload = function () {
-        finding.src = imgArry[3].src;
-        structure.src = imgArry[4].src;
-        process.src = imgArry[5].src;
-        imgLoader_3();
-    }
-}
-
-function imgLoader_1() {
-    imgArry[0] = new Image();
-    imgArry[0].src = "img/latup_source/img/01_background.png";
-
-    imgArry[1] = new Image();
-    imgArry[1].src = "img/latup_source/img/02_product.png";
-
-    imgArry[2] = new Image();
-    imgArry[2].src = "img/latup_source/img/03_interview.png";
-
-    imgArry[0, 1, 2].onload = function () {
-        background.src = imgArry[0].src;
-        overview.src = imgArry[1].src;
-        interview.src = imgArry[2].src;
-        imgLoader_2();
-    }
-}
-
 function gifLoader() {
     selectWorkout.src = "img/latup_source/img/selectWorkout.gif";
     feedback.src = "img/latup_source/img/workoutFeedback.gif";
-    selectWorkout, feedback.onload = function () {
-        console.log("good");
+}
+
+function imgLoader(i) {
+    if (i < imgNum) {
+        i++;
+        imgArry[i - 1] = new Image();
+        imgArry[i - 1].src = `img/latup_source/img/${i < 10 ? `0${i}` : i}-1.png`;
+        imgArry[i - 1].onload = function () {
+            let imgResult = new Function(`i`, `img_${i}.src = imgArry[${i - 1}].src;`);
+            imgResult(i);
+            imgLoader(i);
+        }
+    } else {
+        i = 0;
     }
 }
 
-function Lazy_imgLoader_4() {
-    Lazy_imgArry[9] = new Image();
-    Lazy_imgArry[9].src = "img/latup_source/lazyload/10.png";
-
-    Lazy_imgArry[10] = new Image();
-    Lazy_imgArry[10].src = "img/latup_source/lazyload/11.png";
-
-    Lazy_imgArry[11] = new Image();
-    Lazy_imgArry[11].src = "img/latup_source/lazyload/12.png";
-
-    Lazy_imgArry[12] = new Image();
-    Lazy_imgArry[12].src = "img/latup_source/lazyload/13.png";
-
-    Lazy_imgArry[9, 10, 11, 12].onload = function () {
-        prototype.src = Lazy_imgArry[9].src;
-        elements.src = Lazy_imgArry[10].src;
-        docking.src = Lazy_imgArry[11].src;
-        exhibition.src = Lazy_imgArry[12].src;
-
-        imgLoader_1();
-    }
-}
-
-function Lazy_imgLoader_3() {
-    Lazy_imgArry[6] = new Image();
-    Lazy_imgArry[6].src = "img/latup_source/lazyload/07.png";
-
-    Lazy_imgArry[7] = new Image();
-    Lazy_imgArry[7].src = "img/latup_source/lazyload/08.png";
-
-    Lazy_imgArry[8] = new Image();
-    Lazy_imgArry[8].src = "img/latup_source/lazyload/09.png";
-
-    Lazy_imgArry[6, 7, 8].onload = function () {
-        usertest.src = Lazy_imgArry[6].src;
-        iterations_01.src = Lazy_imgArry[7].src;
-        iterations_02.src = Lazy_imgArry[8].src;
-        Lazy_imgLoader_4();
-    }
-}
-
-function Lazy_imgLoader_2() {
-    Lazy_imgArry[3] = new Image();
-    Lazy_imgArry[3].src = "img/latup_source/lazyload/04.png";
-
-    Lazy_imgArry[4] = new Image();
-    Lazy_imgArry[4].src = "img/latup_source/lazyload/05.png";
-
-    Lazy_imgArry[5] = new Image();
-    Lazy_imgArry[5].src = "img/latup_source/lazyload/06.png";
-
-    Lazy_imgArry[3, 4, 5].onload = function () {
-        finding.src = Lazy_imgArry[3].src;
-        structure.src = Lazy_imgArry[4].src;
-        process.src = Lazy_imgArry[5].src;
-        Lazy_imgLoader_3();
-    }
-}
-
-function Lazy_imgLoader_1() {
-    Lazy_imgArry[0] = new Image();
-    Lazy_imgArry[0].src = "img/latup_source/lazyload/01.png";
-
-    Lazy_imgArry[1] = new Image();
-    Lazy_imgArry[1].src = "img/latup_source/lazyload/02.png";
-
-    Lazy_imgArry[2] = new Image();
-    Lazy_imgArry[2].src = "img/latup_source/lazyload/03.png";
-
-    Lazy_imgArry[0, 1, 2].onload = function () {
-        background.src = Lazy_imgArry[0].src;
-        overview.src = Lazy_imgArry[1].src;
-        interview.src = Lazy_imgArry[2].src;
-        Lazy_imgLoader_2();
-        gifLoader();
+function lazyLoader(i) {
+    if (i < imgNum) {
+        i++;
+        Lazy_imgArry[i - 1] = new Image();
+        Lazy_imgArry[i - 1].src = `img/latup_source/lazyload/${i < 10 ? `0${i}` : i}.png`;
+        Lazy_imgArry[i - 1].onload = function () {
+            let lazyResult = new Function(`i`, `img_${i}.src = Lazy_imgArry[${i - 1}].src;`);
+            lazyResult(i);
+            lazyLoader(i);
+        }
+    } else {
+        i = 0;
+        imgLoader(i);
     }
 }
 
@@ -215,13 +80,17 @@ function preloaderOut() {
 }
 
 function preloaderIn() {
+    const img_thumbnail = new Image();
+    img_thumbnail.src = "img/latup_source/latup_thumbnail.png";
     preloader.style.top = "0";
-    thumbnail.src = "img/latup_source/latup_thumbnail.png";
-    thumbnail.onload = function () {
+    img_thumbnail.onload = function () {
         setTimeout(function () {
+            thumbnail.src = img_thumbnail.src;
+            thumbnail.alt = "thumbnail";
             preloader.style.top = "200%";
             preloaderOut();
-            Lazy_imgLoader_1();
+            lazyLoader(i);
+            gifLoader();
         }, 1000);
     }
 }
