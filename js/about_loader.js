@@ -84,7 +84,7 @@ function preloaderIn() {
     preloader.style.top = "0";
     const insertImg = document.createElement("img");
     profileCont.appendChild(insertImg);
-    insertImg.src = "https://jkms5785.github.io/MaterialAndSolution/img/profile.png";
+    insertImg.src = "img/profile.png";
     insertImg.alt = "MOONSOO-profile";
     insertImg.id = "profileLoaded";
     const profileImg = document.querySelector("#profileLoaded");
