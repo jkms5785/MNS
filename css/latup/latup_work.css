@@ -107,7 +107,7 @@ body {
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 0.875rem;
     line-height: 30px;
-    letter-spacing: -0.4px;
+    letter-spacing: -0.6px;
 }
 
 .body_en {
@@ -183,7 +183,7 @@ body {
     /*       opacity: 0.87;*/
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 1.125rem;
-    letter-spacing: -0.24px;
+    letter-spacing: -0.4px;
     line-height: 38px;
 }
 
