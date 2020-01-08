@@ -28,7 +28,7 @@ ballTank();
 function init2() {
     for (let i = 0; i < 6; i++) {
         var radius =
-            (Math.floor(Math.random() * 12) + 7) * 8,
+            (Math.floor(Math.random() * 16) + 7) * 8,
             x, y,
             dx = (Math.random() - 0.5) * 50,
             dy = -22,
