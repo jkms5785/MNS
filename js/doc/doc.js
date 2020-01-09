@@ -17,9 +17,6 @@ let bg_tg = document.getElementById('bg_tg'),
     posb_tg = document.getElementById('posb_tg'),
     posb_tg_Top;
 
-let test = document.querySelector(".js-imgCheck");
-console.dir(test.src);
-
 function init() {
     let si = document.getElementsByClassName('sc_des');
 
@@ -47,7 +44,7 @@ function makeOffsetHeight(e) {
     const docHeight = document.scrollingElement.offsetHeight;
     if (docHeight > 22000) {
         makeScrollEvent();
-        window.removeEventListener("scroll", makeOffsetHeight);
+        window.removeEventListener("scroll", makeOffsetHeigh);
     }
 }
 
@@ -60,7 +57,6 @@ function makeScrollEvent() {
         diSystem_tg_Top = diSystem_tg.offsetTop,
         sol_tg_Top = sol_tg.offsetTop,
         posb_tg_Top = posb_tg.offsetTop;
-
     function bg_scroll() {
         window.scrollTo(0, bg_tg_Top);
     }
@@ -70,27 +66,27 @@ function makeScrollEvent() {
     }
 
     function taskAnal_scroll() {
-        window.scrollTo(0, taskAnal_tg_Top - 200);
+        window.scrollTo(0, taskAnal_tg_Top);
     }
 
     function curSit_scroll() {
-        window.scrollTo(0, curSit_tg_Top - 200);
+        window.scrollTo(0, curSit_tg_Top);
     }
 
     function inv_scroll() {
-        window.scrollTo(0, inv_tg_Top - 200);
+        window.scrollTo(0, inv_tg_Top);
     }
 
     function diSystem_scroll() {
-        window.scrollTo(0, diSystem_tg_Top - 200);
+        window.scrollTo(0, diSystem_tg_Top);
     }
 
     function sol_scroll() {
-        window.scrollTo(0, sol_tg_Top - 200);
+        window.scrollTo(0, sol_tg_Top);
     }
 
     function posb_scroll() {
-        window.scrollTo(0, posb_tg_Top - 200);
+        window.scrollTo(0, posb_tg_Top);
     }
 
     sc[0].addEventListener('click', bg_scroll),
