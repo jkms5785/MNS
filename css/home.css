@@ -61,7 +61,7 @@ body::-webkit-scrollbar {
     font-weight: 400;
     font-size: 1.125rem;
     color: #393939;
-    line-height: 32px;
+    line-height: 36px;
     padding-top: 32px;
     width: 89.090909%;
     padding-right: 10.909090%;
@@ -175,7 +175,6 @@ body::-webkit-scrollbar {
 .header_loader {
     opacity: 1;
     top: 0;
-    b
 }
 
 .main_arrow {
