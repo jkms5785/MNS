@@ -49,8 +49,8 @@ header {
 .header_nav ul li {
     height: 24px;
     margin-left: 60px;
-    font-family: 'Google Sans', sans-serif;
-    font-weight: 500;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
     font-size: 1rem;
     display: flex;
     align-items: center;
@@ -108,13 +108,14 @@ footer {
 .footer_logo {
     width: 64px;
     height: 30px;
-    opacity: 0.87
 }
 
 .footer_copy {
     height: 23px;
-    opacity: 0.6;
-    font-family: 'Google Sans', sans-serif;
+    opacity: 0.8;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 28px;
+    font-weight: 300;
     font-size: 1rem;
     color: white;
     display: flex;
@@ -123,18 +124,15 @@ footer {
 
 .footer_right {
     color: white;
-    font-family: 'Google Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
     font-size: 1rem;
     margin-left: 2.34375%;
     width: 42.96875%;
 }
 
 .footer_right ul li:not(:first-child) {
-    opacity: 0.6;
-}
-
-.footer_right ul li:first-child {
-    opacity: 0.87;
+    opacity: 0.8;
 }
 
 .footer_right ul>* {
@@ -145,7 +143,7 @@ footer {
 }
 
 .footer_right ul li:first-child {
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .footer_right ul li:not(:first-child) {

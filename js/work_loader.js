@@ -95,8 +95,11 @@ function preloaderOut() {
 
 function workImageLoader() {
     workImage[0].src = "img/work_muto.png";
-    workImage[1].src = "img/work_latup.png";
-    workImage[2].src = "img/work_grayblock.png";
+    workImage[1].src = "img/work_doc.png";
+    workImage[0].onload = function () {
+        workImage[2].src = "img/work_latup.png";
+        workImage[3].src = "img/work_grayblock.png";
+    }
 }
 
 function preloaderIn() {

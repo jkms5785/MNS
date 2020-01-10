@@ -57,7 +57,8 @@ body::-webkit-scrollbar {
 
 .home_body {
     opacity: 0.8;
-    font-family: 'Google Sans', sans-serif;
+   font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
     font-size: 1.125rem;
     color: #393939;
     line-height: 32px;
@@ -249,9 +250,11 @@ body::-webkit-scrollbar {
 }
 
 .arrow_body {
-    font-family: 'Google Sans', sans-serif;
+   font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
     font-size: 1.333rem;
-    margin-top: 6px;
+    letter-spacing: -0.2px;
+    line-height: 32px;
     display: flex;
     color: #393939;
 }

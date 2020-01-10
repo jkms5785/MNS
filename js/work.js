@@ -11,7 +11,7 @@ function Que() {
     text.classList.add("textHovered");
     viewProject.classList.add("viewProjectHovered");
 
-    if (this == work[1]) {
+    if (this == work[2]) {
         img.src = "img/work_latup_m.gif";
     }
 }
@@ -26,7 +26,7 @@ function Stop() {
     text.classList.remove("textHovered");
     viewProject.classList.remove("viewProjectHovered");
 
-    if (this == work[1]) {
+    if (this == work[2]) {
         img.src = "img/work_latup.png";
     }
 }
