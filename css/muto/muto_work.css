@@ -77,75 +77,69 @@ body {
 }
 
 /*        info*/
-.intro_cont {
-    width: 100%;
+.info {
     display: flex;
 }
 
-.overview_cont {
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.intro_image {
-    width: 320px;
-}
-
-.intro_image img {
-    width: 100%;
-    transform: translateX(-16px);
-}
-
-.intro_info {
-    display: flex;
-    justify-content: space-between;
-}
-
-.intro_title {
-    margin-right: 3.0800821%;
-    width: calc(50% - 3.0800821%);
+.info_cont_1 {
+    width: 34.127697841726619%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.intro_body {
-    margin-left: 3.0800821%;
-    width: calc(50% - 3.0800821%);
-    display: flex;
-    flex-direction: column;
+.info_cont_2 {
+    width: 60.476618705035971%;
+    margin-left: 5.39568345%;
 }
 
-.info_cont {
-    display: flex;
+.info_img {
+    margin-left: -16px;
+    width: 84%;
+    height: auto;
 }
 
-.info_sub_title {
-    opacity: 0.8;
-    font-family: 'Google Sans', sans-serif;
-    font-weight: 700;
+.info_title {
+    opacity: 0.87;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
     font-size: 1.125rem;
-    line-height: 36px;
+    line-height: 32px;
+    letter-spacing: -0.2px;
+    margin-top : 8px;
 }
 
-.info_sub_title_kr {
-    opacity: 0.8;
+.info_kr_title{
+    opacity: 0.6;
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 1.125rem;
     letter-spacing: -0.6px;
-    line-height: 38px;
+    line-height: 32px;
 }
 
-.info_sub_body {
+.info_body {
     opacity: 0.6;
-    font-family: 'Google Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
     font-size: 1.125rem;
-    line-height: 36px;
+    line-height: 32px;
+    letter-spacing: -0.2px;
+    margin-top : 8px;
 }
 
+.info_body_align {
+    display: flex;
+}
+
+.info_body_align .info_detail:first-child {
+    margin-right: 8%;
+}
+
+.info_align {
+    display: flex;
+}
+
+/* info */
 .text_cont {
     max-width: 1112px;
     margin: 0 auto;
@@ -185,18 +179,21 @@ body {
     width: calc(50% - 2.6978417%);
     opacity: 0.8;
     font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
     font-size: 0.875rem;
     line-height: 30px;
-    letter-spacing: -0.6px;
+    letter-spacing: -0.8px;
 }
 
 .body_en {
     margin-left: 2.6978417%;
     width: calc(50% - 2.6978417%);
     opacity: 0.38;
-    font-family: 'Google Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
     font-size: 0.875rem;
     line-height: 26px;
+    letter-spacing: -0.2px;
 }
 
 iframe {
