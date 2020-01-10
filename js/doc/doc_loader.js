@@ -71,10 +71,10 @@ function preloaderOut() {
 
 function preloaderIn() {
     const img_thumbnail = new Image();
-    // img_thumbnail.src = "img/doc_source/doc_thumbnail.png";
+    img_thumbnail.src = "img/doc_source/doc_thumbnail.png";
 
     preloader.style.top = "0";
-    // img_thumbnail.onload = function () {
+    img_thumbnail.onload = function () {
     setTimeout(function () {
         thumbnail.src = img_thumbnail.src;
         thumbnail.alt = "thumbnail";
@@ -83,7 +83,7 @@ function preloaderIn() {
         lazyLoader(i);
         videoLoader();
     }, 1000);
-    // }
+    }
 }
 
 function init() {

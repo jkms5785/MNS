@@ -46,12 +46,11 @@
 }
 
 .thumbnail {
-    width: 100%;
+    width: 100vw;
     height: 0;
     padding-top: 62.5%;
     position: relative;
     z-index: 1000;
-    background-color: gray;
 }
 
 .thumbnail img {
@@ -105,7 +104,7 @@
 
 .intro_image img {
     width: 100%;
-    transform: translateX(-16px);
+    margin-top: 20px;
 }
 
 .intro_info {
@@ -555,7 +554,7 @@ iframe {
 
 .sol_z-index {
     z-index: 5;
-    transform: translateY(402px);
+    transform: translateY(348px);
 }
 
 .DesignSystem_1 {
