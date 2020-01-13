@@ -42,7 +42,7 @@ function init() {
 function makeOffsetHeight(e) {
     e.preventDefault();
     const docHeight = document.scrollingElement.offsetHeight;
-    if (docHeight > 22000) {
+    if (docHeight > 23000) {
         makeScrollEvent();
         window.removeEventListener("scroll", makeOffsetHeight);
     }
