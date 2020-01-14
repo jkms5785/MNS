@@ -32,7 +32,7 @@ function langClick() {
         lang.style.fontWeight = "400";
         lang.style.lineHeight = "36px";
         lang.style.letterSpacing = "-0.2px";
-        lang.innerHTML = "안녕하세요. UX 디자이너 김문수입니다. Material and Solution은 디자인 프로세스로 부터 얻은 Material을 어떻게 사용자들을 위한 디자인 Solution으로 만들어 나가는지에 대한 기록입니다.";
+        lang.innerHTML = "안녕하세요. UX 디자이너 김문수입니다. 메터리얼 앤 솔루션(Material and Solution)은 디자인 프로세스로 부터 얻은 재료(Material)를 사용자들을 위한 디자인(Solution)으로 만들어나가는 과정을 기록한 디자인 포트폴리오 입니다.";
         setTimeout(() => {
             make_text.innerHTML = "EN";
         }, 500);
