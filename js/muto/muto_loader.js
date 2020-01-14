@@ -80,14 +80,15 @@ function preloaderOut() {
 function preloaderIn() {
     const img_thumbnail_1 = new Image();
 
-    img_thumbnail_1.src = "img/muto_source/muto_thumbnail.png";
-
+    img_thumbnail_1.src = "img/muto_source/muto_thumbanil_lazyloader.png";
     preloader.style.top = "0";
+
     img_thumbnail_1.onload = function () {
         setTimeout(function () {
             thumbnail.src = img_thumbnail_1.src;
             const img_thumbnail_2 = new Image();
             img_thumbnail_2.src = "img/muto_source/muto_thumbnail.png";
+            thumbnail.src = img_thumbnail_2.src;
             thumbnail.alt = "thumbnail";
             preloader.style.top = "200%";
             preloaderOut();
