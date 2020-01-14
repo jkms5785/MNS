@@ -93,25 +93,23 @@ function preloaderOut() {
     }, 1000);
 }
 
-function workImageLoader() {
-    workImage[0].src = "img/work_muto.png";
-    workImage[1].src = "img/work_doc.png";
-    workImage[0].onload = function () {
-        workImage[2].src = "img/work_latup.png";
-        workImage[3].src = "img/work_grayblock.png";
-    }
+function gifImageLoader() {
+    let GifImg = new Image();
+    GifImg.src = "img/work_latup_m.gif";
 }
 
 function preloaderIn() {
     preloader.style.top = "0";
-    let GifImg = new Image();
-    GifImg.src = "img/work_latup_m.gif";
-
-    GifImg.onload = function () {
+    workImage[0].src = "img/work_muto.png";
+    workImage[1].src = "img/work_doc.png";
+    
+    workImage[0], workImage[1].onload = function () {
+        workImage[2].src = "img/work_latup.png";
+        workImage[3].src = "img/work_grayblock.png";
         setTimeout(function () {
             preloader.style.top = "200%";
             preloaderOut();
-            workImageLoader();
+            gifImageLoader();
         }, 1000);
     }
 }
