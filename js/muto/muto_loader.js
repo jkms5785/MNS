@@ -83,7 +83,7 @@ function preloaderIn() {
     img_thumbnail_1.src = "img/muto_source/muto_thumbnail.png";
 
     preloader.style.top = "0";
-    img_thumbnail.onload = function () {
+    img_thumbnail_1.onload = function () {
         setTimeout(function () {
             thumbnail.src = img_thumbnail_1.src;
             const img_thumbnail_2 = new Image();
