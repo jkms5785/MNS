@@ -21,11 +21,11 @@ function langClick() {
         lang[0], lang[1], lang[2].style.fontWeight = "";
         lang[0], lang[1], lang[2].style.lineHeight = "";
         lang[0], lang[1], lang[2].style.letterSpacing = "";
-        lang[0].innerHTML = "Hi, I’m MOONSOO, a UX design student from Seoul currently looking for the job. I studied UX Design at Seoul National University of Science of Technology.";
+        lang[0].innerHTML = "Hi, I’m MOONSOO, a UX design student from Seoul currently looking for the job. I studied UX Design at Seoul National University of Science of Technology. I have been Studying UX design for the last few years and collaborating with multi-disciplinary groups to create useful user experiences. ";
 
-        lang[1].innerHTML = "I have been Studying UX design for the last few years and collaborating with multi-disciplinary groups to create useful user experiences.";
+        lang[1].innerHTML = "I don't think of design as a simple drawing, but I constantly think about delivering a useful user experience. I am familiar with code and collaboration with my knowledge of front-end development using html/cs/javascipt and my experience working with back-end developers.";
 
-        lang[2].innerHTML = "I like deign and code and making amazing thing and designing amazing thing.";
+        lang[2].innerHTML = "I like deign and code and making amazing thing and designing amazing thing. I am always eager to learn new technologies.";
         setTimeout(() => {
             make_text.innerHTML = "KR";
         }, 500);
@@ -36,11 +36,11 @@ function langClick() {
         lang[0], lang[1], lang[2].style.fontWeight = "400";
         lang[0], lang[1], lang[2].style.lineHeight = "36px";
         lang[0], lang[1], lang[2].style.letterSpacing = "-0.2px";
-        lang[0].innerHTML = "안녕하세요. 서울에 살고있는 UX 디자이너 김문수라고 합니다. 얼마전 서울과학기술대학교 디자인학과를 졸업하고, 현재 디자인 일을 찾고 있습니다.";
+        lang[0].innerHTML = "안녕하세요. UX 디자이너 김문수입니다. 서울과학기술대학교 디자인학과를 졸업하고, 현재 디자인 일을 찾고 있습니다.지난 몇년간 UX 디자인을 공부하며 좋은 사용자 경험을 만들기위해 다양한 분야의 동료들과 협업하며 경험을 쌓아왔습니다.";
 
-        lang[1].innerHTML = "지난 몇년간 UX 디자인을 공부하면서, 좋은 사용자 경험을 만들기위해 다양한 분야의 동료들과 협업하며 경험을 쌓아왔습니다.";
+        lang[1].innerHTML = "저는 디자인을 단순한 그리기로 생각하지 않고 유용한 사용자 경험을 전달하기 위해 끊임없이 고민합니다. 또한, javascipt를 활용한 프론트 엔드 개발 지식과 백 엔드 개발자들과의 협업 경험으로 코드와 협업에 익숙합니다.";
 
-        lang[2].innerHTML = "저는 디자인과 코드를 좋아하며, 디자인과 코드로 아름답고 놀라운 것을 만들기를 좋아합니다.";
+        lang[2].innerHTML = "디자인과 코드로 놀랍고 유용한것을 디자인하는 것을 좋아하며 새로운 것을 배우는 것에 열정적입니다.";
         setTimeout(() => {
             make_text.innerHTML = "EN";
         }, 500);
@@ -57,7 +57,7 @@ function makeLangBtn() {
     make_btn.style.right = "48px";
     make_btn.style.position = "fixed";
     make_btn.style.transition = "all 750ms cubic-bezier(0.455, 0.030, 0.515, 0.955)";
-    make_btn.style.boxShadow = "4px 4px 16px 0 rgba(0,0,0,0.1)";
+    make_btn.style.boxShadow = "2px 2px 6px 0 rgba(0,0,0,0.12)";
     bodyLang_btn.appendChild(make_btn);
 
     make_text.style.lineHeight = "48px";
