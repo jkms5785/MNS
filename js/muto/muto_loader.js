@@ -78,13 +78,16 @@ function preloaderOut() {
 }
 
 function preloaderIn() {
-    const img_thumbnail = new Image();
-    img_thumbnail.src = "img/muto_source/muto_thumbnail.png";
+    const img_thumbnail_1 = new Image();
+
+    img_thumbnail_1.src = "img/muto_source/muto_thumbnail.png";
 
     preloader.style.top = "0";
     img_thumbnail.onload = function () {
         setTimeout(function () {
-            thumbnail.src = img_thumbnail.src;
+            thumbnail.src = img_thumbnail_1.src;
+            const img_thumbnail_2 = new Image();
+            img_thumbnail_2.src = "img/muto_source/muto_thumbnail.png";
             thumbnail.alt = "thumbnail";
             preloader.style.top = "200%";
             preloaderOut();
