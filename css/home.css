@@ -74,7 +74,7 @@ body::-webkit-scrollbar {
 
 .home_arrow {
     height: 28px;
-    padding-top: 40px;
+    margin-top: 40px;
     display: flex;
     cursor: pointer;
 }
