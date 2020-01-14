@@ -58,6 +58,7 @@ function lazyLoader(i) {
         }
     } else {
         i = 0;
+        img_17.alt = "hackathon_img_loaded"; // side btn event que
         imgLoader(i);
     }
 }

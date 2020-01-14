@@ -17,6 +17,8 @@ let bg_tg = document.getElementById('bg_tg'),
     posb_tg = document.getElementById('posb_tg'),
     posb_tg_Top;
 
+const winHeightQue = document.querySelector(".win_height");
+
 function init() {
     let si = document.getElementsByClassName('sc_des');
 
@@ -42,7 +44,7 @@ function init() {
 function makeOffsetHeight(e) {
     e.preventDefault();
     const docHeight = document.scrollingElement.offsetHeight;
-    if (docHeight > 23000) {
+    if (winHeightQue.alt === `hackathon_img_loaded`) {
         makeScrollEvent();
         window.removeEventListener("scroll", makeOffsetHeight);
     }
