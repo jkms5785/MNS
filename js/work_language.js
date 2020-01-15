@@ -5,12 +5,12 @@ const make_text = document.createElement("div");
 
 function langHover() {
     console.log(`btn is hovered`);
-    make_btn.style.backgroundColor = "rgba(47,117,255,0.9)";
+    make_btn.style.backgroundColor = "rgba(47,117,255,0.6)";
 }
 
 function langUnHover() {
     console.log(`btn is hovered`);
-    make_btn.style.backgroundColor = "rgba(47,117,255,0.6)";
+    make_btn.style.backgroundColor = "rgba(47,117,255,0.8)";
 }
 
 function langClick() {
@@ -48,9 +48,9 @@ function makeLangBtn() {
     make_btn.style.width = "48px";
     make_btn.style.height = "48px";
     make_btn.style.borderRadius = "50%";
-    make_btn.style.backgroundColor = "rgba(47,117,255,0.6)";
-    make_btn.style.bottom = "72px";
-    make_btn.style.right = "72px";
+    make_btn.style.backgroundColor = "rgba(47,117,255,0.8)";
+    make_btn.style.bottom = "64px";
+    make_btn.style.right = "64px";
     make_btn.style.position = "fixed";
     make_btn.style.transition = "all 750ms cubic-bezier(0.455, 0.030, 0.515, 0.955)";
     bodyLang_btn.appendChild(make_btn);
@@ -62,8 +62,8 @@ function makeLangBtn() {
     make_text.style.height = "48px";
     make_text.style.color = "white"
     make_text.style.position = "fixed";
-    make_text.style.bottom = "72px";
-    make_text.style.right = "72px";
+    make_text.style.bottom = "64px";
+    make_text.style.right = "64px";
     make_text.innerHTML = "KR";
     make_text.style.fontFamily = "'Open Sans', sans-serif";
     make_text.style.fontWeight = "400";
