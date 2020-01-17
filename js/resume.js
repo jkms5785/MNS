@@ -95,13 +95,19 @@ function btnHovered() {
 }
 
 function ResumeModalActive() {
-     resumeBack.style.height = "100vh"; 
-      makeModal.style.top = "50%";
+    resumeBack.style.height = "100vh";
+    setTimeout(() => {
+        makeModal.style.top = "50%";
+        makeModal.style.opacity = "1.0";
+    }, 250);
 }
 
 function ResumeModalClosed() {
-      resumeBack.style.height = "0"; 
-      makeModal.style.top = "150%";
+    makeModal.style.top = "-50%";
+    makeModal.style.opacity = "0.1";
+    setTimeout(() => {
+        resumeBack.style.height = "0";
+    }, 250);
 }
 
 function makeResumeModal() {
@@ -109,28 +115,49 @@ function makeResumeModal() {
     resumeBack.id = "js-modal-back";
     resumeBack.style.backgroundColor = "#000000";
     resumeBack.style.opacity = "0.6";
-    resumeBack.style.width = "100vw"; 
-    resumeBack.style.height = "0"; 
+    resumeBack.style.width = "100vw";
+    resumeBack.style.height = "0";
     resumeBack.style.position = "fixed";
     resumeBack.style.top = "0";
     resumeBack.style.left = "0";
     resumeBack.style.cursor = "pointer";
     resumeBack.style.zIndex = "2000";
 
+    resumeBack.style.webkitTransition = "all 500ms cubic-bezier(0.000, 0.000, 0.165, 1)";
+    resumeBack.style.mozTransition = "all 500ms cubic-bezier(0.000, 0.000, 0.165, 1)";
+    resumeBack.style.oTransition = "all 500ms cubic-bezier(0.000, 0.000, 0.165, 1)";
+    resumeBack.style.transition = "all 500ms cubic-bezier(0.000, 0.000, 0.165, 1)";
+
+    resumeBack.style.webkitTransitionTimingFunction = "cubic-bezier(0.000, 0.000, 0.165, 1)";
+    resumeBack.style.mozTransitionTimingFunction = "cubic-bezier(0.000, 0.000, 0.165, 1)";
+    resumeBack.style.oTransitionTimingFunction = "cubic-bezier(0.000, 0.000, 0.165, 1)";
+    resumeBack.style.transitionTimingFunction = "cubic-bezier(0.000, 0.000, 0.165, 1)";
+
     resumeParent.appendChild(makeModal);
     makeModal.id = "js-modal";
     makeModal.style.width = "410px";
     makeModal.style.height = "308px";
-    makeModal.style.boxShadow = "8px 16px 40px 0 rgba(0,0,0,0.2)";
+    // makeModal.style.boxShadow = "8px 16px 40px 0 rgba(0,0,0,0.2)";
     makeModal.style.backgroundColor = "#FFFFFF";
+    makeModal.style.opacity = "0.1";
     makeModal.style.borderRadius = "4px";
     makeModal.style.position = "fixed";
-    makeModal.style.top = "150%";
+    makeModal.style.top = "-50%";
     makeModal.style.left = "50%";
     makeModal.style.transform = "translate(-50%, -50%)";
     makeModal.style.boxSizing = "border-box";
     makeModal.style.padding = "40px 0";
     makeModal.style.zIndex = "9990";
+
+    makeModal.style.webkitTransition = "all 400ms ease-in-out";
+    makeModal.style.mozTransition = "all 400ms ease-in-out";
+    makeModal.style.oTransition = "all 400ms ease-in-out";
+    makeModal.style.transition = "all 400ms ease-in-out";
+
+    makeModal.style.webkitTransitionTimingFunction = "ease-in-out";
+    makeModal.style.mozTransitionTimingFunction = "ease-in-out";
+    makeModal.style.oTransitionTimingFunction = "ease-in-out";
+    makeModal.style.transitionTimingFunction = "ease-in-out";
 
     let modal = document.querySelector("#js-modal");
 
