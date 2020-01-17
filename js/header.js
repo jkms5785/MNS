@@ -36,7 +36,7 @@ function headerQue(){
 function Underline() {
     this.classList.add("underlineHovered");
     this.children[0].style.opacity = "1.0";
-    this.children[0].style.color = "#2F75FF"
+    this.children[0].style.color = "#2F75FF";
 }
 
 function UnderlineRemove(){

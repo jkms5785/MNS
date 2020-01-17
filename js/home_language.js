@@ -3,6 +3,8 @@ const lang = document.querySelector("#js-lang");
 const make_btn = document.createElement("div");
 const make_text = document.createElement("div");
 
+const preloaderQue = document.querySelector("#js-preloader");
+
 function langHover() {
     make_btn.style.backgroundColor = "rgba(47,117,255,0.6)";
 }
@@ -38,6 +40,19 @@ function langClick() {
     }
 }
 
+function LangBtnAni() {
+    let preloaderCheck = setInterval(() => {
+        if (preloaderQue.style.height === "0px") {
+            console.log(`end interval`);
+            clearInterval(preloaderCheck);
+            make_btn.style.right = "64px";
+            make_text.style.right = "64px";
+            make_btn.style.opacity = "1.0";
+            make_text.style.opacity = "1.0";
+        }
+    }, 1000);
+}
+
 function makeLangBtn() {
     make_btn.style.display = "inline-block";
     make_btn.style.width = "48px";
@@ -45,9 +60,19 @@ function makeLangBtn() {
     make_btn.style.borderRadius = "50%";
     make_btn.style.backgroundColor = "rgba(47,117,255,0.8)";
     make_btn.style.bottom = "64px";
-    make_btn.style.right = "64px";
+    make_btn.style.right = "-48px";
     make_btn.style.position = "fixed";
-    make_btn.style.transition = "all 750ms cubic-bezier(0.455, 0.030, 0.515, 0.955)";
+    make_btn.style.opacity = "0";
+    make_btn.style.webkitTransition = "all 500ms ease-out";
+    make_btn.style.mozTransition = "all 500ms ease-out";
+    make_btn.style.oTransition = "all 500ms ease-out";
+    make_btn.style.transition = "all 500ms ease-out";
+
+    make_btn.style.webkitTransitionTimingFunction = "ease-out";
+    make_btn.style.mozTransitionTimingFunction = "ease-out";
+    make_btn.style.oTransitionTimingFunction = "ease-out";
+    make_btn.style.transitionTimingFunction = "ease-out";
+
     bodyLang_btn.appendChild(make_btn);
 
     make_text.style.lineHeight = "48px";
@@ -58,10 +83,21 @@ function makeLangBtn() {
     make_text.style.color = "white"
     make_text.style.position = "fixed";
     make_text.style.bottom = "64px";
-    make_text.style.right = "64px";
+    make_text.style.right = "-48px";
     make_text.innerHTML = "KR";
     make_text.style.fontFamily = "'Open Sans', sans-serif";
     make_text.style.fontWeight = "400";
+    make_text.style.opacity = "0";
+
+    make_text.style.webkitTransition = "all 500ms ease-out";
+    make_text.style.mozTransition = "all 500ms ease-out";
+    make_text.style.oTransition = "all 500ms ease-out";
+    make_text.style.transition = "all 500ms ease-out";
+
+    make_text.style.webkitTransitionTimingFunction = "ease-out";
+    make_text.style.mozTransitionTimingFunction = "ease-out";
+    make_text.style.oTransitionTimingFunction = "ease-out";
+    make_text.style.transitionTimingFunction = "ease-out";
     bodyLang_btn.appendChild(make_text);
 
     make_text.addEventListener("mouseover", langHover);
@@ -70,3 +106,4 @@ function makeLangBtn() {
 }
 
 makeLangBtn();
+LangBtnAni();

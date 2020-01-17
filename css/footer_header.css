@@ -54,6 +54,7 @@ header {
     font-size: 1rem;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
 .headerUp {
