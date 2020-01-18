@@ -137,7 +137,6 @@ function makeResumeModal() {
     makeModal.id = "js-modal";
     makeModal.style.width = "410px";
     makeModal.style.height = "308px";
-    // makeModal.style.boxShadow = "8px 16px 40px 0 rgba(0,0,0,0.2)";
     makeModal.style.backgroundColor = "#FFFFFF";
     makeModal.style.opacity = "0.1";
     makeModal.style.borderRadius = "4px";
@@ -149,10 +148,10 @@ function makeResumeModal() {
     makeModal.style.padding = "40px 0";
     makeModal.style.zIndex = "9990";
 
-    makeModal.style.webkitTransition = "all 400ms ease-in-out";
-    makeModal.style.mozTransition = "all 400ms ease-in-out";
-    makeModal.style.oTransition = "all 400ms ease-in-out";
-    makeModal.style.transition = "all 400ms ease-in-out";
+    makeModal.style.webkitTransition = "all 500ms ease-in-out";
+    makeModal.style.mozTransition = "all 500ms ease-in-out";
+    makeModal.style.oTransition = "all 500ms ease-in-out";
+    makeModal.style.transition = "all 500ms ease-in-out";
 
     makeModal.style.webkitTransitionTimingFunction = "ease-in-out";
     makeModal.style.mozTransitionTimingFunction = "ease-in-out";
