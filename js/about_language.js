@@ -5,12 +5,22 @@ const make_text = document.createElement("div");
 
 const preloaderQue = document.querySelector("#js-preloader");
 
+let blue;
+
 function langHover() {
-    make_btn.style.backgroundColor = "rgba(47,117,255,0.6)";
+    if(blue == true){
+          make_btn.style.backgroundColor = "rgba(255,255,255,0.38)";
+    }else{
+        make_btn.style.backgroundColor = "rgba(47,117,255,0.6)";
+    }
 }
 
 function langUnHover() {
-    make_btn.style.backgroundColor = "rgba(47,117,255,0.8)";
+     if(blue == true){
+          make_btn.style.backgroundColor = "rgba(255,255,255,0.2)";
+    }else{
+        make_btn.style.backgroundColor = "rgba(47,117,255,0.8)";
+    }
 }
 
 function langClick() {
@@ -111,5 +121,27 @@ function makeLangBtn() {
     make_text.addEventListener("mouseleave", langUnHover);
     make_text.addEventListener("click", langClick);
 }
+
+function colorChnage(e) {
+    e.preventDefault();
+    const currentTop = e.target.scrollingElement.scrollTop;
+
+    const resumeBlue = document.querySelector(".resume_blue");
+    const blueTop = resumeBlue.offsetTop;
+    const blueHeight = resumeBlue.offsetHeight;
+    const winHeight = window.innerHeight;
+
+    if (currentTop + winHeight + 64 >= blueTop && currentTop + winHeight + 64 <= blueTop + blueHeight) {
+        make_btn.style.backgroundColor = "rgba(255,255,255,0.2)";
+        blue = true;
+    }else{
+        make_btn.style.backgroundColor = "rgba(47,117,255,0.8)";
+         blue = false;
+    }
+    console.log(blue);
+}
+
+window.addEventListener("scroll", colorChnage);
+
 LangBtnAni();
 makeLangBtn();

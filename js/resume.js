@@ -103,8 +103,8 @@ function ResumeModalActive() {
 }
 
 function ResumeModalClosed() {
-    makeModal.style.top = "-50%";
-    makeModal.style.opacity = "0.1";
+    makeModal.style.top = "0";
+    makeModal.style.opacity = "0";
     setTimeout(() => {
         resumeBack.style.height = "0";
     }, 250);
@@ -138,10 +138,10 @@ function makeResumeModal() {
     makeModal.style.width = "410px";
     makeModal.style.height = "308px";
     makeModal.style.backgroundColor = "#FFFFFF";
-    makeModal.style.opacity = "0.1";
+    makeModal.style.opacity = "0";
     makeModal.style.borderRadius = "4px";
     makeModal.style.position = "fixed";
-    makeModal.style.top = "-50%";
+    makeModal.style.top = "0";
     makeModal.style.left = "50%";
     makeModal.style.transform = "translate(-50%, -50%)";
     makeModal.style.boxSizing = "border-box";
