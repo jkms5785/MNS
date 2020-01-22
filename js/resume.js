@@ -99,15 +99,15 @@ function ResumeModalActive() {
     setTimeout(() => {
         makeModal.style.top = "50%";
         makeModal.style.opacity = "1.0";
-    }, 250);
+    }, 500);
 }
 
 function ResumeModalClosed() {
-    makeModal.style.top = "0";
+    makeModal.style.top = "32%";
     makeModal.style.opacity = "0";
     setTimeout(() => {
         resumeBack.style.height = "0";
-    }, 250);
+    }, 500);
 }
 
 function makeResumeModal() {
@@ -141,22 +141,22 @@ function makeResumeModal() {
     makeModal.style.opacity = "0";
     makeModal.style.borderRadius = "4px";
     makeModal.style.position = "fixed";
-    makeModal.style.top = "0";
+    makeModal.style.top = "32%";
     makeModal.style.left = "50%";
     makeModal.style.transform = "translate(-50%, -50%)";
     makeModal.style.boxSizing = "border-box";
     makeModal.style.padding = "40px 0";
     makeModal.style.zIndex = "9990";
 
-    makeModal.style.webkitTransition = "all 500ms ease-in-out";
-    makeModal.style.mozTransition = "all 500ms ease-in-out";
-    makeModal.style.oTransition = "all 500ms ease-in-out";
-    makeModal.style.transition = "all 500ms ease-in-out";
+    makeModal.style.webkitTransition = "all 350ms ease-in-out";
+    makeModal.style.mozTransition = "all 350ms ease-out";
+    makeModal.style.oTransition = "all 350ms ease-out";
+    makeModal.style.transition = "all 350ms ease-out";
 
-    makeModal.style.webkitTransitionTimingFunction = "ease-in-out";
-    makeModal.style.mozTransitionTimingFunction = "ease-in-out";
-    makeModal.style.oTransitionTimingFunction = "ease-in-out";
-    makeModal.style.transitionTimingFunction = "ease-in-out";
+    makeModal.style.webkitTransitionTimingFunction = "ease-out";
+    makeModal.style.mozTransitionTimingFunction = "ease-out";
+    makeModal.style.oTransitionTimingFunction = "ease-out";
+    makeModal.style.transitionTimingFunction = "ease-out";
 
     let modal = document.querySelector("#js-modal");
 
