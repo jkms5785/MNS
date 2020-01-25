@@ -148,10 +148,10 @@ function makeResumeModal() {
     makeModal.style.padding = "40px 0";
     makeModal.style.zIndex = "9990";
 
-    makeModal.style.webkitTransition = "all 350ms ease-in-out";
-    makeModal.style.mozTransition = "all 350ms ease-out";
-    makeModal.style.oTransition = "all 350ms ease-out";
-    makeModal.style.transition = "all 350ms ease-out";
+    makeModal.style.webkitTransition = "all 200ms ease-in-out";
+    makeModal.style.mozTransition = "all 200ms ease-out";
+    makeModal.style.oTransition = "all 200ms ease-out";
+    makeModal.style.transition = "all 200ms ease-out";
 
     makeModal.style.webkitTransitionTimingFunction = "ease-out";
     makeModal.style.mozTransitionTimingFunction = "ease-out";
