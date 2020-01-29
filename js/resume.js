@@ -95,6 +95,7 @@ function btnHovered() {
 }
 
 function ResumeModalActive() {
+    makeResumeModal();
     resumeBack.style.height = "100vh";
     setTimeout(() => {
         makeModal.style.top = "50%";
@@ -103,6 +104,7 @@ function ResumeModalActive() {
 }
 
 function ResumeModalClosed() {
+    resumeParent.removeChild(makeModal);
     makeModal.style.top = "50%";
     makeModal.style.opacity = "0";
     setTimeout(() => {
@@ -110,7 +112,7 @@ function ResumeModalClosed() {
     }, 500);
 }
 
-function makeResumeModal() {
+function makeModalBack(){
     resumeParent.appendChild(resumeBack);
     resumeBack.id = "js-modal-back";
     resumeBack.style.backgroundColor = "#000000";
@@ -132,7 +134,9 @@ function makeResumeModal() {
     resumeBack.style.mozTransitionTimingFunction = "cubic-bezier(0.000, 0.000, 0.165, 1)";
     resumeBack.style.oTransitionTimingFunction = "cubic-bezier(0.000, 0.000, 0.165, 1)";
     resumeBack.style.transitionTimingFunction = "cubic-bezier(0.000, 0.000, 0.165, 1)";
+}
 
+function makeResumeModal() {
     resumeParent.appendChild(makeModal);
     makeModal.id = "js-modal";
     makeModal.style.width = "410px";
@@ -247,5 +251,4 @@ function makeResumeModal() {
 }
 
 resume.addEventListener("click", ResumeModalActive);
-
-makeResumeModal();
+makeModalBack();
