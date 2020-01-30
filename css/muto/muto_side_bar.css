@@ -108,3 +108,14 @@
 .sc_des {
     opacity: 0;
 }
+
+
+@media(max-width:768px) {
+    .side_bt {
+        left: 110%;
+    }
+
+    .side_info{
+        left : 110%;
+    }
+}

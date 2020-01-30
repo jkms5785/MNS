@@ -275,7 +275,7 @@ body::-webkit-scrollbar {
 }
 
 
-@media(max-width:800px) {
+@media(max-width:840px) {
     .home_cont {
         flex-direction: column;
     }

@@ -140,7 +140,7 @@
     font-size: 1.5rem;
     font-weight: 800;
     opacity: 0.8;
-    letter-spacing: 1px;
+    letter-spacing: 0.4px;
 }
 
 .kr {
@@ -317,4 +317,98 @@
 
 .web_img {
     padding-top: 393.75%;
+}
+
+
+@media(max-width:960px) {
+    .info {
+        flex-direction: column;
+    }
+
+    .info_cont_1 {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .info_img {
+        width: 64%;
+    }
+
+    .info_cont_2 {
+        width: 100%;
+        margin-left: 0;
+        padding-top: 56px;
+        flex-direction: row;
+    }
+
+    .info_body_align .info_detail:first-child {
+        margin-right: 0;
+    }
+
+    .info_title, .info_kr_title, .info_body {
+        font-size: 1rem;
+        line-height: 28px;
+    }
+
+    .info_detail, .project_title {
+        width: 50%;
+    }
+
+    .info_body_align {
+        justify-content: space-between;
+    }
+}
+
+@media(max-width:768px){
+    .title {
+        font-size: 1.125rem;
+    }
+
+    .text_cont {
+        flex-direction: column;
+    }
+
+    .body_kr {
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .body_en {
+        margin-left: 0;
+        width: 100%;
+        margin-top: 4.48%;
+    }
+
+    .body_research{
+        margin-top: 6%;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .colorResearch_text{
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .color_map{
+        margin-left: 0;
+        width: 64%;
+        margin-top: 8%;
+        margin-bottom: 12%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+@media(max-width:640px) {
+    .info_title, .info_kr_title, .info_body {
+        font-size: 0.875rem;
+        line-height: 24px;
+    }
+
+    .title {
+        font-size: 1rem;
+    }
 }
