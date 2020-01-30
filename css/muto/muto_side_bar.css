@@ -1,6 +1,6 @@
 .side_bt {
     position: fixed;
-    left: 97.5%;
+    left: 96%;
     top: 50%;
     transform: translateY(-50%);
     z-index: 3;
@@ -32,7 +32,7 @@
 }
 
 .side_bt ul li:last-child {
-    background-color: 2F75FF;
+    background-color: #2F75FF;
     border-radius: 100%;
 }
 
@@ -43,7 +43,7 @@
 
 .side_info {
     position: fixed;
-    left: calc(97.5% - 148px);
+    left: calc(96% - 148px);
     top: 50%;
     transform: translateY(-50%);
     z-index: 3;

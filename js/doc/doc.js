@@ -43,11 +43,11 @@ function init() {
 
 function makeOffsetHeight(e) {
     e.preventDefault();
-    const docHeight = document.scrollingElement.offsetHeight;
     if (winHeightQue.alt === `hackathon_img_loaded`) {
         makeScrollEvent();
         window.removeEventListener("scroll", makeOffsetHeight);
     }
+    window.addEventListener("resize",makeScrollEvent);
 }
 
 function makeScrollEvent() {
