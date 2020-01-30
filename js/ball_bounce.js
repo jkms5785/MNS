@@ -18,8 +18,8 @@ var ball;
 var gravity = 0.8;
 var friction = 0.8;
 var bounce = 0.7;
-let ballWidth;
-let clientWidth = window.screenWidth;
+let ballWidth = 16;
+let clientWidth;
 
 function ballTank() {
     ballsArr = []
@@ -28,10 +28,7 @@ function ballTank() {
 ballTank();
 
 function init2() {
-
-    if (clientWidth > 800) {
-        ballWidth = 16;
-    } else {
+    if (clientWidth < 800) {
         ballWidth = 8;
     }
 
@@ -102,6 +99,8 @@ function PopupBall2() {
     var scrollanchor = window.scrollY,
         QueHeight = blueQue.offsetHeight,
         blueQueTop = blueQue.offsetTop;
+
+    clientWidth = window.innerWidth;
 
     if (scrollanchor >= blueQueTop - window.innerHeight + 600) {
         init2();
