@@ -3,7 +3,7 @@
     left: 97.5%;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 3;
+    z-index: 1000;
 }
 
 .side_bt ul li {
