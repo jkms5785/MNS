@@ -8,12 +8,12 @@ body::-webkit-scrollbar {
 }
 
 .wrap_cont {
-    margin: 0 4%;
+    margin: 0 40px;
 }
 
 .home_cont {
     max-width: 1280px;
-    height: 1024px;
+    min-height: 1024px;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -57,7 +57,7 @@ body::-webkit-scrollbar {
 
 .home_body {
     opacity: 0.8;
-   font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     font-size: 1.125rem;
     color: #393939;
@@ -249,7 +249,7 @@ body::-webkit-scrollbar {
 }
 
 .arrow_body {
-   font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     font-size: 1.333rem;
     letter-spacing: -0.2px;
@@ -272,4 +272,29 @@ body::-webkit-scrollbar {
     -webkit-transform: rotate(0deg);
     /* Chrome, Safari, Opera */
     transform: rotate(0deg);
+}
+
+
+@media(max-width:800px) {
+    .home_cont {
+        flex-direction: column;
+    }
+
+    .home_gif_cont {
+        width: 100%;
+        padding-top: 116.363636363636364%;
+        margin-right: 0;
+        margin-top: 140px;
+    }
+
+    .home_title_cont {
+        margin-left: 0;
+        width: 100%;
+        margin-bottom: 156px;
+    }
+
+    .home_body {
+        width: 100%;
+        padding-right: 0;
+    }
 }

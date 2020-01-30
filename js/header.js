@@ -23,7 +23,7 @@ function ScrollHeader() {
     }, 500);
 }
 
-function headerQue(){
+function headerQue() {
     didScroll = true;
     if (didScroll) {
         headerUp();
@@ -39,7 +39,7 @@ function Underline() {
     this.children[0].style.color = "#2F75FF";
 }
 
-function UnderlineRemove(){
+function UnderlineRemove() {
     this.classList.remove("underlineHovered");
     PageDetect();
 }
@@ -56,6 +56,8 @@ function PageDetect() {
 }
 
 function init() {
+    window.addEventListener('scroll', headerQue);
+     ScrollHeader();
     for (h = 0; h < headerLi.length; h++) {
         headerLi[h].addEventListener("mouseover", Underline);
         headerLi[h].addEventListener("mouseleave", UnderlineRemove);

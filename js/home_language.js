@@ -45,8 +45,8 @@ function LangBtnAni() {
         if (preloaderQue.style.height === "0px") {
             console.log(`end interval`);
             clearInterval(preloaderCheck);
-            make_btn.style.right = "64px";
-            make_text.style.right = "64px";
+            make_btn.style.right = "40px";
+            make_text.style.right = "40px";
             make_btn.style.opacity = "1.0";
             make_text.style.opacity = "1.0";
         }
@@ -59,8 +59,8 @@ function makeLangBtn() {
     make_btn.style.height = "48px";
     make_btn.style.borderRadius = "50%";
     make_btn.style.backgroundColor = "rgba(47,117,255,0.8)";
-    make_btn.style.bottom = "64px";
-    make_btn.style.right = "-48px";
+    make_btn.style.bottom = "6%";
+    make_btn.style.right = "-4%";
     make_btn.style.position = "fixed";
     make_btn.style.opacity = "0";
     make_btn.style.webkitTransition = "all 500ms ease-out";
@@ -82,8 +82,8 @@ function makeLangBtn() {
     make_text.style.height = "48px";
     make_text.style.color = "white"
     make_text.style.position = "fixed";
-    make_text.style.bottom = "64px";
-    make_text.style.right = "-48px";
+    make_text.style.bottom = "6%";
+    make_text.style.right = "-4%";
     make_text.innerHTML = "KR";
     make_text.style.fontFamily = "'Open Sans', sans-serif";
     make_text.style.fontWeight = "400";

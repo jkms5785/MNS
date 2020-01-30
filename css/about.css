@@ -33,6 +33,15 @@
     /* custom */
 }
 
+.wrap {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.wrap_cont {
+    margin: 0 40px;
+}
+
 .material,
 .solution {
     display: flex;
@@ -224,7 +233,7 @@
 .resume_title {
     font-family: 'Montserrat', 'san-selif';
     font-weight: 700;
-    font-size: 40px;
+    font-size: 2.5rem;
     color: #FFFFFF;
     line-height: 49px;
 }
@@ -315,15 +324,16 @@
     font-weight: 600;
     font-size: 1.125rem;
     color: #FFFFFF;
+
 }
 
 .resume_body .detail {
     opacity: 0.6;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
-    font-size: 1.125rem;
+    font-size: 1rem;
     color: #FFFFFF;
-    line-height: 26px;
+    line-height: 24px;
     padding-top: 4px;
 }
 
@@ -331,6 +341,7 @@
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
     font-size: 1rem;
+    line-height: 28px;
     color: #FFFFFF;
 }
 
@@ -387,4 +398,103 @@
 .resume_numUp {
     transform: translateX(-100%);
     opacity: 0.6;
+}
+
+
+@media(max-width:800px) {
+    .about_title {
+        width: 100%;
+    }
+
+    .about_body {
+        flex-direction: column;
+        padding-bottom: 96px;
+    }
+
+    .about_photo {
+        width: 100%;
+        padding-top: 122.5%;
+        margin-right: 0;
+        margin-bottom: 80px;
+    }
+
+    .about_intro {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .resume_blue{
+        height: 960px;
+    }
+
+    .about_resume_cont{
+        padding-top: 96px;
+    }
+
+    .resume_each {
+        min-width: 188px;
+    }
+
+    .resume_body_cont {
+        width: 80%;
+    }
+
+    .resume_title {
+        font-size: 1.5rem;
+        line-height: 32px;
+    }
+
+    .lineTo {
+        width: 0%;
+    }
+
+    .resume_numUp {
+        transform: translateX(-60%);
+    }
+
+    .resume_body_cont ul li:first-child {
+        top: 0;
+    }
+
+    .resume_body_cont ul li:nth-child(2) {
+        top: 138px;
+    }
+
+    .resume_body_cont ul li:nth-child(3) {
+        top: 280px;
+    }
+
+    .resume_body_cont ul li:nth-child(4) {
+        top: 444px;
+    }
+
+    .num {
+        width: 0;
+    }
+
+    .resume_numUp {
+        transform: translateX(0);
+        opacity: 0;
+    }
+
+    .resume_body .title {
+        font-size: 1rem;
+        line-height: 28px;
+    }
+
+    .resume_body .detail {
+        font-size: 0.875rem;
+        line-height: 24px;
+    }
+
+    .resume_body .date {
+        font-size: 0.875rem;
+        line-height: 32px;
+    }
+
+    .skill_cont {
+        margin-right: 36px;
+    }
+
+
 }

@@ -18,6 +18,8 @@ var ball;
 var gravity = 0.8;
 var friction = 0.8;
 var bounce = 0.7;
+let ballWidth;
+let clientWidth = window.screenWidth;
 
 function ballTank() {
     ballsArr = []
@@ -26,9 +28,16 @@ function ballTank() {
 ballTank();
 
 function init2() {
+
+    if (clientWidth > 800) {
+        ballWidth = 16;
+    } else {
+        ballWidth = 8;
+    }
+
     for (let i = 0; i < 6; i++) {
         var radius =
-            (Math.floor(Math.random() * 16) + 7) * 8,
+            (Math.floor(Math.random() * ballWidth) + 7) * 8,
             x, y,
             dx = (Math.random() - 0.5) * 50,
             dy = -22,

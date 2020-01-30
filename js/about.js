@@ -29,7 +29,6 @@ function ResumeBodyDown(i) {
             }
         }
     }
-
     skillDown(i);
 }
 
@@ -111,3 +110,30 @@ function init() {
 }
 
 init();
+
+function dateBr() {
+    const dateCont = document.querySelectorAll(".js-date");
+    if (window.innerWidth < 800) {
+        dateCont[0].innerHTML = `South Korea<div class="date">Mar 2013 - Feb 2020</div>`;
+        dateCont[1].innerHTML = `Designer & Front-end developer&nbsp;&nbsp;
+                                    <div class="date">Mar 2019 - Dec 2019</div>`;
+        dateCont[2].innerHTML = `Students Reasercher&nbsp;&nbsp;
+                                    <div class="date">Mar 2017 - Jul 2019</div>`;
+        dateCont[3].innerHTML = `Students Designer&nbsp;&nbsp; <div class="date">Mar 017 - Dec 2019</div>`;
+        dateCont[4].innerHTML = `Designer&nbsp;&nbsp;<div class="date">Jan 2014 - Mar 2014</div>`;
+    } else {
+        dateCont[0].innerHTML = `  South Korea&nbsp;&nbsp; <span class="date">Mar 2013 - Feb 2020</span>`;
+        dateCont[1].innerHTML = `Designer & Front-end developer&nbsp;&nbsp;
+                                    <span class="date">Mar 2019 - Dec 2019</span>`;
+        dateCont[2].innerHTML = `Students Reasercher&nbsp;&nbsp;
+                                    <span class="date">
+                                        Mar 2017 - Jul 2019</span>`;
+        dateCont[3].innerHTML = `Students Designer&nbsp;&nbsp; <span class="date">Mar 2017 - Dec 2019</span>`;
+        dateCont[4].innerHTML = `Designer&nbsp;&nbsp;<span class="date">Jan
+                                        2014 - Mar 2014</span>`;
+    }
+}
+
+dateBr();
+
+window.addEventListener("resize", dateBr);
