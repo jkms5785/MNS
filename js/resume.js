@@ -63,9 +63,9 @@ function makeCursor(b, c, d) {
 
 function linkTo(a) {
     if (a === "KR") {
-        window.open("https://drive.google.com/open?id=1l3qbS_h8EUfnO3W2e1pouTjwd2R6thiN", "MOONSOOKIM_resume_kr");
+        window.open("https://drive.google.com/open?id=1uXu6y0lhmkGqA1SN4RiLi344_PF0HK2r");
     } else {
-        window.open("https://drive.google.com/open?id=1iAlDS2tMk1Yy4iCNomDS_dGAES3S3tzx", "MOONSOOKIM_resume_en");
+        window.open("https://drive.google.com/open?id=1O1ZUSRbGHCEtkTLSdgDHnIF4fSdf2cEq");
     }
 }
 
