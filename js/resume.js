@@ -110,6 +110,8 @@ function ResumeModalClosed() {
     setTimeout(() => {
         resumeBack.style.height = "0";
     }, 500);
+
+    closeUnHovered();
 }
 
 function makeModalBack(){
