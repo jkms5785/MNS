@@ -111,7 +111,7 @@ function ResumeModalClosed() {
         resumeBack.style.height = "0";
     }, 500);
 
-    closeUnHovered();
+    icon_close.parentElement.style.backgroundColor = "";
 }
 
 function makeModalBack(){
