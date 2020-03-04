@@ -14,7 +14,7 @@ const selectPhoto = document.querySelector("#js-video-selectPhoto"),
 
 let i = 0,
     a = 1;
-let imgNum = 18;
+let imgNum = 17;
 
 for (a = 1; a < imgNum + 1; a++) {
     eval(`var img_${a} = document.querySelector("#js-img-${a < 10 ? `0${a}` : a}");`);
