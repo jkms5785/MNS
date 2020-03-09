@@ -100,8 +100,8 @@ function gifImageLoader() {
 
 function preloaderIn() {
     preloader.style.top = "0";
-    workImage[0].src = "img/work_muto.png";
-    workImage[1].src = "img/work_doc.png";
+    workImage[0].src = "img/work_doc.png";
+    workImage[1].src = "img/work_muto.png";
     
     workImage[0], workImage[1].onload = function () {
         workImage[2].src = "img/work_latup.png";
