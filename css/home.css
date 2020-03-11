@@ -105,7 +105,7 @@ body::-webkit-scrollbar {
 }
 
 .title_preloader {
-    transform: translateY(262px) rotateX(90deg);
+     transform: translateY(262px) rotateX(90deg);
     opacity: 0;
 }
 
@@ -117,6 +117,7 @@ body::-webkit-scrollbar {
     -o-transition: all 700ms cubic-bezier(0.000, 0.000, 0.015, 0.995);
     transition: all 700ms cubic-bezier(0.000, 0.000, 0.015, 0.995);
     /* custom */
+
     -webkit-transition-timing-function: cubic-bezier(0.000, 0.000, 0.015, 0.995);
     -moz-transition-timing-function: cubic-bezier(0.000, 0.000, 0.015, 0.995);
     -o-transition-timing-function: cubic-bezier(0.000, 0.000, 0.015, 0.995);
