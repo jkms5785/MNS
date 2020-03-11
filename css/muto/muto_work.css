@@ -13,19 +13,19 @@ body {
 }
 
 .preloader {
-    position: fixed;
+     position: fixed;
     width: 100%;
     background-color: #2F75FF;
     z-index: 9999;
     opacity: 1;
-    height: 0%;
-    top: 0;
-    -webkit-transition: all 500ms cubic-bezier(0.675, 0.005, 0.470, 1);
+    height: 100%;
+    top: -100%;
+    -webkit-transition: all 550ms cubic-bezier(0.675, 0.005, 0.470, 1);
     /* older webkit */
-    -webkit-transition: all 500ms cubic-bezier(0.675, 0.005, 0.470, 1.005);
-    -moz-transition: all 500ms cubic-bezier(0.675, 0.005, 0.470, 1.005);
-    -o-transition: all 500ms cubic-bezier(0.675, 0.005, 0.470, 1.005);
-    transition: all 500ms cubic-bezier(0.675, 0.005, 0.470, 1.005);
+    -webkit-transition: all 550ms cubic-bezier(0.675, 0.005, 0.470, 1.005);
+    -moz-transition: all 550ms cubic-bezier(0.675, 0.005, 0.470, 1.005);
+    -o-transition: all 550ms cubic-bezier(0.675, 0.005, 0.470, 1.005);
+    transition: all 550ms cubic-bezier(0.675, 0.005, 0.470, 1.005);
     /* custom */
 
     -webkit-transition-timing-function: cubic-bezier(0.675, 0.005, 0.470, 1);

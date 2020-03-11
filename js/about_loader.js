@@ -27,16 +27,16 @@ function bodyLoader3() {
 function bodyLoader2() {
     body2.classList.remove("body_preloader");
     body2.classList.add("body_loader");
-     setTimeout(function () {
-         bodyLoader3();
+    setTimeout(function () {
+        bodyLoader3();
     }, 300);
 }
 
 function bodyLoader1() {
     body1.classList.remove("body_preloader");
     body1.classList.add("body_loader");
-     setTimeout(function () {
-         bodyLoader2();
+    setTimeout(function () {
+        bodyLoader2();
     }, 300);
 }
 
@@ -68,7 +68,8 @@ function titleLoader_1(c) {
 
 function preloaderOut() {
     setTimeout(function () {
-        preloader.style.height = "0";
+        preloader.style.opacity = "0";
+        preloader.style.zIndex = "-9999";
         titleLoader_1(0);
         headerLoader();
         profileLoader();
@@ -81,7 +82,7 @@ function profileLoader() {
 }
 
 function preloaderIn() {
-    preloader.style.height = "100%";
+    preloader.style.transform = "translateY(100%)";
     const insertImg = document.createElement("img");
     profileCont.appendChild(insertImg);
     insertImg.src = "img/profile.png";
@@ -91,7 +92,7 @@ function preloaderIn() {
 
     profileImg.onload = function () {
         setTimeout(function () {
-            preloader.style.top = "100%";
+            preloader.style.transform = "translateY(200%)";
             preloaderOut();
         }, 1000);
     }

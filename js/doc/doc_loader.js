@@ -65,7 +65,8 @@ function lazyLoader(i) {
 
 function preloaderOut() {
     setTimeout(function () {
-        preloader.style.height = "0";
+         preloader.style.opacity = "0";
+        preloader.style.zIndex = "-9999";
         headerLoader();
     }, 1000);
 }
@@ -74,12 +75,12 @@ function preloaderIn() {
     const img_thumbnail = new Image();
     img_thumbnail.src = "img/doc_source/doc_thumbnail.png";
 
-    preloader.style.height = "100%";
+     preloader.style.transform = "translateY(100%)";
     img_thumbnail.onload = function () {
     setTimeout(function () {
         thumbnail.src = img_thumbnail.src;
         thumbnail.alt = "thumbnail";
-        preloader.style.top = "100%";
+        preloader.style.transform = "translateY(200%)";
         preloaderOut();
         lazyLoader(i);
         videoLoader();

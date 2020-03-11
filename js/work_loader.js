@@ -87,7 +87,8 @@ function titleLoader_1(c) {
 
 function preloaderOut() {
     setTimeout(function () {
-        preloader.style.height = "0";
+        preloader.style.opacity = "0";
+        preloader.style.zIndex = "-9999";
         titleLoader_1(0);
         headerLoader();
     }, 1000);
@@ -99,15 +100,15 @@ function gifImageLoader() {
 }
 
 function preloaderIn() {
-    preloader.style.height = "100%";
+    preloader.style.transform = "translateY(100%)";
     workImage[0].src = "img/work_doc.png";
     workImage[1].src = "img/work_muto.png";
-    
+
     workImage[0], workImage[1].onload = function () {
         workImage[2].src = "img/work_latup.png";
         workImage[3].src = "img/work_grayblock.png";
         setTimeout(function () {
-            preloader.style.top = "100%";
+            preloader.style.transform = "translateY(200%)";
             preloaderOut();
             gifImageLoader();
         }, 1000);

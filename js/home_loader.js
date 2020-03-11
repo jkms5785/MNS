@@ -64,7 +64,8 @@ function titleLoader_1(c) {
 
 function preloaderOut() {
     setTimeout(function () {
-        preloader.style.height = "0";
+        preloader.style.opacity = "0";
+        preloader.style.zIndex = "-9999";
         homeGif.style.opacity = "1.0";
         titleLoader_1(0);
         headerLoader();
@@ -72,12 +73,12 @@ function preloaderOut() {
 }
 
 function preloaderIn() {
-    preloader.style.height = "100%";
+    preloader.style.transform = "translateY(100%)";
     homeGif.src = "img/home_logo_min.gif";
     homeGif.style.opacity = "0";
     homeGif.onload = function () {
         setTimeout(function () {
-            preloader.style.top = "100%";
+            preloader.style.transform = "translateY(200%)";
             preloaderOut();
         }, 1000);
     }
