@@ -81,7 +81,7 @@ function profileLoader() {
 }
 
 function preloaderIn() {
-    preloader.style.top = "0";
+    preloader.style.height = "100%";
     const insertImg = document.createElement("img");
     profileCont.appendChild(insertImg);
     insertImg.src = "img/profile.png";
@@ -91,7 +91,7 @@ function preloaderIn() {
 
     profileImg.onload = function () {
         setTimeout(function () {
-            preloader.style.top = "200%";
+            preloader.style.top = "100%";
             preloaderOut();
         }, 1000);
     }

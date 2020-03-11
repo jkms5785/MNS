@@ -99,7 +99,7 @@ function gifImageLoader() {
 }
 
 function preloaderIn() {
-    preloader.style.top = "0";
+    preloader.style.height = "100%";
     workImage[0].src = "img/work_doc.png";
     workImage[1].src = "img/work_muto.png";
     
@@ -107,7 +107,7 @@ function preloaderIn() {
         workImage[2].src = "img/work_latup.png";
         workImage[3].src = "img/work_grayblock.png";
         setTimeout(function () {
-            preloader.style.top = "200%";
+            preloader.style.top = "100%";
             preloaderOut();
             gifImageLoader();
         }, 1000);

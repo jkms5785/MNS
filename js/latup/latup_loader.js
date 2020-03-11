@@ -83,12 +83,12 @@ function preloaderOut() {
 function preloaderIn() {
     const img_thumbnail = new Image();
     img_thumbnail.src = "img/latup_source/latup_thumbnail.png";
-    preloader.style.top = "0";
+    preloader.style.height = "100%";
     img_thumbnail.onload = function () {
         setTimeout(function () {
             thumbnail.src = img_thumbnail.src;
             thumbnail.alt = "thumbnail";
-            preloader.style.top = "200%";
+            preloader.style.top = "100%";
             preloaderOut();
             lazyLoader(i);
             gifLoader();

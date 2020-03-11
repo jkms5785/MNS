@@ -72,12 +72,12 @@ function preloaderOut() {
 }
 
 function preloaderIn() {
-    preloader.style.top = "0";
+    preloader.style.height = "100%";
     homeGif.src = "img/home_logo_min.gif";
     homeGif.style.opacity = "0";
     homeGif.onload = function () {
         setTimeout(function () {
-            preloader.style.top = "200%";
+            preloader.style.top = "100%";
             preloaderOut();
         }, 1000);
     }
