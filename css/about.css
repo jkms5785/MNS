@@ -52,7 +52,7 @@
 }
 
 .title_loader {
-    transform: translateY(0px) rotateX(0deg);
+     transform: translateY(0px) rotateX(0deg) scale(1.0);
     opacity: 1.0;
     -webkit-transition: opacity 1000ms ease 100ms, transform 1000ms cubic-bezier(0, 0.7, 0.29, 0.97) 100ms;
     -moz-transition: opacity 1000ms ease 100ms, transform 1000ms cubic-bezier(0, 0.7, 0.29, 0.97) 100ms;
