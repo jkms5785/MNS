@@ -59,7 +59,7 @@ function langClick() {
 
 function LangBtnAni() {
     let preloaderCheck = setInterval(() => {
-        if (preloaderQue.style.height === "0px") {
+        if (preloaderQue.style.zIndex === "-9999") {
             console.log(`end interval`);
             clearInterval(preloaderCheck);
             make_btn.style.right = "40px";
