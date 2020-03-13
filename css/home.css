@@ -116,8 +116,6 @@ body::-webkit-scrollbar {
     -moz-transition: opacity 1000ms ease 100ms, transform 1000ms cubic-bezier(0, 0.7, 0.29, 0.97) 100ms;
     -o-transition: opacity 1000ms ease 100ms, transform 1000ms cubic-bezier(0, 0.7, 0.29, 0.97) 100ms;
     transition: opacity 1000ms ease 100ms, transform 1000ms cubic-bezier(0, 0.7, 0.29, 0.97) 100ms;
-    /* custom */
-
 }
 
 .body_preloader {
