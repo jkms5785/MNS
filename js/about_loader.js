@@ -47,7 +47,7 @@ function titleLoader_2(c) {
             titleSecond[c].classList.add("title_loader");
             c++;
             titleLoader_2(c);
-        }, 8);
+        }, 16);
     } else if (c === Solution.childElementCount) {
         bodyLoader1();
     }
@@ -60,7 +60,7 @@ function titleLoader_1(c) {
             titleFirst[c].classList.add("title_loader");
             c++;
             titleLoader_1(c);
-        }, 8);
+        }, 16);
     } else if (c === materialAnd.childElementCount) {
         titleLoader_2(0);
     }
