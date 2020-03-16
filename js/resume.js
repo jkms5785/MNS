@@ -96,7 +96,7 @@ function btnHovered() {
 
 function ResumeModalActive() {
     makeResumeModal();
-    resumeBack.style.height = "100vh";
+    resumeBack.style.transform = "translateY(100%)";
     setTimeout(() => {
         makeModal.style.top = "50%";
         makeModal.style.opacity = "1.0";
@@ -108,7 +108,7 @@ function ResumeModalClosed() {
     makeModal.style.top = "50%";
     makeModal.style.opacity = "0";
     setTimeout(() => {
-        resumeBack.style.height = "0";
+        resumeBack.style.transform = "translateY(0)";
     }, 500);
 
     icon_close.parentElement.style.backgroundColor = "";
@@ -120,22 +120,22 @@ function makeModalBack(){
     resumeBack.style.backgroundColor = "#000000";
     resumeBack.style.opacity = "0.6";
     resumeBack.style.width = "100vw";
-    resumeBack.style.height = "0";
+    resumeBack.style.height = "100%";
     resumeBack.style.position = "fixed";
-    resumeBack.style.top = "0";
+    resumeBack.style.top = "-100%";
     resumeBack.style.left = "0";
     resumeBack.style.cursor = "pointer";
     resumeBack.style.zIndex = "2000";
 
-    resumeBack.style.webkitTransition = "all 500ms cubic-bezier(0.000, 0.000, 0.165, 1)";
-    resumeBack.style.mozTransition = "all 500ms cubic-bezier(0.000, 0.000, 0.165, 1)";
-    resumeBack.style.oTransition = "all 500ms cubic-bezier(0.000, 0.000, 0.165, 1)";
-    resumeBack.style.transition = "all 500ms cubic-bezier(0.000, 0.000, 0.165, 1)";
+    resumeBack.style.webkitTransition = "all 500ms cubic-bezier(0.675, 0.005, 0.470, 1)";
+    resumeBack.style.mozTransition = "all 500ms cubic-bezier(0.675, 0.005, 0.470, 1)";
+    resumeBack.style.oTransition = "all 500ms cubic-bezier(0.675, 0.005, 0.470, 1)";
+    resumeBack.style.transition = "all 500ms cubic-bezier(0.675, 0.005, 0.470, 1)";
 
-    resumeBack.style.webkitTransitionTimingFunction = "cubic-bezier(0.000, 0.000, 0.165, 1)";
-    resumeBack.style.mozTransitionTimingFunction = "cubic-bezier(0.000, 0.000, 0.165, 1)";
-    resumeBack.style.oTransitionTimingFunction = "cubic-bezier(0.000, 0.000, 0.165, 1)";
-    resumeBack.style.transitionTimingFunction = "cubic-bezier(0.000, 0.000, 0.165, 1)";
+    resumeBack.style.webkitTransitionTimingFunction = "cubic-bezier(0.675, 0.005, 0.470, 1)";
+    resumeBack.style.mozTransitionTimingFunction = "cubic-bezier(0.675, 0.005, 0.470, 1)";
+    resumeBack.style.oTransitionTimingFunction = "cubic-bezier(0.675, 0.005, 0.470, 1)";
+    resumeBack.style.transitionTimingFunction = "cubic-bezier(0.675, 0.005, 0.470, 1)";
 }
 
 function makeResumeModal() {
