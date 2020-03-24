@@ -52,6 +52,7 @@
 .solution {
     display: flex;
 }
+
 .title_preloader {
     transform: translateY(240px) rotateX(180deg) scale(0.6);
     opacity: 0;
@@ -205,7 +206,7 @@
     font-weight: 400;
     font-size: 1.125rem;
     color: #393939;
-    line-height: 36px;
+    line-height: 32px;
     padding-top: 32px;
 }
 
@@ -805,7 +806,7 @@
 
 }
 
-.CirclePop {
+.Circle {
     width: 63.6363636363%;
     height: 63.6363636363%;
     background-color: #2f75ff;
@@ -814,7 +815,9 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 9999;
+}
 
+.CirclePop {
     animation-name: CircleBounce;
     animation-delay: 0.8s;
     animation-duration: 1s;
@@ -909,7 +912,7 @@
         opacity: 0;
     }
 
-    .selected{
+    .selected {
         height: 84px;
     }
 

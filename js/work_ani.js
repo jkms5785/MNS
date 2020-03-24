@@ -15,99 +15,118 @@ const aniArry = [animation1, animation2, animation3, animation4],
 
 const rotateQue = document.querySelector("#js-workAni");
 
-let count = 0;
-let Rv = 0;
-let RotateChecker = 3;
+let StopRotate = false;
 
-function Rotater() {
-    if (RotateChecker == 0) {
-        let tiltRight = setInterval(function () {
-            Rv++;
-            mtos_cont.style.transform = 'rotateZ(' + Rv + 'deg)';
-            if (Rv >= 18) {
-                clearInterval(tiltRight);
-                RotateChecker = 1;
-            } else if (RotateChecker === 3) {
-                clearInterval(tiltRight);
-            }
-        }, 15);
-    }
-
-    if (RotateChecker == 1) {
-        let tiltLeft = setInterval(function () {
-            Rv--;
-            mtos_cont.style.transform = 'rotateZ(' + Rv + 'deg)';
-            if (Rv <= 0) {
-                clearInterval(tiltLeft);
-                RotateChecker = 0;
-            } else if (RotateChecker === 3) {
-                clearInterval(tiltLeft);
-            }
-        }, 30);
-    }
+function RotateToRight() {
+    mtos_cont.style.transition = "all 500ms ease-in"
+    mtos_cont.style.transform = "rotateZ(18deg)";
+    setTimeout(function () {
+        if (!StopRotate) {
+            RotateToLeft();
+        }
+    }, 2000);
 }
-// 오른쪽, 왼쪽으로 기울기
 
-let overclickStop = true;
+function RotateToLeft() {
+    mtos_cont.style.transform = "rotateZ(0deg)";
+    setTimeout(function () {
+        if (!StopRotate) {
+            RotateToRight();
+        }
+    }, 2000);
+}
+
+function clickToCircle() {
+    ToCircle[0].removeEventListener('click', clickToCircle);
+    StopRotate = true;
+    mtos_cont.style.transform = "rotateZ(0deg)";
+    setTimeout(function () {
+        AniQue2();
+        Popball();
+    }, 800);
+}
+
+function Popball() {
+    setTimeout(function () {
+        svgSlect.style.opacity = 0;
+        svgSlect.style.cursor = "";
+        svgSlect.style.zIndex = "-1";
+
+        ToSquare[0].style.zIndex = "1";
+        ToSquare[0].classList.add('Circle');
+        ToSquare[0].classList.add('CirclePop');
+        ToSquare[0].style.cursor = "pointer";
+        let y = 0;
+        let borderRadiusCircle = setInterval(function () {
+            y++;
+            ToSquare[0].style.borderRadius = y + '%';
+            if (y === 100) {
+                clearInterval(borderRadiusCircle);
+            }
+        }, 5);
+
+        setTimeout(function () {
+            ToSquare[0].addEventListener('click', clickToSquare);
+        }, 1000);
+    }, 1000);
+}
 
 function clickToSquare() {
-    RotateChecker = 3;
+    ToSquare[0].removeEventListener('click', clickToSquare);
+    let TopPosition = parseInt(ToSquare[0].offsetTop / 2.2);
+    // offsetTop 110 = top 50% // offsetWith = 140
+    // Top position % 구하기.
+    ToSquare[0].style.animationName = "no";
+    // 애니메이션 정지
+    ToSquare[0].style.top = TopPosition + '%';
+    // 정지 후 현재위치 유지
 
-    if (overclickStop) {
-        overclickStop = !overclickStop;
-
-        if (count === 1) {
-            var SquareTop = ToSquare[0].offsetTop;
-            var OffsetSquare = mtos_cont.offsetWidth;
-            var TopPosition = parseInt(SquareTop / OffsetSquare * 100);
-            // Top position % 구하기. 
-            ToSquare[0].style.animationName = 'no';
-            ToSquare[0].style.top = TopPosition + '%';
-
-            if (TopPosition > 50) {
-                var t = 0;
-                var Toptimer = setInterval(function () {
-                    t++;
-                    ToSquare[0].style.top = TopPosition - t + '%';
-                    var StopQue = TopPosition - t;
-                    if (StopQue === 50) {
-                        clearInterval(Toptimer);
-                    }
-                }, 8);
+    if (TopPosition > 50) {
+        let t = 0;
+        let backToOrigin = setInterval(function () {
+            t++;
+            ToSquare[0].style.top = TopPosition - t + '%';
+            var StopQue = TopPosition - t;
+            if (StopQue === 50 || StopQue <= 50) {
+                clearInterval(backToOrigin);
+                PopSquare();
             }
-            // 공이 아래로 튈때 ToSquare 제자리로 ~ 
-
-            setTimeout(function () {
-                var y = 100;
-                var timer = setInterval(function () {
-                    y--;
-                    ToSquare[0].style.borderRadius = y + '%';
-                    if (y === 0) {
-                        clearInterval(timer);
-                    }
-                }, 5);
-            }, 500);
-
-            setTimeout(function () {
-                // ToSquare 라운딩 각지게 
-                svgSlect.style.opacity = 1;
-                AniQue();
-                ToSquare[0].classList.remove('CirclePop');
-                ToSquare[0].style.cursor = "";
-                svgSlect.style.opacity = 1.0;
-                svgSlect.style.cursor = "pointer";
-            }, 1500);
-            // 1.5초 뒤에 ToSquare 사라지고, svg다시등장 라운딩 각지게 
-            setTimeout(function () {
-                RotateChecker = 0;
-                overclickStop = true;
-                // 중복방지
-            }, 2500);
-            count--;
-            //카운트 0 으로 
-        }
+        }, 8);
     }
 }
+
+function PopSquare() {
+    let j = 100;
+    let borderRadiusCircle = setInterval(function () {
+        j--;
+        ToSquare[0].style.borderRadius = j + '%';
+        if (j === 0) {
+            clearInterval(borderRadiusCircle);
+            backToSquare();
+        }
+    }, 5);
+}
+
+function backToSquare() {
+    setTimeout(function () {
+        svgSlect.style.opacity = "1";
+        svgSlect.style.zIndex = "1";
+        svgSlect.style.cursor = "pointer";
+        AniQue();
+        ToSquare[0].style.animationName = "";
+        ToSquare[0].classList.remove('CirclePop');
+        ToSquare[0].classList.remove('Circle');
+        ToSquare[0].style.zIndex = "-1";
+        ToSquare[0].style.cursor = "";
+
+        setTimeout(function () {
+            StopRotate = false;
+            RotateToRight();
+            ToCircle[0].addEventListener('click', clickToCircle);
+        }, 1500);
+    }, 500);
+}
+
 
 function AniQue2() {
     for (l = 0; l < 4; l++) {
@@ -129,71 +148,16 @@ function AniQue() {
     }
 }
 
-function clickToCircle() {
-    RotateChecker = 3;
-
-    if (overclickStop) {
-        overclickStop = !overclickStop;
-
-        if (Rv > 0) {
-            var RotateToOrigin = setInterval(function () {
-                Rv--;
-                mtos_cont.style.transform = 'rotateZ(' + Rv + 'deg)';
-                if (Rv == 0) {
-                    clearInterval(RotateToOrigin);
-                }
-            }, 25);
-        } else {
-            mtos_cont.style.transform = 'rotateZ(0deg)';
-            clearInterval(RotateToOrigin);
-        }
-        // rotate Interval 끝내고, 원래 Z축으로 돌아가기 
-
-        setTimeout(function () {
-            AniQue2();
-        }, 500)
-        // 줄어드는 애니메이션 배열 시작 For, 클로저
-
-        if (count === 0) {
-            setTimeout(function () {
-                svgSlect.style.opacity = 0;
-                svgSlect.style.cursor = "";
-                ToSquare[0].classList.add('CirclePop');
-                ToSquare[0].style.cursor = "pointer";
-                var y = 0;
-                var timer = setInterval(function () {
-                    y++;
-                    ToSquare[0].style.borderRadius =
-                        y + '%';
-                    if (y === 100) {
-                        clearInterval(timer);
-                    }
-                }, 5);
-                ToSquare[0].style.animation = ("animation-play-state", "");
-                // 애니메이션 스테이트 멈춤 -> 실행, onclick 3회 이상일때 누적 방지
-            }, 1500)
-            count++;
-        }
-
-        setTimeout(function () {
-            overclickStop = true;
-            //                 // 중복방지
-        }, 3000)
-    } 
-}
-
 function init() {
     ToCircle[0].addEventListener('click', clickToCircle);
-    ToSquare[0].addEventListener('click', clickToSquare);
-
     svgSlect.setAttribute('viewbox', "0 0 220 220");
     svgSlect.style.cursor = "pointer";
 
     const checker = setInterval(function () {
         if (rotateQue.classList[1] === "workAni_loader") {
             RotateChecker = 0;
-            clearInterval(checker); 
-            let RotateToRight = setInterval(Rotater, 2000);
+            clearInterval(checker);
+            RotateToRight();
         }
     }, 1000);
 }

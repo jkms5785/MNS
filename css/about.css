@@ -9,7 +9,7 @@
 }
 
 .preloader {
-   position: fixed;
+    position: fixed;
     width: 100%;
     background-color: #2F75FF;
     z-index: 9999;
@@ -46,13 +46,14 @@
 .solution {
     display: flex;
 }
+
 .title_preloader {
     transform: translateY(240px) rotateX(180deg) scale(0.6);
     opacity: 0;
 }
 
 .title_loader {
-     transform: translateY(0px) rotateX(0deg) scale(1.0);
+    transform: translateY(0px) rotateX(0deg) scale(1.0);
     opacity: 1.0;
     -webkit-transition: opacity 1000ms ease 100ms, transform 1000ms cubic-bezier(0, 0.7, 0.29, 0.97) 100ms;
     -moz-transition: opacity 1000ms ease 100ms, transform 1000ms cubic-bezier(0, 0.7, 0.29, 0.97) 100ms;
@@ -110,7 +111,7 @@
     font-weight: 400;
     font-size: 1.125rem;
     color: #393939;
-    line-height: 36px;
+    line-height: 32px;
     margin-left: 2.34375%;
 }
 
@@ -416,11 +417,11 @@
         margin-left: 0;
     }
 
-    .resume_blue{
+    .resume_blue {
         height: 1080px;
     }
 
-    .about_resume_cont{
+    .about_resume_cont {
         padding-top: 96px;
     }
 
