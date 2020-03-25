@@ -2,8 +2,8 @@ const preloader = document.getElementById("js-preloader"),
     gifCont = document.getElementById("js-gifCont"),
     homeGif = document.getElementById("js_homeGif");
 
-    const materialAnd = document.querySelector("#js-material"),
-        titleFirst = document.querySelectorAll("#js-material span");
+const materialAnd = document.querySelector("#js-material"),
+    titleFirst = document.querySelectorAll("#js-material span");
 
 const Solution = document.querySelector("#js-solution"),
     titleSecond = document.querySelectorAll("#js-solution span");
