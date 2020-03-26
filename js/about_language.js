@@ -50,7 +50,7 @@ function langClick() {
 
         lang[1].innerHTML = "저는 디자인을 단순한 그리기로 생각하지 않고 유용한 사용자 경험을 전달하기 위해 끊임없이 고민합니다. 또한, HTML/CSS/JavaScript를 활용한 프론트 엔드 개발 지식과 백 엔드 개발자들과의 협업 경험으로 코드와 협업에 익숙합니다.";
 
-        lang[2].innerHTML = "디자인과 코드로 놀랍고 아름다운 것을 만드는 것을 좋아하며 새로운 것을 배우는 것에 열정적입니다.";
+        lang[2].innerHTML = "디자인과 코드로 놀랍고 아름다운 것을 만드는 것을 좋아하며 배움에 열정적입니다.";
         setTimeout(() => {
             make_text.innerHTML = "EN";
         }, 500);
