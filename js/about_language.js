@@ -8,17 +8,17 @@ const preloaderQue = document.querySelector("#js-preloader");
 let blue;
 
 function langHover() {
-    if(blue == true){
-          make_btn.style.backgroundColor = "rgba(255,255,255,0.38)";
-    }else{
+    if (blue == true) {
+        make_btn.style.backgroundColor = "rgba(255,255,255,0.38)";
+    } else {
         make_btn.style.backgroundColor = "rgba(47,117,255,0.6)";
     }
 }
 
 function langUnHover() {
-     if(blue == true){
-          make_btn.style.backgroundColor = "rgba(255,255,255,0.2)";
-    }else{
+    if (blue == true) {
+        make_btn.style.backgroundColor = "rgba(255,255,255,0.2)";
+    } else {
         make_btn.style.backgroundColor = "rgba(47,117,255,0.8)";
     }
 }
@@ -46,7 +46,7 @@ function langClick() {
         lang[0], lang[1], lang[2].style.fontWeight = "400";
         lang[0], lang[1], lang[2].style.lineHeight = "36px";
         lang[0], lang[1], lang[2].style.letterSpacing = "-0.2px";
-        lang[0].innerHTML = "안녕하세요. UX 디자이너 김문수입니다. 서울과학기술대학교 디자인학과를 졸업하고, 현재 디자인 일을 찾고 있습니다. 지난 몇년간 UX 디자인을 공부하며 좋은 사용자 경험을 만들기위해 다양한 분야의 동료들과 협업하며 경험을 쌓아왔습니다.";
+        lang[0].innerHTML = "안녕하세요. 디자이너 김문수입니다. 서울과학기술대학교 디자인학과를 졸업하고, 현재 디자인 일을 찾고 있습니다. 지난 몇 년간 UX 디자인을 공부하며 좋은 사용자 경험을 만들기 위해 다양한 분야의 동료들과 협업하며 경험을 쌓아왔습니다.";
 
         lang[1].innerHTML = "저는 디자인을 단순한 그리기로 생각하지 않고 유용한 사용자 경험을 전달하기 위해 끊임없이 고민합니다. 또한, HTML/CSS/JavaScript를 활용한 프론트 엔드 개발 지식과 백 엔드 개발자들과의 협업 경험으로 코드와 협업에 익숙합니다.";
 
@@ -134,9 +134,9 @@ function colorChnage(e) {
     if (currentTop + winHeight + 64 >= blueTop && currentTop + winHeight + 64 <= blueTop + blueHeight) {
         make_btn.style.backgroundColor = "rgba(255,255,255,0.2)";
         blue = true;
-    }else{
+    } else {
         make_btn.style.backgroundColor = "rgba(47,117,255,0.8)";
-         blue = false;
+        blue = false;
     }
 }
 
