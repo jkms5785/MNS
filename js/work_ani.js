@@ -157,7 +157,9 @@ function init() {
         if (rotateQue.classList[1] === "workAni_loader") {
             RotateChecker = 0;
             clearInterval(checker);
-            RotateToRight();
+            setTimeout(function () {
+                RotateToRight();
+            }, 1000);
         }
     }, 1000);
 }

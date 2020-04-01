@@ -1,5 +1,5 @@
 const work = document.getElementsByClassName("js-thumbnail"),
-     workLength = work.length;
+    workLength = work.length;
 
 function Que() {
     let img = this.children[0].children[0],
@@ -11,8 +11,13 @@ function Que() {
     text.classList.add("textHovered");
     viewProject.classList.add("viewProjectHovered");
 
-    if (this == work[2]) {
-        img.src = "img/work_latup_m.gif";
+    switch (this) {
+        case work[2]:
+            img.src = "img/work_latup_m.gif";
+            break;
+        case work[4]:
+            img.src = "img/work_material.gif"
+            break;
     }
 }
 
@@ -26,8 +31,13 @@ function Stop() {
     text.classList.remove("textHovered");
     viewProject.classList.remove("viewProjectHovered");
 
-    if (this == work[2]) {
-        img.src = "img/work_latup.png";
+    switch (this) {
+        case work[2]:
+            img.src = "img/work_latup.png";
+            break;
+        case work[4]:
+            img.src = "img/work_material.png"
+            break;
     }
 }
 

@@ -95,8 +95,10 @@ function preloaderOut() {
 }
 
 function gifImageLoader() {
-    let GifImg = new Image();
-    GifImg.src = "img/work_latup_m.gif";
+    let GifImg_1 = new Image();
+    GifImg_1.src = "img/work_latup_m.gif";
+    let GifImg_2 = new Image();
+    GifImg_2.src = "img/work_material.gif";
 }
 
 function preloaderIn() {
@@ -107,6 +109,7 @@ function preloaderIn() {
     workImage[0], workImage[1].onload = function () {
         workImage[2].src = "img/work_latup.png";
         workImage[3].src = "img/work_grayblock.png";
+        workImage[4].src = "img/work_material.png";
         setTimeout(function () {
             preloader.style.transform = "translateY(200%)";
             preloaderOut();
