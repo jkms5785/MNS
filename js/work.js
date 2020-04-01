@@ -16,7 +16,7 @@ function Que() {
             img.src = "img/work_latup_m.gif";
             break;
         case work[4]:
-            img.src = "img/work_material.gif"
+            img.src = "img/work_material.gif";
             break;
     }
 }
@@ -36,7 +36,9 @@ function Stop() {
             img.src = "img/work_latup.png";
             break;
         case work[4]:
-            img.src = "img/work_material.png"
+            setTimeout(function () {
+                img.src = "img/work_material.png";
+            }, 1000);
             break;
     }
 }
