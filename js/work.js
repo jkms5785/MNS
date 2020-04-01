@@ -36,9 +36,7 @@ function Stop() {
             img.src = "img/work_latup.png";
             break;
         case work[4]:
-            setTimeout(function () {
-                img.src = "img/work_material.png";
-            }, 1000);
+            img.src = "img/work_material.png";
             break;
     }
 }
