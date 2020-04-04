@@ -51,7 +51,7 @@ let ball;
 const gravity = 1.5;
 const friction = 0.8;
 const bounce = 0.6;
-const ballWidth = 8;
+const ballWidth = 6;
 
 const ranNum = (min, max) => {
     let Num = Math.floor(Math.random() * (max - min + 1) + min);
