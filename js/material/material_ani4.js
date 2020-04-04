@@ -115,7 +115,7 @@ class ballObj {
 const drawBall = () => {
     let radius = (Math.floor(ranNum(4, 8) * ballWidth) * 2);
     let x, y;
-    let dx = Math.floor(Math.random() * 10);
+    let dx = Math.floor(ranNum(-4, 8) * 3);
     let dy = -22;
     let color = `rgba(47,117,255,${ranNum(4, 9)/10})`;
     ballsArr.push(new ballObj(x, y, dx, dy, radius, color));
@@ -126,8 +126,9 @@ const pushBall = () => {
 }
 
 const delBall = () => {
-    let ballsArr_2 = ballsArr.slice(0, ballsArr.length - 1);
-    ballsArr = ballsArr_2;
+    // let ballsArr_2 = ballsArr.slice(0, ballsArr.length - 1);
+    // ballsArr = ballsArr_2;
+    ballsArr = [];
 }
 
 function popBallHover() {

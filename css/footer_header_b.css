@@ -106,7 +106,7 @@ footer {
     flex-direction: column;
     justify-content: space-between;
     margin-right: 2.34375%;
-    width: 42.96875%;
+    width: 41.09375%;
 }
 
 .footer_logo {
@@ -132,7 +132,7 @@ footer {
     font-weight: 300;
     font-size: 1rem;
     margin-left: 2.34375%;
-    width: 42.96875%;
+    width: 41.09375%;
 }
 
 .footer_right ul li:not(:first-child) {
@@ -179,7 +179,7 @@ footer {
 
 @media(max-width:640px) {
     .header_nav ul li {
-       margin-left: 24px;
+        margin-left: 24px;
         font-size: 0.875rem;
     }
 }

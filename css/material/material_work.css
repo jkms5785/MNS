@@ -76,6 +76,13 @@ body {
     margin: 0 auto;
 }
 
+.cont_stc {
+    max-width: 1280px;
+    min-width: 960px;
+    margin: 0 auto;
+}
+
+
 .cont_left {
     width: calc(50% - 2.6978417%);
 }
@@ -243,6 +250,23 @@ body {
     font-size: 0.875rem;
     line-height: 26px;
     letter-spacing: -0.2px;
+}
+
+/* material Identity */
+.main_txt_cont {
+    position: absolute;
+    top: 50%;
+    left: 62%;
+    transform: translate(-50%, -50%);
+}
+
+.main_txt {
+    font-family: 'Montserrat', 'san-selif';
+    font-weight: 700;
+    font-size: 3.25rem;
+    color: white;
+    line-height: 63px;
+    display: flex;
 }
 
 .btn_cont {
@@ -458,6 +482,14 @@ body {
 }
 
 /* canvas */
+.blue {
+    background-color: #2F75FF;
+}
+
+.mainImg {
+    padding-top: 64.0625%;
+}
+
 
 /*  margin */
 .p_mg {
@@ -507,6 +539,10 @@ body {
 
 .mg_120 {
     padding-top: 9.375%;
+}
+
+.mg_160 {
+    padding-top: 12.5%;
 }
 
 
