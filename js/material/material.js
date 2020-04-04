@@ -52,7 +52,7 @@ function fd_scroll() {
 var si = document.getElementsByClassName('sc_des');
 
 function init() {
-        sc[0].addEventListener('click', ov_scroll),
+    sc[0].addEventListener('click', ov_scroll),
         sc[1].addEventListener('click', rs_scroll),
         sc[2].addEventListener('click', dp_scroll),
         sc[3].addEventListener('click', ut_scroll),

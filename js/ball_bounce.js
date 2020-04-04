@@ -1,11 +1,47 @@
-var canvas = document.getElementById('canvas');
-canvas.width = window.innerWidth;
-canvas.height = 790;
+var canvas = document.getElementById('canvas'),
+    canvas_wrap = document.querySelectorAll(".js-canvas_wrap");
 
-window.onresize = e => {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+const bckScale = (context) => {
+    if ('devicePixelRatio' in window) {
+        if (window.devicePixelRatio > 1) {
+            // retina display
+            return window.devicePixelRatio;
+        }
+    }
+    return 1;
 }
+
+canvas.style.width = "100%";
+canvas.style.height = "100%";
+
+var c = canvas.getContext("2d");
+var scaleFactor = bckScale(c);
+
+if (scaleFactor > 1) {
+    canvas.width = canvas_wrap[0].clientWidth * scaleFactor;
+    canvas.height = canvas_wrap[0].clientHeight * scaleFactor;
+
+    c = canvas.getContext("2d");
+
+    window.onresize = (e) => {
+        e.preventDefault();
+        canvas.width = canvas_wrap[0].clientWidth * scaleFactor;
+        canvas.height = canvas_wrap[0].clientHeight * scaleFactor;
+    }
+
+} else {
+    canvas.width = canvas_wrap[0].clientWidth;
+    canvas.height = canvas_wrap[0].clientHeight;
+
+    c = canvas.getContext("2d");
+
+    window.onresize = (e) => {
+        e.preventDefault();
+        canvas.width = canvas_wrap[0].clientWidth;
+        canvas.height = canvas_wrap[0].clientHeight;
+    }
+}
+
 
 var generateRandom = function (min, max) {
     var ranNum = Math.floor(Math.random() * (max - min + 1) + min);
@@ -13,12 +49,11 @@ var generateRandom = function (min, max) {
 }
 
 let ballsArr = []
-var c = canvas.getContext("2d");
 var ball;
-var gravity = 0.8;
+var gravity = 0.9;
 var friction = 0.8;
-var bounce = 0.7;
-let ballWidth = 16;
+var bounce = 0.6;
+let ballWidth = 32;
 let clientWidth;
 
 function ballTank() {
@@ -38,7 +73,7 @@ function init2() {
             x, y,
             dx = (Math.random() - 0.5) * 50,
             dy = -22,
-            color = 'rgba(47,117,255,' + generateRandom(3, 8) / 10 + ')'
+            color = 'rgba(47,117,255,' + generateRandom(4, 9) / 10 + ')'
 
         ballsArr.push(new Ball(x, y, dx, dy, radius, color))
     }

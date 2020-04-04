@@ -1,21 +1,17 @@
 .preloader {
-     position: fixed;
+    position: fixed;
     width: 100%;
     background-color: #2F75FF;
     z-index: 9999;
     opacity: 1;
     height: 100%;
     top: -100%;
-    -webkit-transition: all 500ms cubic-bezier(0.675, 0.005, 0.470, 1);
-    /* older webkit */
     -webkit-transition: all 500ms cubic-bezier(0.675, 0.005, 0.470, 1.005);
     -moz-transition: all 500ms cubic-bezier(0.675, 0.005, 0.470, 1.005);
     -o-transition: all 500ms cubic-bezier(0.675, 0.005, 0.470, 1.005);
     transition: all 500ms cubic-bezier(0.675, 0.005, 0.470, 1.005);
     /* custom */
 
-    -webkit-transition-timing-function: cubic-bezier(0.675, 0.005, 0.470, 1);
-    /* older webkit */
     -webkit-transition-timing-function: cubic-bezier(0.675, 0.005, 0.470, 1.005);
     -moz-transition-timing-function: cubic-bezier(0.675, 0.005, 0.470, 1.005);
     -o-transition-timing-function: cubic-bezier(0.675, 0.005, 0.470, 1.005);
@@ -98,10 +94,10 @@
     font-size: 1.125rem;
     line-height: 32px;
     letter-spacing: -0.2px;
-    margin-top : 8px;
+    margin-top: 4px;
 }
 
-.info_kr_title{
+.info_kr_title {
     opacity: 0.6;
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 1.125rem;
@@ -116,7 +112,7 @@
     font-size: 1.125rem;
     line-height: 32px;
     letter-spacing: -0.2px;
-    margin-top : 8px;
+    margin-top: 4px;
 }
 
 .info_body_align {
@@ -190,7 +186,7 @@
 .color_map {
     position: relative;
     margin-left: 2.6978417%;
-    width: calc(50% -  2.6978417%);
+    width: calc(50% - 2.6978417%);
     height: 0;
 }
 
@@ -346,12 +342,15 @@
         margin-right: 0;
     }
 
-    .info_title, .info_kr_title, .info_body {
+    .info_title,
+    .info_kr_title,
+    .info_body {
         font-size: 1rem;
         line-height: 28px;
     }
 
-    .info_detail, .project_title {
+    .info_detail,
+    .project_title {
         width: 50%;
     }
 
@@ -360,7 +359,7 @@
     }
 }
 
-@media(max-width:768px){
+@media(max-width:768px) {
     .title {
         font-size: 1.125rem;
     }
@@ -380,18 +379,18 @@
         margin-top: 4.48%;
     }
 
-    .body_research{
+    .body_research {
         margin-top: 6%;
         width: 100%;
         margin-left: 0;
     }
 
-    .colorResearch_text{
+    .colorResearch_text {
         width: 100%;
         margin-right: 0;
     }
 
-    .color_map{
+    .color_map {
         margin-left: 0;
         width: 64%;
         margin-top: 8%;
@@ -403,7 +402,10 @@
 
 
 @media(max-width:640px) {
-    .info_title, .info_kr_title, .info_body {
+
+    .info_title,
+    .info_kr_title,
+    .info_body {
         font-size: 0.875rem;
         line-height: 24px;
     }
