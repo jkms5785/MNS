@@ -16,6 +16,7 @@ const backingScale = (context) => {
 
 canvas.style.width = "100%";
 canvas.style.height = "100%";
+canvas.style.backgroundColor = "#F3F3F3";
 
 let ctx = canvas.getContext("2d");
 let scaleFactor = backingScale(ctx);
