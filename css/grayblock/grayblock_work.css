@@ -100,6 +100,7 @@
 .info_kr_title {
     opacity: 0.6;
     font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
     font-size: 1.125rem;
     letter-spacing: -0.6px;
     line-height: 32px;
@@ -142,8 +143,8 @@
 .kr {
     font-size: 0.875rem;
     font-family: 'Noto Sans KR', sans-serif;
-    font-weight: 400;
-    line-height: 28px;
+    font-weight: 500;
+    line-height: 27px;
     letter-spacing: -0.6px;
     opacity: 0.6;
 }

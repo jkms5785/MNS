@@ -37,10 +37,6 @@ body {
     /* custom */
 }
 
-.gray {
-    background-color: #f4f4f4;
-}
-
 .thumbnail {
     width: 100vw;
     height: 0;
@@ -78,8 +74,9 @@ body {
 
 .cont_stc {
     max-width: 1280px;
-    min-width: 960px;
+    min-width: 560px;
     margin: 0 auto;
+    padding: 120px 0;
 }
 
 
@@ -136,7 +133,7 @@ body {
 .info_body {
     opacity: 0.6;
     font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 1.125rem;
     line-height: 32px;
     letter-spacing: -0.2px;
@@ -218,7 +215,7 @@ body {
     width: calc(50% - 2.6978417%);
     opacity: 0.8;
     font-family: 'Noto Sans KR', sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 0.875rem;
     line-height: 28px;
     letter-spacing: -0.8px;
@@ -237,34 +234,58 @@ body {
 
 .kr {
     font-family: 'Noto Sans KR', sans-serif;
-    font-weight: 400;
+    font-weight: 500;
+    opacity: 0.8;
     font-size: 0.875rem;
     line-height: 28px;
     letter-spacing: -0.8px;
 }
 
 .en {
-    opacity: 0.38;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
+    opacity: 0.38;
     font-size: 0.875rem;
     line-height: 26px;
     letter-spacing: -0.2px;
 }
 
 /* material Identity */
-.main_txt_cont {
+.main_txt_cont_1 {
     position: absolute;
     top: 50%;
-    left: 62%;
+    left: 84%;
     transform: translate(-50%, -50%);
 }
 
-.main_txt {
+.main_txt_1 {
     font-family: 'Montserrat', 'san-selif';
     font-weight: 700;
     font-size: 3.25rem;
     color: white;
+    line-height: 63px;
+    display: flex;
+}
+
+.main_txt_cont_2 {
+    position: absolute;
+    top: 28%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+}
+
+.main_txt_cont_3 {
+    position: absolute;
+    top: 58%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+}
+
+.main_txt_2 {
+    font-family: 'Montserrat', 'san-selif';
+    font-weight: 700;
+    font-size: 3.25rem;
+    color: #2F75FF;
     line-height: 63px;
     display: flex;
 }
@@ -448,7 +469,7 @@ body {
     height: 496px;
     position: relative;
     overflow: hidden;
-    background-color: #F3F3F3;
+    background-color: #EEEEEE;
 }
 
 .pageLoader {
@@ -486,8 +507,24 @@ body {
     background-color: #2F75FF;
 }
 
-.mainImg {
-    padding-top: 64.0625%;
+.gray {
+    background-color: #EFEFEF;
+}
+
+
+.mainImg_1 {
+    width: 552px;
+    height: 558px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.mainImg_2 {
+    width: 1112px;
+    min-width: 800px;
+    height: 769px;
+    left: 50%;
+    transform: translate(-50%, 0);
 }
 
 

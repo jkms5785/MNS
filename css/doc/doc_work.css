@@ -116,6 +116,7 @@
 .info_kr_title {
     opacity: 0.6;
     font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
     font-size: 1.125rem;
     letter-spacing: -0.6px;
     line-height: 32px;
@@ -447,7 +448,7 @@
 
 .inv_body_1 {
     font-family: 'Noto Sans KR', sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     opacity: 0.87;
     font-size: 1.25rem;
     letter-spacing: -1.2px;
@@ -511,16 +512,16 @@
 .body_kr {
     opacity: 0.8;
     font-family: 'Noto Sans KR', sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 0.875rem;
-    line-height: 28px;
+    line-height: 27px;
     letter-spacing: -1px;
 }
 
 .body_en {
     opacity: 0.38;
     font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 0.875rem;
     line-height: 26px;
     letter-spacing: -0.2px;

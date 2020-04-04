@@ -13,7 +13,7 @@ body {
 }
 
 .preloader {
-     position: fixed;
+    position: fixed;
     width: 100%;
     background-color: #2F75FF;
     z-index: 9999;
@@ -112,6 +112,7 @@ body {
 .info_kr_title {
     opacity: 0.6;
     font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
     font-size: 1.125rem;
     letter-spacing: -0.6px;
     line-height: 32px;
@@ -179,9 +180,9 @@ body {
     width: calc(50% - 2.6978417%);
     opacity: 0.8;
     font-family: 'Noto Sans KR', sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 0.875rem;
-    line-height: 28px;
+    line-height: 27px;
     letter-spacing: -0.8px;
 }
 
@@ -358,12 +359,15 @@ iframe {
         margin-right: 0;
     }
 
-    .info_title, .info_kr_title, .info_body {
+    .info_title,
+    .info_kr_title,
+    .info_body {
         font-size: 1rem;
         line-height: 28px;
     }
 
-    .info_detail, .project_title {
+    .info_detail,
+    .project_title {
         width: 50%;
     }
 
@@ -372,7 +376,7 @@ iframe {
     }
 }
 
-@media(max-width:768px){
+@media(max-width:768px) {
     .title {
         font-size: 1.125rem;
     }
@@ -395,7 +399,10 @@ iframe {
 
 
 @media(max-width:640px) {
-    .info_title, .info_kr_title, .info_body {
+
+    .info_title,
+    .info_kr_title,
+    .info_body {
         font-size: 0.875rem;
         line-height: 24px;
     }
