@@ -21,7 +21,7 @@ function txtUp_2() {
             txt_tg_2[j].classList.add("txt_after");
             j++;
             txtUp_2(j);
-        }, 24);
+        }, 20);
     } else if (j === txt_tg_2.length) {
         j = 0;
     }
@@ -35,7 +35,7 @@ function txtUp_1() {
             txt_tg_1[z].classList.add("txt_after");
             z++;
             txtUp_1(z);
-        }, 24);
+        }, 20);
     } else if (z === txt_tg_1.length) {
         z = 0;
     }
@@ -46,23 +46,23 @@ function txt_Que(e) {
     currentY = window.scrollY;
 
     if (fireTxt_1 == true) {
-        if (currentY >= trg_1.offsetTop - 400 && currentY <= trg_1.offsetTop + trg_1.offsetHeight - 400) {
+        if (currentY >= trg_1.offsetTop - 400 && currentY <= trg_1.offsetTop + trg_1.offsetHeight) {
             z = 0;
             txtUp_1();
         }
     } else if (fireTxt_1 == false) {
-        if (currentY <= trg_1.offsetTop - 400 || currentY >= trg_1.offsetTop + trg_1.offsetHeight - 400) {
+        if (currentY <= trg_1.offsetTop - 400 || currentY >= trg_1.offsetTop + trg_1.offsetHeight) {
             txtReset_1();
         }
     }
 
     if (fireTxt_2 == true) {
-        if (currentY >= trg_2.offsetTop - 400 && currentY <= trg_2.offsetTop + trg_2.offsetHeight - 400) {
+        if (currentY >= trg_2.offsetTop - 400 && currentY <= trg_2.offsetTop + trg_2.offsetHeight) {
             j = 0;
             txtUp_2();
         }
     } else if (fireTxt_2 == false) {
-        if (currentY <= trg_2.offsetTop - 200 || currentY >= trg_2.offsetTop + trg_2.offsetHeight - 200) {
+        if (currentY <= trg_2.offsetTop - 400 || currentY >= trg_2.offsetTop + trg_2.offsetHeight) {
             txtReset_2();
         }
     }
