@@ -75,7 +75,6 @@ function txtReset_2() {
         txt_tg_2[i].classList.remove("txt_after");
         txt_tg_2[i].classList.add("txt_before");
     }
-    // console.log(`txt2_reset`);
 }
 
 function txtReset_1() {
