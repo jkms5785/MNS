@@ -9,18 +9,16 @@ const txt_tg_1 = document.querySelectorAll(".js-txt-tg_1"),
 
 let j = 0;
 let z = 0;
-let txtDefine = true;
-
 let currentY;
 
 function txtUp_2() {
     if (j < txt_tg_2.length) {
         setTimeout(function () {
-            txt_tg_2[j].style.setProperty("transform", "translateY(0) rotateX(0) scale(1.0)");
-            txt_tg_2[j].style.setProperty("opacity", "1.0");
+            txt_tg_2[j].classList.remove("txt_before");
+            txt_tg_2[j].classList.add("txt_after");
             j++;
             txtUp_2(j);
-        }, 16);
+        }, 100);
     } else if (j === txt_tg_2.length) {
         j = 0;
     }
@@ -29,59 +27,46 @@ function txtUp_2() {
 function txtUp_1() {
     if (z < txt_tg_1.length) {
         setTimeout(function () {
-            txt_tg_1[z].style.setProperty("transform", "translateY(0) rotateX(0) scale(1.0)");
-            txt_tg_1[z].style.setProperty("opacity", "1.0");
+            txt_tg_1[z].classList.remove("txt_before");
+            txt_tg_1[z].classList.add("txt_after");
             z++;
             txtUp_1(z);
-        }, 16);
+        }, 24);
     } else if (z === txt_tg_1.length) {
         z = 0;
     }
 }
 
-function txt_2_Que(e) {
+function txt_Que(e) {
     e.preventDefault();
     currentY = window.scrollY;
-    if (currentY >= trg_2.offsetTop - 640) {
-        window.removeEventListener("scroll", txt_2_Que);
+    if (currentY >= trg_2.offsetTop - 400 && currentY <= trg_2.offsetTop + trg_2.offsetHeight - 400) {
         txtUp_2();
+    } else if (currentY <= trg_2.offsetTop - 200 || currentY >= trg_2.offsetTop + trg_2.offsetHeight - 200) {
+        txtReset_2();
     }
-}
 
-
-function txt_1_Que(e) {
-    e.preventDefault();
-    currentY = window.scrollY;
-    if (currentY >= trg_1.offsetTop - 640) {
-        window.removeEventListener("scroll", txt_1_Que);
+    if (currentY >= trg_1.offsetTop - 400 && currentY <= trg_1.offsetTop + trg_1.offsetHeight - 400) {
         txtUp_1();
+    } else if (currentY <= trg_1.offsetTop - 200 || currentY >= trg_1.offsetTop + trg_1.offsetHeight - 200) {
+        txtReset_1();
     }
 }
 
-function init() {
+function txtReset_2() {
+    let i = 0;
+    for (i = 0; i < txt_tg_2.length; i++) {
+        txt_tg_2[i].classList.remove("txt_after");
+        txt_tg_2[i].classList.add("txt_before");
+    }
+}
+
+function txtReset_1() {
     let i = 0;
     for (i = 0; i < txt_tg_1.length; i++) {
-        txt_tg_1[i].style.setProperty("-webkit-transition", "opacity 1000ms ease 100ms, transform 1000ms cubic-bezier(0, 0.7, 0.29, 0.97) 100ms");
-        txt_tg_1[i].style.setProperty("-moz-transition", "opacity 1000ms ease 100ms, transform 1000ms cubic-bezier(0, 0.7, 0.29, 0.97) 100ms");
-        txt_tg_1[i].style.setProperty("-o-transition", "opacity 1000ms ease 100ms, transform 1000ms cubic-bezier(0, 0.7, 0.29, 0.97) 100ms");
-        txt_tg_1[i].style.setProperty("transition", "opacity 1000ms ease 100ms, transform 1000ms cubic-bezier(0, 0.7, 0.29, 0.97) 100ms");
-
-        txt_tg_1[i].style.setProperty("transform", "translateY(200px) rotateX(180deg) scale(0.6)");
-        txt_tg_1[i].style.setProperty("opacity", "0");
-    }
-
-    for (i = 0; i < txt_tg_2.length; i++) {
-        txt_tg_2[i].style.setProperty("-webkit-transition", "opacity 1000ms ease 100ms, transform 1000ms cubic-bezier(0, 0.7, 0.29, 0.97) 100ms");
-        txt_tg_2[i].style.setProperty("-moz-transition", "opacity 1000ms ease 100ms, transform 1000ms cubic-bezier(0, 0.7, 0.29, 0.97) 100ms");
-        txt_tg_2[i].style.setProperty("-o-transition", "opacity 1000ms ease 100ms, transform 1000ms cubic-bezier(0, 0.7, 0.29, 0.97) 100ms");
-        txt_tg_2[i].style.setProperty("transition", "opacity 1000ms ease 100ms, transform 1000ms cubic-bezier(0, 0.7, 0.29, 0.97) 100ms");
-
-        txt_tg_2[i].style.setProperty("transform", "translateY(200px) rotateX(180deg) scale(0.6)");
-        txt_tg_2[i].style.setProperty("opacity", "0");
+        txt_tg_1[i].classList.remove("txt_after");
+        txt_tg_1[i].classList.add("txt_before");
     }
 }
 
-window.addEventListener("scroll", txt_1_Que);
-window.addEventListener("scroll", txt_2_Que);
-
-init();
+window.addEventListener("scroll", txt_Que);

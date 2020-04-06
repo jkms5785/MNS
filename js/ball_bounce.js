@@ -50,7 +50,7 @@ var generateRandom = function (min, max) {
 
 let ballsArr = []
 var ball;
-var gravity = 0.9;
+var gravity = 1.0;
 var friction = 0.8;
 var bounce = 0.6;
 let ballWidth = 32;
