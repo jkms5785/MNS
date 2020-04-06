@@ -50,10 +50,10 @@ var generateRandom = function (min, max) {
 
 let ballsArr = []
 var ball;
-var gravity = 1.0;
+var gravity = 1.4;
 var friction = 0.8;
 var bounce = 0.6;
-let ballWidth = 32;
+let ballWidth = 40;
 let clientWidth;
 
 function ballTank() {
@@ -69,7 +69,7 @@ function init2() {
 
     for (let i = 0; i < 6; i++) {
         var radius =
-            (Math.floor(Math.random() * ballWidth) + 7) * 8,
+            (Math.floor(generateRandom(2, 4) * ballWidth) + 7) * 2,
             x, y,
             dx = (Math.random() - 0.5) * 50,
             dy = -22,
