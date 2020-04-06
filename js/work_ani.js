@@ -18,7 +18,7 @@ const rotateQue = document.querySelector("#js-workAni");
 let StopRotate = false;
 
 function RotateToRight() {
-    mtos_cont.style.transition = "all 500ms ease-in"
+    mtos_cont.style.transition = "all 400ms ease-in"
     mtos_cont.style.transform = "rotateZ(18deg)";
     setTimeout(function () {
         if (!StopRotate) {

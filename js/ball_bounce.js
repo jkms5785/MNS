@@ -52,8 +52,8 @@ let ballsArr = []
 var ball;
 var gravity = 1.4;
 var friction = 0.8;
-var bounce = 0.6;
-let ballWidth = 40;
+var bounce = 0.8;
+let ballWidth = 32;
 let clientWidth;
 
 function ballTank() {
@@ -72,7 +72,7 @@ function init2() {
             (Math.floor(generateRandom(2, 4) * ballWidth) + 7) * 2,
             x, y,
             dx = (Math.random() - 0.5) * 50,
-            dy = -22,
+            dy = -28,
             color = 'rgba(47,117,255,' + generateRandom(4, 9) / 10 + ')'
 
         ballsArr.push(new Ball(x, y, dx, dy, radius, color))
