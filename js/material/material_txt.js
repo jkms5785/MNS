@@ -23,7 +23,7 @@ function txtUp_2() {
             if (j === 12) {
                 setTimeout(function () {
                     txtUp_2(j);
-                }, 1000);
+                }, 800);
             } else {
                 txtUp_2(j);
             }
