@@ -21,7 +21,7 @@ function txtUp_2() {
             txt_tg_2[j].classList.add("txt_after");
             j++;
             txtUp_2(j);
-        }, 20);
+        }, 16);
     } else if (j === txt_tg_2.length) {
         j = 0;
     }
@@ -35,7 +35,7 @@ function txtUp_1() {
             txt_tg_1[z].classList.add("txt_after");
             z++;
             txtUp_1(z);
-        }, 20);
+        }, 16);
     } else if (z === txt_tg_1.length) {
         z = 0;
     }
