@@ -20,7 +20,13 @@ function txtUp_2() {
             txt_tg_2[j].classList.remove("txt_before");
             txt_tg_2[j].classList.add("txt_after");
             j++;
-            txtUp_2(j);
+            if (j === 12) {
+                setTimeout(function () {
+                    txtUp_2(j);
+                }, 1000);
+            } else {
+                txtUp_2(j);
+            }
         }, 16);
     } else if (j === txt_tg_2.length) {
         j = 0;
