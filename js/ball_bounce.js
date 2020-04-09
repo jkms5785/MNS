@@ -54,7 +54,6 @@ var gravity = 1.5;
 var friction = 0.8;
 var bounce = 0.8;
 let ballWidth = 32;
-let clientWidth;
 
 function ballTank() {
     ballsArr = []
@@ -63,10 +62,10 @@ function ballTank() {
 ballTank();
 
 function init2() {
-    if (clientWidth < 800) {
-        ballWidth = 8;
+    console.log(canvas.width);
+    if (canvas.width < 1200) {
+        ballWidth = 24;
     }
-
     for (let i = 0; i < 6; i++) {
         var radius =
             (Math.floor(generateRandom(2, 4) * ballWidth) + 7) * 2,
@@ -132,10 +131,7 @@ class Ball {
 function PopupBall2() {
     var blueQue = document.querySelector('#js-message');
     var scrollanchor = window.scrollY,
-        QueHeight = blueQue.offsetHeight,
         blueQueTop = blueQue.offsetTop;
-
-    clientWidth = window.innerWidth;
 
     if (scrollanchor >= blueQueTop - window.innerHeight + 600) {
         init2();
