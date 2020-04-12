@@ -94,20 +94,20 @@ class ballObj {
             this._dy = -this._dy * friction
             this._dx = this._dx * friction
         } else {
-            this._dy += gravity
+            this._dy += gravity // y가속 * 중력
             this._radius = this._radius
         }
         if (this._x + this._radius > canvas.width || this._x - this._radius < 0) {
             this._dx = -this._dx
         }
         if (this._dy < 0.5 && this._dy > -5.5) {
-            this._dy = 0;
+            this._dy = 0; // y가속이 0.5 ~ -5.5  사이면 가속 = 0
         }
         if (Math.abs(this._dx) < 2.1) {
-            this._dx = 0;
+            this._dx = 0; // x가속 2.1 보다작으면 0 
         }
-        this._y += this._dy
-        this._x += this._dx
+        this._y += this._dy // y 좌표에 가속을 더하라, 가속 = dy * gravity
+        this._x += this._dx // x 좌표에 가속을 더하라, 가속 = dx
         this.draw()
     }
 }
