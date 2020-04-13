@@ -73,9 +73,9 @@ body {
 }
 
 .cont_stc {
-    max-width: 1280px;
+    max-width: 1112px;
     margin: 0 auto;
-    padding: 144px 0;
+    padding: 168px 0;
 }
 
 
@@ -293,9 +293,19 @@ body {
 
 
 /* material Identity */
-.stry_cont {
+
+
+
+.stry_cont_1 {
     display: flex;
-    justify-content: center;
+    width: 818px;
+    margin: 0 auto;
+}
+
+.stry_cont_2 {
+    display: flex;
+    width: 818px;
+    margin-left: auto;
 }
 
 .stry_txt {
@@ -306,13 +316,14 @@ body {
     line-height: 63px;
     display: flex;
     align-items: center;
-    margin-right: 24px;
+    margin-right: 16px;
 }
 
-.stry_MS {
-    width: 264px;
-    height: 264px;
+.stry_M {
+    width: 272px;
+    height: 272px;
     background-color: #2F75FF;
+    margin-right: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -321,6 +332,22 @@ body {
     font-size: 3.25rem;
     color: white;
     line-height: 63px;
+}
+
+.stry_S {
+    width: 272px;
+    height: 272px;
+    background-color: #2F75FF;
+    margin-right: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', 'san-selif';
+    font-weight: 700;
+    font-size: 3.25rem;
+    color: white;
+    line-height: 63px;
+    border-radius: 50%;
 }
 
 .main_txt_cont_1 {
