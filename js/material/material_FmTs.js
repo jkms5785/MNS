@@ -18,6 +18,7 @@ const FmTs_CirPop = () => {
     }, 5);
 
     FmTs_cir.classList.add(`CirclePop`);
+    window.addEventListener(`scroll`, FmTsQue);
 }
 
 const FmTs_ToCir = (i) => {
@@ -82,6 +83,7 @@ const FmTsQue = () => {
     if (Y > QueSign_Top - 320 && Y < QueSign_Top + FmTs_QueSign.offsetHeight) {
         if (FmTs_check == false) {
             FmTs_check = true;
+            window.removeEventListener(`scroll`, FmTsQue);
             setTimeout(() => {
                 console.log(`que`);
                 FmTs_ToCir(0);
