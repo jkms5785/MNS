@@ -75,7 +75,7 @@ body {
 .cont_stc {
     max-width: 1112px;
     margin: 0 auto;
-    padding: 168px 0;
+    padding: 176px 0;
 }
 
 
@@ -298,14 +298,14 @@ body {
 
 .stry_cont_1 {
     display: flex;
-    width: 818px;
+    width: 819px;
     margin: 0 auto;
 }
 
 .stry_cont_2 {
     display: flex;
-    width: 818px;
-    margin-left: auto;
+    width: 819px;
+    margin-left: 280px;
 }
 
 .stry_txt {
@@ -459,6 +459,21 @@ body {
     position: absolute;
 }
 
+.FmTs_ani_cont {
+    width: 140px;
+    height: 140px;
+    padding: 40px;
+    position: relative;
+    margin: auto;
+}
+
+.FmTs_ani {
+    fill: #2f75ff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
 /* material interaction */
 .material_ani_cont {

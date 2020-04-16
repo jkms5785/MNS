@@ -1,7 +1,7 @@
 const stry_txt_1 = document.querySelector("#js-stry-txt-1"),
     stry_txt_2 = document.querySelector("#js-stry-txt-2");
 
-const ran_txt = [`a`, `!`, `b`, `#`, `3`, `j`, `d`, `i`, `e`, `$`, `i`, `*`];
+const ran_txt = [`a`, `!`, `b`, `#`, `3`, `j`, `d`, `t`, `*`, `e`, `$`, `i`];
 
 const M_arry = [`Process.`, `Background.`, `Research.`, `Subject.`, `Sketch.`, `Prototype.`, `Testing.`];
 
