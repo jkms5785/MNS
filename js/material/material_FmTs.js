@@ -82,13 +82,15 @@ const FmTsQue = () => {
     if (Y > QueSign_Top - 320 && Y < QueSign_Top + FmTs_QueSign.offsetHeight) {
         if (FmTs_check == false) {
             FmTs_check = true;
-            console.log(`animation que`);
-            FmTs_ToCir(0);
+            setTimeout(() => {
+                console.log(`que`);
+                FmTs_ToCir(0);
+            }, 500);
         }
     } else {
         if (FmTs_check == true) {
             FmTs_check = false;
-            console.log(`animation reset`);
+            console.log(`reset`);
             FmTs_CirReset(0);
         }
     }

@@ -293,8 +293,15 @@ body {
 
 
 /* material Identity */
-
-
+.title_stry {
+    max-width: 819px;
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+    color: #2F75FF;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 32px;
+}
 
 .stry_cont_1 {
     display: flex;
