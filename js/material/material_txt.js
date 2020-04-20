@@ -129,6 +129,9 @@ const MnS_set = () => {
     MnS_cir.style.setProperty(`-moz-transition-timing-function`, `cubic-bezier(0.200, -0.135, 0.125, 1.500)`);
     MnS_cir.style.setProperty(`-o-transition-timing-function`, `cubic-bezier(0.200, -0.135, 0.125, 1.500)`);
     MnS_cir.style.setProperty(`transition-timing-function`, `cubic-bezier(0.200, -0.135, 0.125, 1.500)`);
+
+    MnS_grd.setAttribute(`version`, `1.1`);
+    MnS_grd.setAttribute(`xmlns`, `http://www.w3.org/2000/svg`);
 }
 
 const MnS_load = () => {
@@ -173,6 +176,9 @@ const MnS_gradation = (g) => {
 
 const FmTs_set = () => {
     for (let k = 0; k < FmTs.length; k++) {
+        FmTs[k].setAttribute(`version`, `1.1`);
+        FmTs[k].setAttribute(`xmlns`, `http://www.w3.org/2000/svg`);
+
         FmTs[k].style.setProperty(`transform`, `scale(0.2)`);
         FmTs[k].style.setProperty(`opacity`, `0`);
         FmTs[k].style.setProperty(`-webkit-transition`, `all 700ms cubic-bezier(0.200, -0.135, 0.125, 1.500)`);
