@@ -75,7 +75,7 @@ body {
 .cont_stc {
     max-width: 1112px;
     margin: 0 auto;
-    padding: 176px 0;
+    padding: 216px 0;
 }
 
 
@@ -291,6 +291,16 @@ body {
     z-index: 3;
 }
 
+/* background */
+.bg_img_cont {
+    position: relative;
+    background-color: gray;
+    height: 880px;
+}
+
+.bg_img {
+    width: 100%;
+}
 
 /* material Identity */
 .title_stry {
@@ -467,8 +477,8 @@ body {
 }
 
 .FmTs_ani_cont {
-    width: 140px;
-    height: 140px;
+    width: 192px;
+    height: 192px;
     padding: 40px;
     position: relative;
     margin: auto;
@@ -480,6 +490,17 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.FmTs_cir {
+    width: 176px;
+    height: 176px;
+    background-color: #2f75ff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
 }
 
 /* material interaction */

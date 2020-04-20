@@ -7,13 +7,14 @@ const trg_1 = document.querySelector("#js-txt_trg_1"),
 const txt_tg_1 = document.querySelectorAll(".js-txt-tg_1"),
     txt_tg_2 = document.querySelectorAll(".js-txt-tg_2");
 
-let j = 0;
-let z = 0;
 let currentY;
 let fireTxt_1 = true,
     fireTxt_2 = true;
 
-function txtUp_2() {
+let StopMnS = false;
+let StopFmTs = false;
+
+function txtUp_2(j) {
     fireTxt_2 = false;
     if (j < txt_tg_2.length) {
         setTimeout(function () {
@@ -33,7 +34,7 @@ function txtUp_2() {
     }
 }
 
-function txtUp_1() {
+function txtUp_1(z) {
     fireTxt_1 = false;
     if (z < txt_tg_1.length) {
         setTimeout(function () {
@@ -53,14 +54,15 @@ function txt_Que(e) {
 
     if (fireTxt_1 == true) {
         if (currentY >= trg_1.offsetTop - 320 && currentY <= trg_1.offsetTop + trg_1.offsetHeight) {
-            z = 0;
-            MnS_load();
+            StopMnS = false;
+            MnS_load(0);
             setTimeout(() => {
-                txtUp_1();
+                txtUp_1(0);
             }, 3000);
         }
     } else if (fireTxt_1 == false) {
         if (currentY <= trg_1.offsetTop - 320 || currentY >= trg_1.offsetTop + trg_1.offsetHeight) {
+            StopMnS = true;
             txtReset_1();
             MnS_Reset();
         }
@@ -68,12 +70,13 @@ function txt_Que(e) {
 
     if (fireTxt_2 == true) {
         if (currentY >= trg_2.offsetTop - 320 && currentY <= trg_2.offsetTop + trg_2.offsetHeight) {
-            j = 0;
-            txtUp_2();
-            FmTs_Load();
+            StopFmTs = false;
+            FmTs_Load(0);
+            txtUp_2(0);
         }
     } else if (fireTxt_2 == false) {
         if (currentY <= trg_2.offsetTop - 320 || currentY >= trg_2.offsetTop + trg_2.offsetHeight) {
+            StopFmTs = true;
             txtReset_2();
             FmTs_Reset();
         }
@@ -82,8 +85,7 @@ function txt_Que(e) {
 
 function txtReset_2() {
     fireTxt_2 = true;
-    let i = 0;
-    for (i = 0; i < txt_tg_2.length; i++) {
+    for (let i = 0; i < txt_tg_2.length; i++) {
         txt_tg_2[i].classList.remove("txt_after");
         txt_tg_2[i].classList.add("txt_before");
     }
@@ -91,8 +93,7 @@ function txtReset_2() {
 
 function txtReset_1() {
     fireTxt_1 = true;
-    let i = 0;
-    for (i = 0; i < txt_tg_1.length; i++) {
+    for (let i = 0; i < txt_tg_1.length; i++) {
         txt_tg_1[i].classList.remove("txt_after");
         txt_tg_1[i].classList.add("txt_before");
     }
@@ -135,13 +136,12 @@ const MnS_load = () => {
     MnS_rect.style.setProperty(`transform`, `scale(1.0)`);
     MnS_rect.style.setProperty(`opacity`, `1`);
     setTimeout(() => {
-        MnS_gradation();
+        MnS_gradation(0);
     }, 1000);
 }
 
-let g = 0;
-
 const MnS_Reset = () => {
+    StopMnS = true;
     MnS_rect.style.setProperty(`transform`, `scale(0.6)`);
     MnS_rect.style.setProperty(`opacity`, `0`);
     MnS_cir.style.setProperty(`transform`, `scale(0.4)`);
@@ -149,16 +149,20 @@ const MnS_Reset = () => {
     MnS_grd.children[1].setAttribute(`points`, `0,272 272,0 272,0 0,272`);
 }
 
-const MnS_gradation = () => {
+const MnS_gradation = (g) => {
     setTimeout(() => {
         if (g <= 256) {
             // 0,272 272,0 272,0 0,272
             // 0,272 272,0 528,410 410,528
-            let x = g;
-            let y = 1.6 * g;
-            MnS_grd.children[1].setAttribute(`points`, `0,272 272,0 ${272 + x},${y} ${y},${272 + x}`);
-            g = g + 2;
-            MnS_gradation(a);
+            if (StopMnS == true) {
+                MnS_Reset();
+            } else {
+                let x = g;
+                let y = 1.6 * g;
+                MnS_grd.children[1].setAttribute(`points`, `0,272 272,0 ${272 + x},${y} ${y},${272 + x}`);
+                g = g + 2;
+                MnS_gradation(g);
+            }
         } else {
             g = 0;
             MnS_cir.style.setProperty(`transform`, `scale(1.0)`);
@@ -186,20 +190,23 @@ const FmTs_set = () => {
         // x = 190, y = 122;
     }
 }
-let o = 0;
 
-const FmTs_Load = (a) => {
-    setTimeout(function () {
-        FmTs[o].style.setProperty(`transform`, `scale(1.0)`);
-        FmTs[o].style.setProperty(`opacity`, `1.0`);
-        o++;
-        if (o < FmTs.length) {
-            FmTs_Load(o);
-        } else {
-            // console.log(`i is ${o}, Fmts.lenght is ${FmTs.length}`);
-            o = 0;
-        }
-    }, 300);
+const FmTs_Load = (o) => {
+    if (StopFmTs == true) {
+        FmTs_Reset();
+    } else {
+        setTimeout(function () {
+            FmTs[o].style.setProperty(`transform`, `scale(1.0)`);
+            FmTs[o].style.setProperty(`opacity`, `1.0`);
+            o++;
+            if (o < FmTs.length) {
+                FmTs_Load(o);
+            } else {
+                // console.log(`i is ${o}, Fmts.lenght is ${FmTs.length}`);
+                o = 0;
+            }
+        }, 300);
+    }
 }
 
 const FmTs_Reset = () => {
