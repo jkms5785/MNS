@@ -53,7 +53,7 @@ function txt_Que(e) {
     currentY = window.scrollY;
 
     if (fireTxt_1 == true) {
-        if (currentY >= trg_1.offsetTop - 320 && currentY <= trg_1.offsetTop + trg_1.offsetHeight) {
+        if (currentY >= trg_1.offsetTop - 320 && currentY <= trg_1.offsetTop + trg_1.offsetHeight - 240) {
             StopMnS = false;
             MnS_load(0);
             setTimeout(() => {
@@ -61,7 +61,7 @@ function txt_Que(e) {
             }, 3000);
         }
     } else if (fireTxt_1 == false) {
-        if (currentY <= trg_1.offsetTop - 320 || currentY >= trg_1.offsetTop + trg_1.offsetHeight) {
+        if (currentY <= trg_1.offsetTop - 320 || currentY >= trg_1.offsetTop + trg_1.offsetHeight - 240) {
             StopMnS = true;
             txtReset_1();
             MnS_Reset();
@@ -69,13 +69,13 @@ function txt_Que(e) {
     }
 
     if (fireTxt_2 == true) {
-        if (currentY >= trg_2.offsetTop - 320 && currentY <= trg_2.offsetTop + trg_2.offsetHeight) {
+        if (currentY >= trg_2.offsetTop - 320 && currentY <= trg_2.offsetTop + trg_2.offsetHeight - 240) {
             StopFmTs = false;
             FmTs_Load(0);
             txtUp_2(0);
         }
     } else if (fireTxt_2 == false) {
-        if (currentY <= trg_2.offsetTop - 320 || currentY >= trg_2.offsetTop + trg_2.offsetHeight) {
+        if (currentY <= trg_2.offsetTop - 320 || currentY >= trg_2.offsetTop + trg_2.offsetHeight - 240) {
             StopFmTs = true;
             txtReset_2();
             FmTs_Reset();

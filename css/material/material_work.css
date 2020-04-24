@@ -223,7 +223,7 @@ body {
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 500;
     font-size: 0.875rem;
-    line-height: 28px;
+    line-height: 27px;
     letter-spacing: -0.8px;
 }
 
@@ -292,37 +292,124 @@ body {
 }
 
 /* background */
-.bg_img_cont {
-    position: relative;
-    background-color: gray;
-    height: 880px;
+.bg_cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 424px 0;
 }
 
-.bg_img {
+.bg_cont .svg_cont {
+    position: relative;
+    width: 344px;
+    height: 344px;
+}
+
+.bg_cont .svg_cont svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.bg_title_b,
+.bg_title_w {
+    position: absolute;
     width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 32px;
+    letter-spacing: -0.37px;
+    display: flex;
+    justify-content: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+}
+
+.bg_title_b {
+    color: #2F75FF;
+}
+
+.bg_title_w {
+    color: white;
+}
+
+.bg_txt_before {
+    transform: translateY(160px) rotateX(180deg) scale(1.0);
+    opacity: 0;
+}
+
+.bg_txt_after {
+    transform: translateY(0) rotateX(0deg) scale(1.0);
+    opacity: 1.0;
+    -webkit-transition: opacity 750ms ease 100ms, transform 750ms cubic-bezier(0, 0.7, 0.29, 0.97) 100ms;
+    -moz-transition: opacity 750ms ease 100ms, transform 750ms cubic-bezier(0, 0.7, 0.29, 0.97) 100ms;
+    -o-transition: opacity 750ms ease 100ms, transform 750ms cubic-bezier(0, 0.7, 0.29, 0.97) 100ms;
+    transition: opacity 750ms ease 100ms, transform 750ms cubic-bezier(0, 0.7, 0.29, 0.97) 100ms;
+
+    -webkit-transition-timing-function: ease, cubic-bezier(0, 0.7, 0.29, 0.97);
+    -moz-transition-timing-function: ease, cubic-bezier(0, 0.7, 0.29, 0.97);
+    -o-transition-timing-function: ease, cubic-bezier(0, 0.7, 0.29, 0.97);
+    transition-timing-function: ease, cubic-bezier(0, 0.7, 0.29, 0.97);
+}
+
+.bg_txt_fadeOut {
+    opacity: 0;
+}
+
+.bg_x {
+    margin: 0 40px;
+}
+
+@keyframes x_up {
+    to {
+        transform: translateY(-80px);
+        opacity: 0;
+    }
+}
+
+@keyframes drawingPath {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fillPath {
+    from {
+        fill: transparent;
+    }
+
+    to {
+        fill: #2F75FF;
+    }
+}
+
+
+.bg_MnS_txt {
+    font-family: 'Montserrat', 'san-selif';
+    font-weight: 700;
+    font-size: 3.25rem;
+    color: white;
+    line-height: 63px;
+}
+
+.bg_MnS_before {
+    font-family: 'Montserrat', 'san-selif';
+    font-weight: 700;
+    font-size: 3.25rem;
+    color: white;
+    line-height: 63px;
 }
 
 /* material Identity */
-.title_stry {
-    max-width: 819px;
-    margin: 0 auto;
-    font-family: 'Montserrat', sans-serif;
-    color: #2F75FF;
-    font-weight: 700;
-    font-size: 1rem;
-    line-height: 32px;
-}
 
-.stry_cont_1 {
+.stry_cont {
     display: flex;
-    width: 819px;
+    width: 744px;
     margin: 0 auto;
-}
-
-.stry_cont_2 {
-    display: flex;
-    width: 819px;
-    margin-left: 280px;
+    padding: 80px 0;
 }
 
 .stry_txt {
@@ -333,39 +420,51 @@ body {
     line-height: 63px;
     display: flex;
     align-items: center;
-    margin-right: 16px;
 }
 
 .stry_M {
     width: 272px;
     height: 272px;
     background-color: #2F75FF;
-    margin-right: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Montserrat', 'san-selif';
-    font-weight: 700;
-    font-size: 3.25rem;
-    color: white;
-    line-height: 63px;
 }
 
 .stry_S {
     width: 272px;
     height: 272px;
     background-color: #2F75FF;
-    margin-right: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Montserrat', 'san-selif';
-    font-weight: 700;
-    font-size: 3.25rem;
-    color: white;
-    line-height: 63px;
     border-radius: 50%;
 }
+
+.dash {
+    width: 6px;
+    height: 44px;
+    margin-left: 8px;
+    background-color: #2F75FF;
+    animation: dashBlink 1.5s linear infinite;
+}
+
+@keyframes dashBlink {
+    0% {
+        opacity: 60%;
+    }
+
+    49% {
+        opacity: 60%;
+    }
+
+    50% {
+        opacity: 20%;
+    }
+
+    99% {
+        opacity: 20%;
+    }
+
+    100% {
+        opacity: 60%;
+    }
+}
+
 
 .main_txt_cont_1 {
     position: absolute;

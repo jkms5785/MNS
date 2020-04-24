@@ -33,7 +33,7 @@ const FmTs_ToCir = (i) => {
         i = 0;
         setTimeout(() => {
             FmTs_CirPop();
-        }, 750)
+        }, 500)
     }
 }
 
@@ -81,13 +81,13 @@ const FmTs_CirReset = () => {
 const FmTsQue = () => {
     let Y = parseInt(window.scrollY);
     let QueSign_Top = FmTs_QueSign.offsetTop;
-    if (Y > QueSign_Top - 450 && Y < QueSign_Top + FmTs_QueSign.offsetHeight) {
+    if (Y > QueSign_Top - 450 && Y < QueSign_Top + FmTs_QueSign.offsetHeight - 240) {
         if (FmTs_check == false) {
             FmTs_check = true;
             window.removeEventListener(`scroll`, FmTsQue);
             setTimeout(() => {
                 FmTs_ToCir(0);
-            }, 750);
+            }, 500);
         }
     } else {
         if (FmTs_check == true) {
