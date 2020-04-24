@@ -17,10 +17,14 @@ function langClick() {
     if (make_text.innerHTML === "EN") {
         make_btn.style.borderRadius = "100%";
         make_btn.style.transform = "rotate( 0deg )";
-        lang[0], lang[1].style.fontFamily = "";
-        lang[0], lang[1].style.fontWeight = "";
-        lang[0], lang[1].style.lineHeight = "";
-        lang[0], lang[1].style.letterSpacing = "";
+        lang[0].style.fontFamily = "";
+        lang[0].style.fontWeight = "";
+        lang[0].style.lineHeight = "";
+        lang[0].style.letterSpacing = "";
+        lang[1].style.fontFamily = "";
+        lang[1].style.fontWeight = "";
+        lang[1].style.lineHeight = "";
+        lang[1].style.letterSpacing = "";
         lang[0].innerHTML = "I think design is the process of making what people need through the processing of rough materials. Designers collect and process many raw materials to create useful, attractive objects for people. In this process, designers have a lot of troubles. Finally, the rough materials will be a solution for the people through the efforts of the designer.";
 
         lang[1].innerHTML = "This portfolio will show you materials I've gathered in the process of creating useful, attractive designs for people, and how materials has became a solution.";
@@ -30,10 +34,14 @@ function langClick() {
     } else {
         make_btn.style.borderRadius = "0%";
         make_btn.style.transform = "rotate( 180deg )";
-        lang[0], lang[1].style.fontFamily = "'Noto Sans KR', sans-serif";
-        lang[0], lang[1].style.fontWeight = "400";
-        lang[0], lang[1].style.lineHeight = "36px";
-        lang[0], lang[1].style.letterSpacing = "-0.4px";
+        lang[0].style.fontFamily = "'Noto Sans KR', sans-serif";
+        lang[0].style.fontWeight = "400";
+        lang[0].style.lineHeight = "36px";
+        lang[0].style.letterSpacing = "-0.4px";
+        lang[1].style.fontFamily = "'Noto Sans KR', sans-serif";
+        lang[1].style.fontWeight = "400";
+        lang[1].style.lineHeight = "36px";
+        lang[1].style.letterSpacing = "-0.4px";
         lang[0].innerHTML = "메터리얼 앤 솔루션. 디자인은 누군가에게 필요한 것을 만들기 위해 재료들을 수집하고, 가공하는 과정이라고 생각합니다. 디자이너는 사람들에게 유용하고 매력적인 것을 만들어내기 위해 다듬어지지 않은 재료들을 수집하고 가공합니다. 이 과정에서 디자이너는 치열하게 고민하고, 때로는 재료를 부수기도 합니다. 거칠었던 재료들은 디자이너의 손을 거쳐 마침내 사람들에게 필요한 아름다운 존재가 됩니다.";
 
         lang[1].innerHTML = "이 포트폴리오는 사람들에게 유용하고, 매력적인 디자인을 만들고자 제가 수집한 재료들과, 재료(Material)들이 마침내 사람들에게 필요한 디자인(Solution)이 되기까지의 과정을 보여줄 것입니다.";

@@ -81,7 +81,7 @@ const FmTs_CirReset = () => {
 const FmTsQue = () => {
     let Y = parseInt(window.scrollY);
     let QueSign_Top = FmTs_QueSign.offsetTop;
-    if (Y > QueSign_Top - 450 && Y < QueSign_Top + FmTs_QueSign.offsetHeight - 240) {
+    if (Y > QueSign_Top - 450 && Y < QueSign_Top + FmTs_QueSign.offsetHeight) {
         if (FmTs_check == false) {
             FmTs_check = true;
             window.removeEventListener(`scroll`, FmTsQue);

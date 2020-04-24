@@ -274,7 +274,7 @@ const bg_load = () => {
 const bg_ani_que = () => {
     const scrollY = parseInt(window.scrollY);
 
-    if (scrollY > bg_cont.offsetTop - 320 && scrollY < bg_cont.offsetTop + bg_cont.offsetHeight - 240) {
+    if (scrollY > bg_cont.offsetTop - 160 && scrollY < bg_cont.offsetTop + bg_cont.offsetHeight) {
         window.removeEventListener(`scroll`, bg_ani_que);
         svg_path_1.style.setProperty(`animation`, `drawingPath 1s ease forwards`);
         svg_path_2[0].style.setProperty(`animation`, `drawingPath 200ms ease forwards`);
