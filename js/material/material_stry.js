@@ -3,9 +3,9 @@ const stry_txt_1 = document.querySelector("#js-stry-txt-1"),
 
 const ran_txt = [`a`, `b`, `#`, `j`, `d`, `*`, `e`, `i`];
 
-const M_arry = [`Material.`, `Process.`, `Research.`, `Sketch.`, `Prototype.`, `Testing.`];
+const M_arry = [`Material`, `Process`, `Research`, `Sketch`, `Prototype`, `Testing`];
 
-const S_arry = [`Solution.`, `Design.`, `Develop.`, `Product.`, `Experience.`, `Business.`];
+const S_arry = [`Solution`, `Design`, `Develop`, `Product`, `Experience`, `Business`];
 
 const dash = document.querySelectorAll(`.js-stry-dash`);
 

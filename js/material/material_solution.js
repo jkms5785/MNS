@@ -44,7 +44,7 @@ if (sol_scaleFactor > 1) {
 
 let bArr = [];
 let sol_b;
-const grv = 2.0;
+const grv = 1.6;
 const fric = 0.8;
 const bnc = 0.4;
 const bWidth = 16;
@@ -115,9 +115,9 @@ const drawB = () => {
     for (let i = 0; i < 6; i++) {
         let radius = (Math.floor(makeRanNum(5, 6) * bWidth) * 2);
         let x, y;
-        let dx = Math.floor(makeRanNum(-10, 10) * 3);
+        let dx = Math.floor(makeRanNum(-8, 8) * 3);
         let dy = -22;
-        let color = `rgba(47,117,255,${makeRanNum(6, 8)/10})`;
+        let color = `rgba(47,117,255,${makeRanNum(6, 9)/10})`;
         bArr.push(new bObj(x, y, dx, dy, radius, color));
     }
 }
@@ -127,11 +127,7 @@ const pushB = () => {
     if (Y > sol_canvas_cont.offsetTop && Y < sol_canvas_cont.offsetTop + sol_canvas_cont.offsetHeight) {
         window.removeEventListener(`scroll`, pushB);
         drawB();
+
     }
 }
-
-const delB = () => {
-    bArr = [];
-}
-
 window.addEventListener(`scroll`, pushB);

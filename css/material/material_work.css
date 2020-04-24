@@ -43,7 +43,7 @@ body {
     padding-top: 62.5%;
     position: relative;
     z-index: 1000;
-    background-color: white;
+    background-color: #2F75FF;
 }
 
 .thumbnail img {
@@ -83,7 +83,6 @@ body {
     padding: 216px 0;
 }
 
-
 .cont_left {
     width: calc(50% - 2.6978417%);
 }
@@ -111,8 +110,7 @@ body {
 }
 
 .info_img {
-    margin-left: -16px;
-    width: 84%;
+    width: 128px;
     height: auto;
 }
 
@@ -301,7 +299,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 424px 0;
+    padding: 408px 0;
 }
 
 .bg_cont .svg_cont {
@@ -391,7 +389,6 @@ body {
     }
 }
 
-
 .bg_MnS_txt {
     font-family: 'Montserrat', 'san-selif';
     font-weight: 700;
@@ -442,7 +439,7 @@ body {
 
 .dash {
     width: 6px;
-    height: 44px;
+    height: 56px;
     margin-left: 4px;
     background-color: #2F75FF;
     animation: dashBlink 1.5s linear infinite;
@@ -450,23 +447,23 @@ body {
 
 @keyframes dashBlink {
     0% {
-        opacity: 60%;
+        opacity: 30%;
     }
 
     49% {
-        opacity: 60%;
+        opacity: 30%;
     }
 
     50% {
-        opacity: 20%;
+        opacity: 10%;
     }
 
     99% {
-        opacity: 20%;
+        opacity: 10%;
     }
 
     100% {
-        opacity: 60%;
+        opacity: 30%;
     }
 }
 
@@ -605,10 +602,6 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 9999;
-}
-
-.sol_wrap {
-    height: 800px;
 }
 
 .canvas_cont {
