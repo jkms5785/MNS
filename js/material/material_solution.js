@@ -122,12 +122,24 @@ const drawB = () => {
     }
 }
 
+const delB = () => {
+    bArr = [];
+}
+
+let bCheck = true;
+
 const pushB = () => {
     const Y = window.scrollY;
     if (Y > sol_canvas_cont.offsetTop && Y < sol_canvas_cont.offsetTop + sol_canvas_cont.offsetHeight) {
-        window.removeEventListener(`scroll`, pushB);
-        drawB();
-
+        if (bCheck == true) {
+            bCheck = false;
+            drawB();
+        }
+    } else {
+        if (bCheck == false) {
+            bCheck = true;
+            delB();
+        }
     }
 }
 window.addEventListener(`scroll`, pushB);
