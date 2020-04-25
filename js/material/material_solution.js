@@ -112,7 +112,7 @@ class bObj {
 }
 
 const drawB = () => {
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < 7; i++) {
         let radius = (Math.floor(makeRanNum(5, 6) * bWidth) * 2);
         let x, y;
         let dx = Math.floor(makeRanNum(-8, 8) * 3);

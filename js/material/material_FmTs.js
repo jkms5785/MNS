@@ -16,7 +16,7 @@ const FmTs_CirPop = () => {
         if (y === 100) {
             clearInterval(borderRadius);
         }
-    }, 8);
+    }, 6);
 
     FmTs_cir.classList.add(`CirclePop`);
     window.addEventListener(`scroll`, FmTsQue);
