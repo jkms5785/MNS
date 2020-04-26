@@ -68,7 +68,7 @@ function init2() {
     }
     for (let i = 0; i < 6; i++) {
         var radius =
-            (Math.floor(generateRandom(3, 5) * ballWidth) + 7) * 2,
+            (Math.floor(generateRandom(3, 5) * ballWidth) + 5) * 2,
             x, y,
             dx = (Math.random() - 0.5) * 50,
             dy = -28,
