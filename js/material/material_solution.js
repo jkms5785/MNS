@@ -116,7 +116,7 @@ const drawB = () => {
         let radius = (Math.floor(makeRanNum(5, 6) * bWidth) * 2);
         let x, y;
         let dx = Math.floor(makeRanNum(-8, 8) * 3);
-        let dy = -22;
+        let dy = -32;
         let color = `rgba(47,117,255,${makeRanNum(6, 9)/10})`;
         bArr.push(new bObj(x, y, dx, dy, radius, color));
     }
