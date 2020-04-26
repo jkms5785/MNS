@@ -108,10 +108,15 @@ body::-webkit-scrollbar {
 .title_loader {
     transform: translateY(0px) rotateX(0deg) scale(1.0);
     opacity: 1.0;
-    -webkit-transition: opacity 1000ms ease 100ms, transform 1000ms cubic-bezier(0, 0.7, 0.29, 0.97) 100ms;
-    -moz-transition: opacity 1000ms ease 100ms, transform 1000ms cubic-bezier(0, 0.7, 0.29, 0.97) 100ms;
-    -o-transition: opacity 1000ms ease 100ms, transform 1000ms cubic-bezier(0, 0.7, 0.29, 0.97) 100ms;
-    transition: opacity 1000ms ease 100ms, transform 1000ms cubic-bezier(0, 0.7, 0.29, 0.97) 100ms;
+    -webkit-transition: opacity 750ms ease 100ms, transform 750ms cubic-bezier(0, 0.7, 0.29, 0.97) 100ms;
+    -moz-transition: opacity 750ms ease 100ms, transform 750ms cubic-bezier(0, 0.7, 0.29, 0.97) 100ms;
+    -o-transition: opacity 750ms ease 100ms, transform 750ms cubic-bezier(0, 0.7, 0.29, 0.97) 100ms;
+    transition: opacity 750ms ease 100ms, transform 750ms cubic-bezier(0, 0.7, 0.29, 0.97) 100ms;
+
+    -webkit-transition-timing-function: ease, cubic-bezier(0, 0.7, 0.29, 0.97);
+    -moz-transition-timing-function: ease, cubic-bezier(0, 0.7, 0.29, 0.97);
+    -o-transition-timing-function: ease, cubic-bezier(0, 0.7, 0.29, 0.97);
+    transition-timing-function: ease, cubic-bezier(0, 0.7, 0.29, 0.97);
 }
 
 .body_preloader {

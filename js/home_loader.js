@@ -45,7 +45,9 @@ function titleLoader_2(c) {
             titleLoader_2(c);
         }, 12);
     } else if (c === Solution.childElementCount) {
-        bodyLoader();
+        setTimeout(() => {
+            bodyLoader();
+        }, 250);
     }
 }
 
@@ -67,8 +69,10 @@ function preloaderOut() {
         preloader.style.opacity = "0";
         preloader.style.zIndex = "-9999";
         homeGif.style.opacity = "1.0";
-        titleLoader_1(0);
-        headerLoader();
+        setTimeout(() => {
+            titleLoader_1(0);
+            headerLoader();
+        }, 500);
     }, 1000);
 }
 
