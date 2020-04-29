@@ -72,8 +72,7 @@ function init2() {
             x, y,
             dx = (Math.random() - 0.5) * 50,
             dy = -28,
-            color = 'rgba(47,117,255,' + generateRandom(4, 9) / 10 + ')'
-
+            color = 'rgba(47,117,255,' + generateRandom(6, 9) / 10 + ')'
         ballsArr.push(new Ball(x, y, dx, dy, radius, color))
     }
 }
