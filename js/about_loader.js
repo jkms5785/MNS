@@ -49,9 +49,10 @@ function titleLoader_2(c) {
             titleLoader_2(c);
         }, 12);
     } else if (c === Solution.childElementCount) {
-        bodyLoader1();
-
-        profileLoader();
+        setTimeout(() => {
+            bodyLoader1();
+            profileLoader();
+        }, 500);
     }
 }
 
