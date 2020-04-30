@@ -50,6 +50,8 @@ function titleLoader_2(c) {
         }, 12);
     } else if (c === Solution.childElementCount) {
         bodyLoader1();
+
+        profileLoader();
     }
 }
 
@@ -72,7 +74,6 @@ function preloaderOut() {
         preloader.style.zIndex = "-9999";
         titleLoader_1(0);
         headerLoader();
-        profileLoader();
     }, 1000);
 }
 
