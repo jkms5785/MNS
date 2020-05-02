@@ -130,7 +130,7 @@ let bCheck = true;
 
 const pushB = () => {
     const Y = window.scrollY;
-    if (Y > sol_canvas_cont.offsetTop && Y < sol_canvas_cont.offsetTop + sol_canvas_cont.offsetHeight) {
+    if (Y > sol_canvas_cont.offsetTop - 160 && Y < sol_canvas_cont.offsetTop + sol_canvas_cont.offsetHeight + 320) {
         if (bCheck == true) {
             bCheck = false;
             drawB();
