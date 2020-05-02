@@ -52,7 +52,7 @@ function titleLoader_2(c) {
         setTimeout(() => {
             bodyLoader1();
             profileLoader();
-        }, 500);
+        }, 250);
     }
 }
 
