@@ -887,6 +887,50 @@ body {
     padding-top: 12.5%;
 }
 
+/* footer */
+.footer {
+    padding: 84px 0;
+    margin: 0 auto;
+    display: flex;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 2.34375%;
+    width: 526px;
+}
+
+.right {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    margin-left: 2.34375%;
+    width: 526px;
+}
+
+
+.right ul li:not(:first-child) {
+    opacity: 0.8;
+}
+
+.right ul>* {
+    height: 23px;
+    display: flex;
+    align-items: center;
+}
+
+.right ul li:first-child {
+    font-weight: 600;
+}
+
+
+.right ul li:not(:first-child) {
+    padding-top: 16px;
+}
+
 /* 
 
 @media(max-width:960px) {
