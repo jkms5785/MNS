@@ -97,8 +97,10 @@ function preloaderOut() {
 function gifImageLoader() {
     let GifImg_1 = new Image();
     GifImg_1.src = "img/work_latup_m.gif";
-    let GifImg_2 = new Image();
-    GifImg_2.src = "img/work_material.gif";
+    GifImg_1.onload = () => {
+        let GifImg_2 = new Image();
+        GifImg_2.src = "img/work_material.gif";
+    }
 }
 
 function preloaderIn() {
