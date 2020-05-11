@@ -1,3 +1,7 @@
+body::-webkit-scrollbar {
+    display: none;
+}
+
 .preloader {
     position: fixed;
     width: 100%;
