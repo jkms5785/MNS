@@ -1,3 +1,7 @@
+body::-webkit-scrollbar {
+    display: none;
+}
+
 .header_preloader {
     opacity: 0.2;
     top: -80px;
