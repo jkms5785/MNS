@@ -23,7 +23,7 @@ function ov_scroll() {
 }
 
 function rs_scroll() {
-    window.scrollTo(0, rs_tg_Top - 120);
+    window.scrollTo(0, rs_tg_Top - 80);
 }
 
 function dp_scroll() {
@@ -43,7 +43,7 @@ function pd_scroll() {
 }
 
 function fd_scroll() {
-    window.scrollTo(0, fd_tg_Top - 32);
+    window.scrollTo(0, fd_tg_Top - 64);
 }
 
 var si = document.getElementsByClassName('sc_des');
