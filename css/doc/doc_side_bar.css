@@ -3,7 +3,8 @@
     left: 96%;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 1000;
+    /* z-index: 1000; */
+    z-index: 9999;
 }
 
 .side_bt ul li {
@@ -46,7 +47,8 @@
     left: calc(96% - 148px);
     top: 50%;
     transform: translateY(-50%);
-    z-index: 3;
+    /* z-index: 3; */
+    z-index: 9999;
 }
 
 .side_info ul li {
@@ -114,7 +116,7 @@
         left: 110%;
     }
 
-    .side_info{
-        left : 110%;
+    .side_info {
+        left: 110%;
     }
 }
