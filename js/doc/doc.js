@@ -71,7 +71,7 @@ function makeScrollEvent() {
     }
 
     function ov_scroll() {
-        window.scrollTo(0, ov_tg_Top - 80);
+        window.scrollTo(0, ov_tg_Top - 96);
     }
 
     function taskAnal_scroll() {
