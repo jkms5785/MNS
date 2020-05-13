@@ -23,7 +23,7 @@ function ov_scroll() {
 }
 
 function rs_scroll() {
-    window.scrollTo(0, rs_tg_Top);
+    window.scrollTo(0, rs_tg_Top - 120);
 }
 
 function dp_scroll() {
