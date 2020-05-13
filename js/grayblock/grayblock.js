@@ -60,7 +60,7 @@ function pd_scroll() {
 }
 
 function fd_scroll() {
-    window.scrollTo(0, fd_tg_Top + 380);
+    window.scrollTo(0, fd_tg_Top + 160);
 }
 
 function init() {
