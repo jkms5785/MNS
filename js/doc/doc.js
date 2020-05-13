@@ -79,7 +79,7 @@ function makeScrollEvent() {
     }
 
     function curSit_scroll() {
-        window.scrollTo(0, curSit_tg_Top + 64);
+        window.scrollTo(0, curSit_tg_Top + 88);
     }
 
     function inv_scroll() {
