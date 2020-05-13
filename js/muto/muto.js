@@ -49,11 +49,11 @@ function pd_scroll() {
 }
 
 function de_scroll() {
-    window.scrollTo(0, de_tg_Top - 140);
+    window.scrollTo(0, de_tg_Top - 164);
 }
 
 function fd_scroll() {
-    window.scrollTo(0, fd_tg_Top - 80);
+    window.scrollTo(0, fd_tg_Top - 120);
 }
 
 var si = document.getElementsByClassName('sc_des');
