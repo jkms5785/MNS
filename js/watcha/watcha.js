@@ -38,11 +38,11 @@ function ov_scroll() {
 }
 
 function rs_scroll() {
-    window.scrollTo(0, rs_tg_Top - 80);
+    window.scrollTo(0, rs_tg_Top - 120);
 }
 
 function dp_scroll() {
-    window.scrollTo(0, dp_tg_Top - 40);
+    window.scrollTo(0, dp_tg_Top - 80);
 }
 
 function ut_scroll() {
