@@ -54,7 +54,7 @@ function de_scroll() {
 
 
 function fd_scroll() {
-    window.scrollTo(0, fd_tg_Top - 64);
+    window.scrollTo(0, fd_tg_Top - 88);
 }
 
 function init() {
