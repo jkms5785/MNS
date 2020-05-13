@@ -37,7 +37,7 @@ function dp_scroll() {
 }
 
 function ut_scroll() {
-    window.scrollTo(0, ut_tg_Top - 64);
+    window.scrollTo(0, ut_tg_Top - 40);
 }
 
 function di_scroll() {
