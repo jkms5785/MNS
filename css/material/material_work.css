@@ -85,7 +85,7 @@ body {
 .cont_stc {
     width: 1112px;
     margin: 0 auto;
-    padding: 216px 0;
+    padding: 240px 0;
 }
 
 .cont_left {
@@ -615,7 +615,7 @@ body {
 
 .canvas_cont {
     width: 100%;
-    height: 800px;
+    height: 960px;
     display: flex;
     justify-content: center;
 }
