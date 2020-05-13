@@ -83,7 +83,7 @@ function makeScrollEvent() {
     }
 
     function inv_scroll() {
-        window.scrollTo(0, inv_tg_Top - 16);
+        window.scrollTo(0, inv_tg_Top - 64);
     }
 
     function obj_scroll() {
@@ -91,7 +91,7 @@ function makeScrollEvent() {
     }
 
     function diSystem_scroll() {
-        window.scrollTo(0, diSystem_tg_Top + 80);
+        window.scrollTo(0, diSystem_tg_Top + 120);
     }
 
     function diComp_scroll() {
@@ -103,7 +103,7 @@ function makeScrollEvent() {
     }
 
     function posb_scroll() {
-        window.scrollTo(0, posb_tg_Top + 140);
+        window.scrollTo(0, posb_tg_Top + 124);
     }
 
     sc[0].addEventListener('click', bg_scroll),

@@ -28,19 +28,19 @@ var fd_tg = document.getElementById('fd_tg'),
     fd_tg_Top = fd_tg.offsetTop;
 
 function ov_scroll() {
-    window.scrollTo(0, ov_tg_Top - 100);
+    window.scrollTo(0, ov_tg_Top - 80);
 }
 
 function desk_scroll() {
-    window.scrollTo(0, desk_tg_Top - 124);
+    window.scrollTo(0, desk_tg_Top - 160);
 }
 
 function rs_scroll() {
-    window.scrollTo(0, rs_tg_Top - 148);
+    window.scrollTo(0, rs_tg_Top - 188);
 }
 
 function dp_scroll() {
-    window.scrollTo(0, dp_tg_Top - 128);
+    window.scrollTo(0, dp_tg_Top - 168);
 }
 
 function co_scroll() {
@@ -48,7 +48,7 @@ function co_scroll() {
 }
 
 function ut_scroll() {
-    window.scrollTo(0, ut_tg_Top - 100);
+    window.scrollTo(0, ut_tg_Top - 140);
 }
 
 function di_scroll() {
@@ -60,7 +60,7 @@ function pd_scroll() {
 }
 
 function fd_scroll() {
-    window.scrollTo(0, fd_tg_Top - 100);
+    window.scrollTo(0, fd_tg_Top + 40);
 }
 
 function init() {

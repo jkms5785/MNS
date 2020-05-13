@@ -25,7 +25,7 @@ var fd_tg = document.getElementById('fd_tg'),
     fd_tg_Top = fd_tg.offsetTop;
 
 function ov_scroll() {
-    window.scrollTo(0, ov_tg_Top + 40);
+    window.scrollTo(0, ov_tg_Top);
 }
 
 function rs_scroll() {
@@ -33,11 +33,11 @@ function rs_scroll() {
 }
 
 function dp_scroll() {
-    window.scrollTo(0, dp_tg_Top - 64);
+    window.scrollTo(0, dp_tg_Top - 88);
 }
 
 function ut_scroll() {
-    window.scrollTo(0, ut_tg_Top - 80);
+    window.scrollTo(0, ut_tg_Top - 64);
 }
 
 function di_scroll() {
@@ -45,11 +45,11 @@ function di_scroll() {
 }
 
 function pd_scroll() {
-    window.scrollTo(0, pd_tg_Top - 100);
+    window.scrollTo(0, pd_tg_Top - 132);
 }
 
 function de_scroll() {
-    window.scrollTo(0, de_tg_Top - 32);
+    window.scrollTo(0, de_tg_Top - 80);
 }
 
 
