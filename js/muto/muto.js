@@ -45,7 +45,7 @@ function di_scroll() {
 }
 
 function pd_scroll() {
-    window.scrollTo(0, pd_tg_Top - 240);
+    window.scrollTo(0, pd_tg_Top - 234);
 }
 
 function de_scroll() {
