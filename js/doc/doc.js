@@ -67,7 +67,7 @@ function makeScrollEvent() {
         posb_tg_Top = posb_tg.offsetTop;
 
     function bg_scroll() {
-        window.scrollTo(0, bg_tg_Top + 64);
+        window.scrollTo(0, bg_tg_Top + 24);
     }
 
     function ov_scroll() {
