@@ -43,7 +43,7 @@ function pd_scroll() {
 }
 
 function fd_scroll() {
-    window.scrollTo(0, fd_tg_Top);
+    window.scrollTo(0, fd_tg_Top - 32);
 }
 
 var si = document.getElementsByClassName('sc_des');
