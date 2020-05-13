@@ -75,7 +75,7 @@ function makeScrollEvent() {
     }
 
     function taskAnal_scroll() {
-        window.scrollTo(0, taskAnal_tg_Top + 160);
+        window.scrollTo(0, taskAnal_tg_Top + 136);
     }
 
     function curSit_scroll() {
