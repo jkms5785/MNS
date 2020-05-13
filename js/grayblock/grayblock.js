@@ -32,7 +32,7 @@ function ov_scroll() {
 }
 
 function desk_scroll() {
-    window.scrollTo(0, desk_tg_Top - 132);
+    window.scrollTo(0, desk_tg_Top - 172);
 }
 
 function rs_scroll() {
@@ -40,7 +40,7 @@ function rs_scroll() {
 }
 
 function dp_scroll() {
-    window.scrollTo(0, dp_tg_Top - 208);
+    window.scrollTo(0, dp_tg_Top - 168);
 }
 
 function co_scroll() {
@@ -48,7 +48,7 @@ function co_scroll() {
 }
 
 function ut_scroll() {
-    window.scrollTo(0, ut_tg_Top - 172);
+    window.scrollTo(0, ut_tg_Top - 132);
 }
 
 function di_scroll() {
@@ -56,11 +56,11 @@ function di_scroll() {
 }
 
 function pd_scroll() {
-    window.scrollTo(0, pd_tg_Top - 132);
+    window.scrollTo(0, pd_tg_Top - 172);
 }
 
 function fd_scroll() {
-    window.scrollTo(0, fd_tg_Top + 400);
+    window.scrollTo(0, fd_tg_Top + 380);
 }
 
 function init() {
