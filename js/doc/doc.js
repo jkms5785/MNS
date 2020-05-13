@@ -10,8 +10,12 @@ let bg_tg = document.getElementById('bg_tg'),
     curSit_tg_Top,
     inv_tg = document.getElementById('inv_tg'),
     inv_tg_Top,
+    obj_tg = document.getElementById('obj_tg'),
+    obj_tg_Top,
     diSystem_tg = document.getElementById('diSystem_tg'),
     diSystem_tg_Top,
+    diComp_tg = document.getElementById('diComp_tg'),
+    diComp_tg_Top,
     sol_tg = document.getElementById('sol_tg'),
     sol_tg_Top,
     posb_tg = document.getElementById('posb_tg'),
@@ -47,7 +51,7 @@ function makeOffsetHeight(e) {
         makeScrollEvent();
         window.removeEventListener("scroll", makeOffsetHeight);
     }
-    window.addEventListener("resize",makeScrollEvent);
+    window.addEventListener("resize", makeScrollEvent);
 }
 
 function makeScrollEvent() {
@@ -55,40 +59,51 @@ function makeScrollEvent() {
         ov_tg_Top = ov_tg.offsetTop,
         taskAnal_tg_Top = taskAnal_tg.offsetTop,
         curSit_tg_Top = curSit_tg.offsetTop,
+        obj_tg_Top = obj_tg.offsetTop,
         inv_tg_Top = inv_tg.offsetTop,
         diSystem_tg_Top = diSystem_tg.offsetTop,
+        diComp_tg_Top = diComp_tg.offsetTop,
         sol_tg_Top = sol_tg.offsetTop,
         posb_tg_Top = posb_tg.offsetTop;
+
     function bg_scroll() {
-        window.scrollTo(0, bg_tg_Top);
+        window.scrollTo(0, bg_tg_Top + 64);
     }
 
     function ov_scroll() {
-        window.scrollTo(0, ov_tg_Top);
+        window.scrollTo(0, ov_tg_Top - 64);
     }
 
     function taskAnal_scroll() {
-        window.scrollTo(0, taskAnal_tg_Top);
+        window.scrollTo(0, taskAnal_tg_Top + 200);
     }
 
     function curSit_scroll() {
-        window.scrollTo(0, curSit_tg_Top);
+        window.scrollTo(0, curSit_tg_Top + 64);
     }
 
     function inv_scroll() {
-        window.scrollTo(0, inv_tg_Top);
+        window.scrollTo(0, inv_tg_Top - 16);
+    }
+
+    function obj_scroll() {
+        window.scrollTo(0, obj_tg_Top);
     }
 
     function diSystem_scroll() {
-        window.scrollTo(0, diSystem_tg_Top);
+        window.scrollTo(0, diSystem_tg_Top + 80);
+    }
+
+    function diComp_scroll() {
+        window.scrollTo(0, diComp_tg_Top - 16);
     }
 
     function sol_scroll() {
-        window.scrollTo(0, sol_tg_Top);
+        window.scrollTo(0, sol_tg_Top + 264);
     }
 
     function posb_scroll() {
-        window.scrollTo(0, posb_tg_Top);
+        window.scrollTo(0, posb_tg_Top + 140);
     }
 
     sc[0].addEventListener('click', bg_scroll),
@@ -96,9 +111,11 @@ function makeScrollEvent() {
         sc[2].addEventListener('click', taskAnal_scroll),
         sc[3].addEventListener('click', curSit_scroll),
         sc[4].addEventListener('click', inv_scroll),
-        sc[5].addEventListener('click', diSystem_scroll),
-        sc[6].addEventListener('click', sol_scroll),
-        sc[7].addEventListener('click', posb_scroll);
+        sc[5].addEventListener('click', obj_scroll),
+        sc[6].addEventListener('click', diSystem_scroll),
+        sc[7].addEventListener('click', diComp_scroll),
+        sc[8].addEventListener('click', sol_scroll),
+        sc[9].addEventListener('click', posb_scroll);
 }
 
 window.addEventListener("scroll", makeOffsetHeight);
