@@ -71,11 +71,11 @@ function makeScrollEvent() {
     }
 
     function ov_scroll() {
-        window.scrollTo(0, ov_tg_Top - 64);
+        window.scrollTo(0, ov_tg_Top - 80);
     }
 
     function taskAnal_scroll() {
-        window.scrollTo(0, taskAnal_tg_Top + 200);
+        window.scrollTo(0, taskAnal_tg_Top + 160);
     }
 
     function curSit_scroll() {
