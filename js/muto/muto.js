@@ -25,7 +25,7 @@ var fd_tg = document.getElementById('fd_tg'),
     fd_tg_Top = fd_tg.offsetTop;
 
 function ov_scroll() {
-    window.scrollTo(0, ov_tg_Top - 104);
+    window.scrollTo(0, ov_tg_Top - 80);
 }
 
 function rs_scroll() {
