@@ -9,7 +9,7 @@
 
 .side_bt ul li {
     opacity: 0.75;
-    background-color: #33E787;
+    background-color: #7CE5A6;
     cursor: pointer;
     width: 8px;
     height: 8px;
@@ -33,7 +33,7 @@
 }
 
 .side_bt ul li:last-child {
-    background-color: 2F75FF;
+    /* background-color: 2F75FF; */
     border-radius: 100%;
 }
 
@@ -62,7 +62,7 @@
 
     font-family: 'Google Sans', sans-serif;
     font-size: 0.875rem;
-    color: #33E787;
+    color: #7CE5A6;
 
     -webkit-transition: all 200ms cubic-bezier(0.455, 0.030, 0.515, 0.955);
     -moz-transition: all 200ms cubic-bezier(0.455, 0.030, 0.515, 0.955);

@@ -91,7 +91,7 @@ function makeScrollEvent() {
     }
 
     function diSystem_scroll() {
-        window.scrollTo(0, diSystem_tg_Top + 120);
+        window.scrollTo(0, diSystem_tg_Top + 104);
     }
 
     function diComp_scroll() {
