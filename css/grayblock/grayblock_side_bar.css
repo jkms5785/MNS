@@ -29,7 +29,7 @@
 
 
 .side_bt ul li:not(:last-child) {
-    margin-bottom: 32px;
+    margin-bottom: 24px;
 }
 
 .side_bt ul li:last-child {
@@ -39,7 +39,7 @@
 
 
 .side_info ul li:not(:last-child) {
-    margin-bottom: 8px;
+    /* margin-bottom: 8px; */
 }
 
 .side_info {
