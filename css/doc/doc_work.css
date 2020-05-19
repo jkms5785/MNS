@@ -1,6 +1,6 @@
-body::-webkit-scrollbar {
+/* body::-webkit-scrollbar {
     display: none;
-}
+} */
 
 .header_preloader {
     opacity: 0.2;
