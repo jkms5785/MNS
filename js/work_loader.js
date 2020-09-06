@@ -105,13 +105,14 @@ function gifImageLoader() {
 
 function preloaderIn() {
     preloader.style.transform = "translateY(100%)";
-    workImage[0].src = "img/work_doc.png";
-    workImage[1].src = "img/work_muto.png";
+    workImage[0].src = "img/work_kakao.png";
+    workImage[1].src = "img/work_doc.png";
+    workImage[2].src = "img/work_muto.png";
 
-    workImage[0], workImage[1].onload = function () {
-        workImage[2].src = "img/work_latup.png";
-        workImage[3].src = "img/work_grayblock.png";
-        workImage[4].src = "img/work_material.png";
+    workImage[0], workImage[1], workImage[2].onload = function () {
+        workImage[3].src = "img/work_latup.png";
+        workImage[4].src = "img/work_grayblock.png";
+        workImage[5].src = "img/work_material.png";
         setTimeout(function () {
             preloader.style.transform = "translateY(200%)";
             preloaderOut();

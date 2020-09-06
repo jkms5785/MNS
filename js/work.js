@@ -12,10 +12,10 @@ function Que() {
     viewProject.classList.add("viewProjectHovered");
 
     switch (this) {
-        case work[2]:
+        case work[3]:
             img.src = "img/work_latup_m.gif";
             break;
-        case work[4]:
+        case work[5]:
             img.src = "img/work_material.gif";
             break;
     }
@@ -32,10 +32,10 @@ function Stop() {
     viewProject.classList.remove("viewProjectHovered");
 
     switch (this) {
-        case work[2]:
+        case work[3]:
             img.src = "img/work_latup.png";
             break;
-        case work[4]:
+        case work[5]:
             img.src = "img/work_material.png";
             break;
     }
