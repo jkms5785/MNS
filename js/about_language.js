@@ -147,7 +147,7 @@ function colorChnage(e) {
     const blueHeight = resumeBlue.offsetHeight;
     const winHeight = window.innerHeight;
 
-    if (currentTop + winHeight + 64 >= blueTop && currentTop + winHeight + 64 <= blueTop + blueHeight) {
+    if (currentTop + winHeight >= blueTop && currentTop + winHeight + 64 <= blueTop + blueHeight) {
         make_btn.style.backgroundColor = "rgba(255,255,255,0.2)";
         blue = true;
     } else {
