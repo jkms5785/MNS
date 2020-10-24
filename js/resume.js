@@ -95,6 +95,8 @@ function btnHovered() {
 }
 
 function ResumeModalActive() {
+    resumeParent.style.overflow = "hidden"; // body scroll Lock
+
     makeResumeModal();
     resumeBack.style.transform = "translateY(100%)";
     setTimeout(() => {
@@ -104,13 +106,14 @@ function ResumeModalActive() {
 }
 
 function ResumeModalClosed() {
+
     resumeParent.removeChild(makeModal);
     makeModal.style.top = "50%";
     makeModal.style.opacity = "0";
     setTimeout(() => {
         resumeBack.style.transform = "translateY(0)";
+        resumeParent.style.overflow = ""; // body scroll unLock
     }, 500);
-
     icon_close.parentElement.style.backgroundColor = "";
 }
 

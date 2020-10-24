@@ -7,6 +7,7 @@ const ClueX = clickClue.offsetLeft,
     ClueHeight = clickClue.offsetHeight;
 
 function init() {
+    // ClueParent.style.overflow = "hidden"; // body scroll lock
     console.dir(clickClue);
     console.log(ClueX, ClueY, ClueX + ClueWidth, ClueY + ClueHeight);
     let ClueCanvas = document.createElement("canvas");
