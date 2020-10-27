@@ -106,7 +106,6 @@ function ResumeModalActive() {
 }
 
 function ResumeModalClosed() {
-
     resumeParent.removeChild(makeModal);
     makeModal.style.top = "50%";
     makeModal.style.opacity = "0";

@@ -48,7 +48,7 @@ function bodyLoader() {
         body2.classList.remove("body_preloader");
         body2.classList.add("body_loader");
         workAniLoader();
-    }, 300);
+    }, 100);
 }
 
 function arrowLoader() {
@@ -56,7 +56,7 @@ function arrowLoader() {
     arrow.classList.add("arrow_loader");
     setTimeout(function () {
         bodyLoader();
-    }, 300);
+    }, 100);
 }
 
 function titleLoader_2(c) {
@@ -89,6 +89,7 @@ function preloaderOut() {
     setTimeout(function () {
         preloader.style.opacity = "0";
         preloader.style.zIndex = "-9999";
+        preloader.classList.add('js-clickClue');
         titleLoader_1(0);
         headerLoader();
     }, 1000);

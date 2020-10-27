@@ -33,7 +33,7 @@ function bodyLoader() {
     body.classList.add("body_loader");
     setTimeout(function () {
         arrowLoader();
-    }, 300);
+    }, 100);
 }
 
 function titleLoader_2(c) {
@@ -47,7 +47,7 @@ function titleLoader_2(c) {
     } else if (c === Solution.childElementCount) {
         setTimeout(() => {
             bodyLoader();
-        }, 250);
+        }, 200);
     }
 }
 
@@ -72,7 +72,7 @@ function preloaderOut() {
         setTimeout(() => {
             titleLoader_1(0);
             headerLoader();
-        }, 500);
+        }, 200);
     }, 1000);
 }
 

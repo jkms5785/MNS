@@ -38,12 +38,12 @@ function RotateToLeft() {
 
 function clickToCircle() {
     ToCircle[0].removeEventListener('click', clickToCircle);
-    StopRotate = true;
     mtos_cont.style.transform = "rotateZ(0deg)";
+    StopRotate = true;
     setTimeout(function () {
         AniQue2();
         Popball();
-    }, 800);
+    }, 1000);
 }
 
 function Popball() {
@@ -159,7 +159,7 @@ function init() {
             clearInterval(checker);
             setTimeout(function () {
                 RotateToRight();
-            }, 2500);
+            }, 3500);
         }
     }, 1000);
 }

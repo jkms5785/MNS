@@ -29,7 +29,7 @@ function bodyLoader2() {
     body2.classList.add("body_loader");
     setTimeout(function () {
         bodyLoader3();
-    }, 300);
+    }, 100);
 }
 
 function bodyLoader1() {
@@ -37,7 +37,7 @@ function bodyLoader1() {
     body1.classList.add("body_loader");
     setTimeout(function () {
         bodyLoader2();
-    }, 300);
+    }, 100);
 }
 
 function titleLoader_2(c) {
@@ -52,7 +52,7 @@ function titleLoader_2(c) {
         setTimeout(() => {
             bodyLoader1();
             profileLoader();
-        }, 250);
+        }, 200);
     }
 }
 
