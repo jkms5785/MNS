@@ -24,7 +24,7 @@ function RotateToRight() {
         if (!StopRotate) {
             RotateToLeft();
         }
-    }, 2000);
+    }, 2500);
 }
 
 function RotateToLeft() {
@@ -33,7 +33,7 @@ function RotateToLeft() {
         if (!StopRotate) {
             RotateToRight();
         }
-    }, 2000);
+    }, 2500);
 }
 
 function clickToCircle() {
@@ -159,7 +159,7 @@ function init() {
             clearInterval(checker);
             setTimeout(function () {
                 RotateToRight();
-            }, 1000);
+            }, 2500);
         }
     }, 1000);
 }
