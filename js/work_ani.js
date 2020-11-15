@@ -159,7 +159,7 @@ function init() {
             clearInterval(checker);
             setTimeout(function () {
                 RotateToRight();
-            }, 3500);
+            }, 2500);
         }
     }, 1000);
 }
