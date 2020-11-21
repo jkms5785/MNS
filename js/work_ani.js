@@ -37,9 +37,9 @@ function RotateToLeft() {
 }
 
 function clickToCircle() {
+    StopRotate = true;
     ToCircle[0].removeEventListener('click', clickToCircle);
     mtos_cont.style.transform = "rotateZ(0deg)";
-    StopRotate = true;
     setTimeout(function () {
         AniQue2();
         Popball();
@@ -155,11 +155,12 @@ function init() {
 
     const checker = setInterval(function () {
         if (rotateQue.classList[1] === "workAni_loader") {
-            RotateChecker = 0;
             clearInterval(checker);
             setTimeout(function () {
-                RotateToRight();
-            }, 2500);
+                if (!StopRotate) {
+                    RotateToRight();
+                }
+            }, 3000);
         }
     }, 1000);
 }

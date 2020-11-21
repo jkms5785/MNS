@@ -26,7 +26,7 @@ ClueCanvas.style.webkitTransition = "all 500ms ease-out";
 ClueCanvas.style.mozTransition = "all 500ms ease-out";
 ClueCanvas.style.oTransition = "all 500ms ease-out";
 ClueCanvas.style.transition = "all 500ms ease-out";
-// ClueCanvas.style.opacity = "0";
+ClueCanvas.style.opacity = "0";
 ClueParent.appendChild(ClueCanvas);
 
 // 2-1. canvas.style 설정
@@ -57,7 +57,6 @@ if (scaleFactor > 1) {
     }
 }
 
-
 // 4. remooveCanvas 함수
 function removeCanvas() {
     // ClueCanvas.style.opacity = "0";
@@ -67,16 +66,18 @@ function removeCanvas() {
     }, 500);
 }
 
-let opacity = {
-    value: 0,
-    ve: 1
+function ClickClueOpacity_1() {
+    ClueCanvas.style.opacity = "1.0";
+
+    setTimeout(() => {
+        ClueCanvas.style.opacity = "0";
+        ClueCanvas.style.zIndex = "-9999";
+        scrollMove();
+    }, 1200);
 }
 
 // 3. canavas 그리기
 function makeClickClue() {
-    let animate = window.requestAnimationFrame(makeClickClue);
-    // ClueCanvas.style.opacity = "1.0";
-
     let c = ClueCanvasCtx;
     let s = ClueScaleFactor;
 
@@ -95,73 +96,64 @@ function makeClickClue() {
         Y = Cy - (Cwidth / 2 + Cmargin) * s,
         width = (Cwidth + Cmargin * 2) * s;
 
-    opacity.value += opacity.ve;
-    // console.log(`rgba(0, 0, 0, 0.${opacity.value < 10 ? `0${opacity.value}` : opacity.value})`);
-    // console.log(opacity.value);
-    // c.fillStyle = `rgba(0, 0, 0, 0.${opacity.value < 10 ? `0${opacity.value}` : opacity.value})`;
     c.fillStyle = 'rgba(0, 0, 0, 0.6)';
     c.fillRect(0, 0, window.innerWidth * s, window.innerHeight * s);
     c.clearRect(X, Y, width, width);
 
 
-    // Click 그리기 
+    // Click txt 그리기 
     let font = "700 32px Montserrat, 'san-selif'",
         message = "Click",
         fontX = X + width / 2,
         fontY = Y + width,
         fontMargin = 32 * s;
 
-    // c.fillStyle = "rgba(255, 255, 255, 1.0)";
+    c.fillStyle = "rgba(255, 255, 255, 1.0)";
     c.textAlign = "center";
     c.textBaseline = "Top";
     c.font = font;
     c.fillText(message, fontX, fontY + fontMargin);
+}
 
-    // Canvas 사라지기
+// resize 좌표 유지
+window.addEventListener("resize", makeClickClue);
 
-    if (opacity.value == 60) {
-        window.cancelAnimationFrame(animate);
+// canvas 그리기
+const preloader_Out = document.querySelector(`#js-preloader`);
+
+function transitionedCheck(e) {
+    if (e.target.style.transform == `translateY(200%)`) {
+        preloader_Out.removeEventListener(`transitionend`, transitionedCheck);
         setTimeout(() => {
-            removeCanvas();
-        }, 1500);
+            makeClickClue();
+            ClickClueOpacity_1();
+        }, 1200);
     }
 }
 
+preloader_Out.addEventListener(`transitionend`, transitionedCheck);
 
-// 0. 스크롤 고정 및 시작
+function scrollFrozen() {
+    ClueParent.style.height = "100%";
+    ClueParent.style.minHeight = "100%";
+    ClueParent.style.overflow = "hidden";
+    ClueParent.style.touchAction = "none";
+}
+
+function scrollMove() {
+    ClueParent.style.height = "";
+    ClueParent.style.minHeight = "";
+    ClueParent.style.overflow = "";
+    ClueParent.style.touchAction = "";
+}
+
+
 function init() {
-    ClueParent.style.overflow = "hidden"
     window.scroll({
         top: 0,
         behavior: "smooth"
     });
-
-    let preloader = document.querySelector(".preloader");
-    let ClueCheckInterval = setInterval(() => {
-        if (preloader.classList.contains('js-clickClue')) {
-
-            clearInterval(ClueCheckInterval);
-            setTimeout(() => {
-                makeClickClue();
-            }, 1000);
-        }
-    }, 1000);
+    scrollFrozen();
 }
 
 init();
-
-// window.addEventListener("resize", resizeCanvas);
-
-// TODO: local storge 로 1회만 뜰 것.
-
-
-// window.addEventListener("scroll", function(){
-//     console.log(window.scrollY);
-// })
-
-// window.onload = function(){
-//     setTimeout(() => {
-//         window.scrollTo(0,0);
-//         console.log('1221242114142124');
-//     }, 100);
-// }

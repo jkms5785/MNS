@@ -89,7 +89,6 @@ function preloaderOut() {
     setTimeout(function () {
         preloader.style.opacity = "0";
         preloader.style.zIndex = "-9999";
-        preloader.classList.add('js-clickClue');
         titleLoader_1(0);
         headerLoader();
     }, 1000);
