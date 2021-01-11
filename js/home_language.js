@@ -21,7 +21,7 @@ function langClick() {
         lang.style.fontWeight = "";
         lang.style.lineHeight = "";
         lang.style.letterSpacing = "";
-        lang.innerHTML = "Hi, I’m MOONSOO KIM. a UX design student from Seoul. Material and Soultion is my portfolio which is How I creat a Solution for users with Materials through the UX process.";
+        lang.innerHTML = "Hi, I’m MOONSOO KIM. a UX designer from Seoul. Material and Soultion is my portfolio which is How I creat a Solution for users with Materials through the UX process.";
         setTimeout(() => {
             make_text.innerHTML = "KR";
         }, 500);

@@ -39,7 +39,7 @@ function langClick() {
         lang[2].style.fontWeight = "";
         lang[2].style.lineHeight = "";
         lang[2].style.letterSpacing = "";
-        lang[0].innerHTML = "Hi, I’m MOONSOO, a UX design student from Seoul currently looking for the job. I studied UX Design at Seoul National University of Science of Technology. I have been Studying UX design for the last few years and collaborating with multi-disciplinary groups to create useful user experiences. ";
+        lang[0].innerHTML = "Hi, I’m MOONSOO, a UX designer from Seoul. I studied UX Design at Seoul National University of Science of Technology and currently working as a UX planner at NCSOFT. I have been Studying UX design for the last few years and collaborating with multi-disciplinary groups to create useful user experiences. ";
 
         lang[1].innerHTML = "I don't think of design as a simple drawing, but I constantly think about delivering a useful user experience. I am familiar with code and collaboration with my knowledge of front-end development using HTML/CSS/JavaScript and my experience working with back-end developers.";
 
@@ -62,7 +62,7 @@ function langClick() {
         lang[2].style.fontWeight = "400";
         lang[2].style.lineHeight = "36px";
         lang[2].style.letterSpacing = "-0.2px";
-        lang[0].innerHTML = "안녕하세요. UX 디자이너 김문수입니다. 서울과학기술대학교 디자인학과를 졸업하고, 현재 디자인 일을 찾고 있습니다. 지난 몇 년간 UX 디자인을 공부하며 좋은 사용자 경험을 만들기 위해 다양한 분야의 동료들과 협업하며 경험을 쌓아왔습니다.";
+        lang[0].innerHTML = "안녕하세요. UX 디자이너 김문수입니다. 저는 서울과학기술대학교 디자인학과를 졸업하고 현재, 엔씨소프트에서 UX 기획자로 일하고 있습니다. 지난 몇 년간 UX 디자인을 공부하며 좋은 사용자 경험을 만들기 위해 다양한 분야의 동료들과 협업하며 경험을 쌓아왔습니다.";
 
         lang[1].innerHTML = "저는 디자인을 단순한 그리기로 생각하지 않고 유용한 사용자 경험을 전달하기 위해 끊임없이 고민합니다. 또한, HTML/CSS/JavaScript를 활용한 프론트 엔드 개발 지식과 백 엔드 개발자들과의 협업 경험으로 코드와 협업에 익숙합니다.";
 
