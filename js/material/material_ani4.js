@@ -21,7 +21,7 @@ canvas.style.backgroundColor = "#EEEEEE";
 let ctx = canvas.getContext("2d");
 let scaleFactor = backingScale(ctx);
 
-if (scaleFactor > 1) {
+if (scaleFactor >= 1) {
     canvas.width = canvas_cont.clientWidth * scaleFactor;
     canvas.height = canvas_cont.clientHeight * scaleFactor;
 

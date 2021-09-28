@@ -17,7 +17,7 @@ canvas.style.height = "100%";
 var c = canvas.getContext("2d");
 var scaleFactor = bckScale(c);
 
-if (scaleFactor > 1) {
+if (scaleFactor >= 1.1) {
     canvas.width = canvas_wrap[0].clientWidth * scaleFactor;
     canvas.height = canvas_wrap[0].clientHeight * scaleFactor;
 

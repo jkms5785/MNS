@@ -37,7 +37,7 @@ ClueCanvas.style.height = "100%";
 let ClueCanvasCtx = ClueCanvas.getContext("2d");
 let ClueScaleFactor = windowPixelScale(c);
 
-if (scaleFactor > 1) {
+if (scaleFactor >= 1.1) {
     ClueCanvas.width = window.innerWidth * ClueScaleFactor;
     ClueCanvas.height = window.innerHeight * ClueScaleFactor;
     ClueCanvasCtx = ClueCanvas.getContext("2d");
